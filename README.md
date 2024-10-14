@@ -4,7 +4,7 @@
 **Teammitglieder:**  
 Bauer Alina, Baumann Isabella, Thomas Gossenreiter, Lien Hochbichler, Stefanie Steinmair  
 
-**Projekt-Auftraggeber:**  
+**Projekt-Auftraggeber:** 
 Huemer, Reder  
 
 **Projektbeginn und voraussichtliches Ende:** 
