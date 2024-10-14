@@ -1,13 +1,17 @@
 # Projektantrag Edusphere 
 ![Mein Bild](https://www.htl-leonding.at/wp-content/uploads/2022/10/htllogo_2022_white_v2-1024x231.png)
 
-**Teammitglieder:**  Bauer Alina, Baumann Isabella, Thomas Gossenreiter, Lien Hochbichler, Stefanie Steinmair  
+**Teammitglieder:**  
+Bauer Alina, Baumann Isabella, Thomas Gossenreiter, Lien Hochbichler, Stefanie Steinmair  
 
-**Projekt-Auftraggeber:**  Huemer, Reder  
+**Projekt-Auftraggeber:**  
+Huemer, Reder  
 
-**Projektbeginn und voraussichtliches Ende:**  September 2024 – Februar 2026  
+**Projektbeginn und voraussichtliches Ende:**  
+September 2024 – Februar 2026  
 
-**Datum der Antragstellung:**  20. September 2024  
+**Datum der Antragstellung:**  
+20. September 2024  
 
 ## Über Edusphere:
 Das Projekt zur Neugestaltung der Webseite der HTL Leonding zielt darauf ab, die veraltete Webseite sowohl technisch als auch optisch zu modernisieren. Die aktuelle Seite ist schwer navigierbar und entspricht nicht mehr den Ansprüchen einer modernen Schule. Ziel ist es, eine benutzerfreundliche, intuitive Webseite zu schaffen, die auf allen Endgeräten funktioniert und die Identität der Schule klar widerspiegelt. 
