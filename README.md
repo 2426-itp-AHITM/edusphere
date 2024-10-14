@@ -7,7 +7,7 @@ Bauer Alina, Baumann Isabella, Thomas Gossenreiter, Lien Hochbichler, Stefanie S
 **Projekt-Auftraggeber:**  
 Huemer, Reder  
 
-**Projektbeginn und voraussichtliches Ende:**  
+**Projektbeginn und voraussichtliches Ende:** 
 September 2024 – Februar 2026  
 
 **Datum der Antragstellung:**  
