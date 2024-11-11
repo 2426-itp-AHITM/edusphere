@@ -1,0 +1,22 @@
+Projektantrag wurde erledigt, soweit wurden keine Fehler oder Mängel angemerkt.
+Flowchart wurde mit Herrn Professor Huemer abgeklärt, dabei gibt es soweit keine Probleme.
+
+Figma Designs waren für die gestellten Aufgabestellungen in Ordnung, allerdings kommen jetzt neue Anforderungen und Erwartungen hinzu.
+-> ausgefallenere Designs
+-> Designs sollen sich deutlich abheben von der jetzigen Seite (siehe User Story Issue #45)
+Die alten Figma Designs werden so als Dokumentation abgespeichert, allerdings nicht weiter verwendet.
+
+Wordpress-Recherche wurde vorgestellt, für den nächsten Sprint werden die in der Recherche behandelten Themes und Pagebuilder ausgetestet und mitprotokolliert.
+
+
+Folgende Issues werden also geschlossen:
+#44 Projektantrag
+#39 Flowchart
+#36 Figma Designs
+    #41 Figma Design 1
+    #42 Figma Design 2
+    #43 Figma Design 3
+#37 Wordpress Recherche
+
+
+--- Gossenreiter Thomas
