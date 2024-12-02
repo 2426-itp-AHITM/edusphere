@@ -1,0 +1,23 @@
+5 neue Figma Designs wurden erstellt. Pro Person 1 Design. Diese Designs waren Vorschläge und als diese haben sie gut gepasst.
+Nach dem ersten Review von diesen Designs wurden die Designs von Lien, Stefanie und Isabella weiterentwickelt.
+
+Diese Designs wurden dann nochmal reviewed, Design von Isabella ist hiermit fertig, dieser wird nicht mehr weiter verfolgt.
+Designs von Lien und Stefanie werden weiter entwickelt
+ -> Liens Design muss aufregender sein, sich mehr abheben
+ -> Stefanies Design muss einladender, ruhiger werden. Zu spitze Ecken, zu kalte Farben
+
+In Wordpress wurden Themes und Pagebuilder für den ersten Feel ausprobiert, mitprotokolliert und vorgestellt.
+FÜr den nächsten Sprint werden nun Alina und Thomas ihren persönlichen Favoriten (Thme und Pagebuilder) nutzen und eines der Figma Designs so weit als möglich nachstellen.
+
+
+Folgende Issues werden also geschlossen:
+#45 Neue Figma Designs
+    #46 Figma Design Thomas
+    #47 Figma Design Alina
+    #48 Figma Design Lien
+    #49 Figma Design Steffi
+    #50 Figma Design Isabella
+
+
+
+--- Gossenreiter Thomas
