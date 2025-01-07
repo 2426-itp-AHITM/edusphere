@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+}
+
+#content{
+    display: flex;
+    width: 90vw;
+    gap: 5vw;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.absolventen{
+    width: 70%;
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.485);
+    display: flex;
+    position: relative;
+}
+
+.gf{
+    position: absolute;
+    left: -5%;
+}
+
+#container-1{
+    width: 30vw;
+
+}
+
+#container-2{
+    gap: 5vh;
+    display: grid;
+    justify-items: center;
+    z-index: 2;
+}
+
+.absolventen div:first-child{
+    padding: 20px;
+}
+
+.grey-p{
+    color:#636571;
+    width: 80%;
+}
+
+#d1, #d2, #d3 {
+    position: absolute;
+    z-index: 1; 
+}
+
+#d1 {
+    top: 5%;
+    left: 43%; 
+}
+
+#d2 {
+    bottom: 10%;
+    right: 5%; 
+}
+
+#d3 {
+    top: 35%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+#pc-container{
+    position: relative;
+    width: 20vw;
+}
+#bg{
+    position: absolute;
+    left: 10%;
+    top: 9%;
+}

@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    left: 0;
+    top: 0;
+    padding: 0;
+}
+#switch{    
+    display: flex;
+    width: 20vw;
+    background-color: #282B30;
+    color: #c8c8c8;
+    border-radius: 4px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5vh;
+}
+
+.switchbutton{
+    border-radius: 4px;
+    width: 10vw;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+}
+
+#anzeige {
+    margin: auto;
+    width: 60vw;
+}
+
+#imageDisplay{
+    width: 100%;
+}
+
+#start{
+    background-color: white;
+    color: black;
+}
+
+#timetable{
+    background: rgb(26,71,114);
+    background: linear-gradient(0deg, rgba(26,71,114,1) 12%, rgba(10,38,64,1) 91%);
+    height: 100vh;
+    padding: 5vh;
+}

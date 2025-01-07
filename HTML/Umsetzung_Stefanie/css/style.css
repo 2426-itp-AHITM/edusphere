@@ -1,0 +1,401 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: hsl(0, 0%, 0%);
+    padding: 0;
+    overflow-x: hidden;
+    font-family: fontLight;
+}
+
+
+@font-face {
+    font-family: fontLigth;
+    src: url("../css/static/Manrope-Light.ttf");
+}
+@font-face {
+    font-family: fontBold;
+    src: url("../css/static/Manrope-Bold.ttf");
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 20px;
+    /* Für etwas Innenabstand */
+    box-sizing: border-box;
+    /* Macht das Padding Teil der Breite */
+    z-index: 1000;
+    /* Stellt sicher, dass der Header oben bleibt */
+}
+
+.logo a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    font-size: 1rem;
+    color: #666;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+    /* Textfarbe auf Schwarz */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow {
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.nav .dropdown-menu,
+.nav .dropdown-sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    min-width: 150px;
+    /* Damit Dropdown eine Mindestbreite hat */
+}
+
+.nav .dropdown-menu li,
+.nav .dropdown-sub-menu li {
+    padding: 5px 20px;
+}
+
+.nav .dropdown-menu a:hover,
+.nav .dropdown-sub-menu a:hover {
+    color: #007bff;
+    /* Blau als Hover-Farbe */
+}
+
+.nav .dropdown.active>.dropdown-menu {
+    display: block;
+}
+
+.nav .dropdown-sub.active>.dropdown-sub-menu {
+    display: block;
+}
+
+.nav .dropdown.active>.dropdown-toggle .arrow,
+.nav .dropdown-sub.active>.dropdown-toggle .arrow {
+    transform: rotate(180deg);
+}
+
+.newsletter button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter button:hover {
+    background-color: #555;
+}
+
+.header-img>img {
+    width: 100%;
+    background-size: cover;
+}
+
+#navBar-home {
+    display: flex;
+    width: 60vw;
+    background-color: white;
+    height: 20vh;
+    position: absolute;
+    left: 20vw;
+    right: 20vw;
+    top: 70%;
+}
+
+.nav-items {
+    flex: 1;
+    justify-items: center;
+    border-left: solid black 2px;
+    border-right: solid black 2px;
+}
+
+.container {
+    background: linear-gradient(to bottom, #021422, #04243d);
+    color: white;
+    height: 100vh;
+}
+
+#container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
+    padding: 20vh;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px;
+    margin: 30px 0;
+}
+
+.bar {
+    width: 100px;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    margin: 2vw;
+}
+
+.bar span {
+    position: absolute;
+    bottom: -60px;
+    left: -10px;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+}
+
+.bar1 {
+    height: 150px;
+}
+
+.bar2 {
+    height: 50px;
+}
+
+.bar3 {
+    height: 180px;
+}
+
+.bar4 {
+    height: 80px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15%;
+}
+
+.info-text {
+    text-align: left;
+}
+
+.info-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-text ul li {
+    margin-bottom: 10px;
+}
+
+.info-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-button a {
+    text-decoration: none;
+    color: white;
+    background: #0066cc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+
+
+/** abteilungen ***/
+
+#allDept {
+    display: flex;
+    width: 100vw;
+}
+
+.dept {
+    flex: 1;
+    height: 90vh;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.dept img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.dept:hover {
+    flex: 3;
+
+}
+
+.dept img:hover {
+    transition: all 1s ease-in-out;
+}
+
+.dept:hover img {
+    transform: scale(1.1);
+    transition: transform 1s ease-in-out;
+}
+
+.dept:hover .bgImg {
+    filter: brightness(0.7);
+    filter: blur(0.7);
+
+}
+
+.deptText {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    transition: transform 1s ease-in-out, flex-direction 1.5s ease-in-out;
+}
+
+.dept:hover .deptText {
+
+    flex-direction: row;
+    left: 35%;
+    transform: translateY(900%);
+
+}
+
+.effect3d {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 800px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.effect3d img {
+    width: 25vw;
+    height: auto;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.dept:hover .effect3d {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dept:hover .effect3d img {
+    transform: rotateY(-10deg) rotateX(-5deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* gallerie **/
+
+#galerie{
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    gap: 1vw;
+}
+
+.galerie-item{
+    flex: 1;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.5s ease;
+}
+
+.galerie-item > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+button{
+    border: none;
+    background: none;
+    font-size: 4.5em;
+}
+
+#galerie-container{
+    width: 90vw;
+    margin: auto;
+    margin-top: 10vh;
+}
+.galerie-text{
+    font-size: 2em;
+    font-weight: bold;
+    color: white; /* Weißer Text für besseren Kontrast */
+    position: absolute;
+    top: 80%; /* Positionierung in der Mitte des Eltern-Elements */
+    left: 25%; /* Horizontale Mitte */
+    transform: translate(-50%, -50%); /* Zentrieren des Textes */
+    z-index: 2; /* Stellt sicher, dass der Text über dem Bild liegt */
+    opacity: 0;
+}
+
+.title1{
+    text-align: center;
+}
+
+
+
+/* news */
+
+#container2{
+    height: 100vh;
+    background: linear-gradient(to bottom, #021422, #04243d);
+
+}
