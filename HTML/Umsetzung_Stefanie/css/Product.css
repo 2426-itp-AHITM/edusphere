@@ -1,0 +1,385 @@
+#abschlussContainer {
+    width: 100vw;
+    height: 50vh;
+    background: linear-gradient(to bottom, #021422, #04243d);
+    color: white;
+    margin-top: -2vh;
+}
+#abschlussContainer div{
+    width: 90vw;
+    padding: 2vw;
+    margin: auto;
+}
+
+#abschlussContainer div p{
+    font-size: 1.2em;
+}
+
+.productImg{
+    background-image: url("../img/headerimg.png");
+    background-size: 100vw;
+    height: 90vh;
+}
+#ddpHead{
+    width: 40vw;
+    color: white;
+    padding-top: 15vw;
+    padding-left: 10vw;
+}
+
+#ddpHead h1{
+    font-family: 'fontBold';
+    font-size: 2.5vw;
+}
+#ddpButtons{
+    display: flex;
+    gap: 1vw;
+    text-align: center;
+}
+
+#ddpButtons> div{
+    background-color: #4890E2;
+    width: 10vw;
+    padding: 1vw;
+    font-size: 1vw;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.5 ease-in-out;
+}
+
+
+/* slider */
+.slider-container {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    height: 65vh;
+    margin-top: 10vh;
+}
+
+.slider {
+    margin-top: 7vh;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    justify-content: center;
+    /* Zentrieren der Bilder */
+    perspective: 500px;
+}
+
+.slider img {
+    width: 7vw;
+    /* Standardbreite für alle Bilder */
+    transition: transform 0.3s ease;
+    /* Für das Vergrößern und Verkleinern */
+    height: 50vh;
+}
+
+.triangle {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translateX(-50%) rotate(360deg);
+    width: 40vw;
+    height: 20vh;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background-color: #000;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+#bigTriangle{
+    position: absolute;
+    top: 0vh;
+    left: 50%;
+    transform: translateX(-50%) rotate(360deg);
+    width: 55vw;
+    height: 30vh;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background-color: #ffffff;
+    z-index: 9;
+}
+
+/* Hover-Effekt für das Dreieck */
+.triangle:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    height: 53vh;
+}
+
+/* Der Text im Dreieck */
+.triangle-text {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    visibility: hidden;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.triangle> h1{
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+/* Sichtbar machen des Textes, wenn das Dreieck hovered wird */
+.triangle:hover .triangle-text {
+    visibility: visible;
+}
+
+.slider> img:nth-child(1){
+    position: absolute;
+    transform: rotateY(50deg);
+    left: 5vw;
+    object-fit: cover;
+
+}
+.slider> img:nth-child(2){
+    position: absolute;
+    transform: rotateY(50deg);
+    left: 10vw;
+    object-fit: cover;
+}.slider> img:nth-child(3){
+    position: absolute;
+    transform: rotateY(50deg);
+    left: 15vw;
+    object-fit: cover;
+}
+.slider> img:nth-child(4){
+    width: 40vw;
+}
+.slider> img:nth-child(5){
+    position: absolute;
+    transform: rotateY(-50deg);
+    right: 5vw;
+    object-fit: cover;
+}
+.slider> img:nth-child(6){
+    position: absolute;
+    transform: rotateY(-50deg);
+    right: 10vw;
+    object-fit: cover;
+}.slider> img:nth-child(7){
+    position: absolute;
+    transform: rotateY(-50deg);
+    right: 15vw;
+    object-fit: cover;
+}
+
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* stundentafel */
+
+#switch {
+    display: flex;
+    width: 20vw;
+    background-color: #282B30;
+    color: #c8c8c8;
+    border-radius: 4px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5vh;
+}
+
+.switchbutton {
+    border-radius: 4px;
+    width: 10vw;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+}
+
+#anzeige {
+    margin: auto;
+    width: 60vw;
+}
+
+#imageDisplay {
+    width: 100%;
+}
+
+#start {
+    background-color: white;
+    color: black;
+}
+
+#timetable {
+    background: rgb(26, 71, 114);
+    background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
+    height: 100vh;
+    padding: 5vh;
+    margin-top: 10vh;
+}
+
+
+
+/* galerie */
+
+.carousel-wrapper{
+    display: flex;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+}
+
+.carousel-item img{
+    width: 15vw;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+#carousel-mid img{
+    width: 40vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+}
+
+#headGalerie{
+    text-align: center;
+    font-size: 2em;
+}
+
+.rec-container {
+    display: flex;
+    justify-content: space-between; /* Verteilt die Rechtecke mit gleichen Abständen */
+    width: 5vw;
+    margin: auto; /* Container auf 80% der Bildschirmbreite beschränken */
+}
+
+/* Rechtecke */
+.rectangle {
+    width: 1vw; /* Breite des Rechtecks */
+    height: 1vw; /* Höhe des Rechtecks */
+    background-color: rgb(85, 85, 85);
+}
+
+
+#container3{
+    width: 100vw;
+    margin-top: 10vh;
+    background: linear-gradient(to bottom, #021422, #04243d);
+}
+#projects{
+    padding: 2vw;
+}
+
+#headPro{
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+#headPro select{
+    margin-top: 35px;
+    margin-left: 15px;
+    height: 20px;
+}
+
+.projects-container{
+    width: 60vw;
+    background-color: white;
+    padding: 1vw;
+    margin: 5vw;
+    display: flex;
+}
+
+.infotext-container{
+
+}
+
+.fact-container{
+    display: flex;
+}
+
+.fact-container p{
+    border: solid 2px gray;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    color: #4890E2;
+}
+
+.be-container p{
+    color: gray;
+}
+
+.projects-container:nth-child(2){
+    margin-left: 30vw;
+}
+
+
+
+#container4{
+    width: 90vw;
+    display: flex;
+    margin: auto;
+    height: 60vh;
+}
+
+.insight-container{
+    width: 20vw;
+    margin: auto;
+    margin-top: 0%;
+    position: relative;
+    cursor: pointer;
+    height: auto;
+}
+
+.insight-container div img{
+    width: 90%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+}
+
+.insight-container:nth-child(1) div img{
+    height: 50vh;
+}
+
+.insight-container:nth-child(2) div img{
+    height: 35vh;
+}
+.insight-container:nth-child(3) div img{
+    height: 50vh;
+}
+.insight-container:nth-child(4) div img{
+    height: 35vh;
+}
+.insight-container> div >p{
+    position: absolute;
+    top: 85%;
+    color: white;
+    left: 5%;
+}
+
+.insight-container div img:hover{
+    height: 60vh;
+}
+
+#insightHead{
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}

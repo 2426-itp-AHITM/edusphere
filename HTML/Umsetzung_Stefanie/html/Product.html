@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Product.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../javaScript/product.js" defer></script>
+    <script src="../javaScript/script.js" defer></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../html/Landingpage.html"><img src="../img/HTL_Logo.png" alt=""></a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Ausbildung <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Informatik</a></li>
+                        <li><a href="#">IT-Medientechnik</a></li>
+                        <li><a href="#">Elektronik</a></li>
+                        <li><a href="#">Medizintechnik</a></li>
+                        <li class="dropdown-sub">
+                            <a href="#" class="dropdown-toggle">Fachschule <span class="arrow">▼</span></a>
+                            <ul class="dropdown-sub-menu">
+                                <li><a href="#">Elektronik</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-sub">
+                            <a href="#" class="dropdown-toggle">Kolleg <span class="arrow">▼</span></a>
+                            <ul class="dropdown-sub-menu">
+                                <li><a href="#">Medientechnik</a></li>
+                                <li><a href="#">Informatik</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li><a href="#">Bewerber:in</a></li>
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="newsletter">
+            <button id="newsletterButton">Newsletter</button>
+        </div>
+    </header>
+    <div class="productImg">
+        <div id="ddpHead">
+            <h1>INFORMATIK - <br> DDP</h1>
+            <h2>Design of Digital Product</h2>
+            <div id="ddpButtons">
+                <div>zum Flyer</div>
+                <div>zur Anmeldung</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="abschlussContainer">
+        <div>
+            <h1>ABSCHLUSS</h1>
+            <p>Wenn du den Zweig DDP bei uns erfolgreich abschließt, bekommst du ein Reife- und Diplomprüfungszeugnis. Das ermöglicht dir:
+                <br>
+                <br>
+                - den direkten Einstieg ins Berufsleben
+                <br>
+                - das Studium an einer Universität oder FH, wobei wir mit einigen Uni- und FH-Studiengängen Anrechnungen vereinbart haben, die dir dein Studium dann um bis zu einem Jahr verkürzen können
+                <br>
+                <br>
+                Ein Abschlusszeugnis der HTL Leonding in DDP ist hundertprozentig eine wertvolle Eintrittskarte zu österreichischen Unis und FHs und den vielen IT-Firmen im OÖ Zentralraum und auch darüber hinaus.</p>
+        </div>
+    </div>
+    
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            
+          <!-- Bilder werden hier durch JavaScript eingefügt -->
+        </div>
+        <div id="bigTriangle"></div>
+            <div class="triangle">
+                <h1>Programmiererei und Software Engineering</h1>
+                <div class="triangle-text">Ein Abschlusszeugnis der HTL Leonding in DDP ist hundertprozentig eine wertvolle Eintrittskarte zu österreichischen Unis und FHs und den vielen IT-Firmen im OÖ Zentralraum und auch darüber hinaus.</div>
+            </div>
+        
+    
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+   
+    <div id="timetable">
+        <div id="switch">
+            <div class="switchbutton" id="start" onclick="switchImg(this,1)">Stundenplan</div>
+            <div class="switchbutton" onclick="switchImg(this,2)">Stundentafel</div>
+        </div>
+        <div id="anzeige">
+            <img id="imageDisplay" src="../img/stundentafel.png" alt="Image 1">
+        </div>
+    </div>
+
+    <h1 id="headGalerie">Galerie</h1>
+    <div class="carousel-wrapper">
+        <div class="carousel-item">
+            <img src="../img/galerieimg2.png" alt="">
+        </div>  
+        <div id="carousel-mid">
+            <img src="../img/galerieimg.png" alt="">
+        </div>  
+        <div class="carousel-item">
+            <img src="../img/galerieimg2.png" alt="">
+        </div>
+    </div>
+    <div class="rec-container">
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+    </div>
+
+    <div id="container3">
+        <div id="headPro">
+            <h1>Projekte DDP</h1>
+            <select id="year">
+                <option value="2000">2024</option>
+                <option value="2001">2023</option>
+                <option value="2002">2022</option>
+            </select>
+        </div>
+        <div id="projects">
+            <div class="projects-container">
+                <img src="../img/projectsimg.png" alt="">
+                <div class="infotext-container">
+                    <h1>Connecting Memories</h1>
+                    <div class="fact-container">
+                        <p>2022</p>
+                        <p>Medientechnik</p>
+                        <p>Felix Mayr, Max Mustermann</p>
+                    </div>
+                    <div class="be-container">
+                        <h1>Beschreibung</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                            natoque penatibus et magnis dis parturient.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-container">
+                <img src="../img/projectsimg.png" alt="">
+                <div class="infotext-container">
+                    <h1>Connecting Memories</h1>
+                    <div class="fact-container">
+                        <p>2022</p>
+                        <p>Medientechnik</p>
+                        <p>Felix Mayr, Max Mustermann</p>
+                    </div>
+                    <div class="be-container">
+                        <h1>Beschreibung</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                            natoque penatibus et magnis dis parturient.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-container">
+                <img src="../img/projectsimg.png" alt="">
+                <div class="infotext-container">
+                    <h1>Connecting Memories</h1>
+                    <div class="fact-container">
+                        <p>2022</p>
+                        <p>Medientechnik</p>
+                        <p>Felix Mayr, Max Mustermann</p>
+                    </div>
+                    <div class="be-container">
+                        <h1>Beschreibung</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                            Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                            natoque penatibus et magnis dis parturient.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="insightHead">
+        <h1>Insights</h1>
+    </div>
+    <div id="container4">
+        
+        <div class="insight-container">
+            <div>
+                <img src="../img/insights1.png" alt="">
+                <p>Robotic</p>
+            </div>
+        </div>
+        <div class="insight-container">
+            <div>
+                <img src="../img/insights2.png" alt="">
+                <p>Robotic</p>
+            </div>
+        </div>
+        <div class="insight-container">
+            <div>
+                <img src="../img/insights3.png" alt="">
+                <p>Robotic</p>
+            </div>
+        </div>
+        <div class="insight-container">
+            <div>
+                <img src="../img/insights4.png" alt="">
+                <p>Robotic</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="footer">
+        <h1 id="footerh">HTL LEONDING</h1>
+        <div id="footer-container">
+            <div id="footer-info">
+                <div class="footer-items">
+                    <p class="head">HTBLA Leonding</p>
+                    <p>Limesstraße 12-14, A-4060 Leonding</p>
+                    <p>(0732) 67 33 68 – 0</p>
+                    <p>office@htl-leonding.ac.at</p>
+                    <p>Schulkennzahl: 410427</p>
+                    <p>Onlinebroschüre</p>
+                    <div id="aButton">Anmelden</div>
+                </div>
+
+                <div class="footer-items">
+                    <p class="head">Bildungsangebote</p>
+                    <p>Informatik - SSE</p>
+                    <p>Informatik - CSI</p>
+                    <p>Informatik - DDP</p>
+                    <p>IT-Medientechnik</p>
+                    <p>Elektronik und technische Informatik</p>
+                    <p>Biomedizin- und Gesundheitstechnik</p>
+                    <p>Fachschule Elektronik und technische Informatik</p>
+                    <p>Kolleg für Berufstätige Informatik</p>
+                    <p>Kolleg für Berufstätige System-/Medientechnik</p>
+                </div>
+
+                <div class="footer-items">
+                    <p class="head">Kontakt</p>
+                    <p>Kontaktdaten</p>
+                    <p>Datenschutz</p>
+                    <p>Impressum</p>
+                </div>
+            </div>
+            <div id="img-container">
+                <div>
+                    <img src="../img/footerimg2.png" alt="">
+                </div>
+                <div id="soc">
+                    <img src="../img/footerimg1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

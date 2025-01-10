@@ -19,19 +19,29 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">Ausbildung <span class="arrow">▼</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">HTL</a></li>
-                        <li><a href="#">Fachschule</a></li>
+                        <li><a href="../html/Product.html">Informatik</a></li>
+                        <li><a href="#">IT-Medientechnik</a></li>
+                        <li><a href="#">Elektronik</a></li>
+                        <li><a href="#">Medizintechnik</a></li>
                         <li class="dropdown-sub">
-                            <a href="#" class="dropdown-toggle">Abendschule <span class="arrow">▼</span></a>
+                            <a href="#" class="dropdown-toggle">Fachschule <span class="arrow">▼</span></a>
                             <ul class="dropdown-sub-menu">
                                 <li><a href="#">Elektronik</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-sub">
+                            <a href="#" class="dropdown-toggle">Kolleg <span class="arrow">▼</span></a>
+                            <ul class="dropdown-sub-menu">
+                                <li><a href="#">Medientechnik</a></li>
                                 <li><a href="#">Informatik</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
+                
                 <li><a href="#">Bewerber:in</a></li>
                 <li><a href="#">Über uns</a></li>
+                <li><a href="#">Kontakt</a></li>
             </ul>
         </nav>
         <div class="newsletter">
@@ -61,8 +71,22 @@
     </div>
 
     <div class="container">
-        <div class="title">HTL LEONDING STATICS</div>
+        <div class="title"><h1>HTL LEONDING STATICS </h1>
+            <select id="year" onchange="restartAnimation()">
+            <option value="2000">2024</option>
+            <option value="2001">2023</option>
+            <option value="2002">2022</option>
+        </select></div>
         <div id="container1">
+            <div id="statsTri1">
+                <img src="../img/triangle1.png" alt="">
+            </div>
+            <div id="statsTri2">
+                <img src="../img/triangle2.png" alt="">
+            </div>
+            <div id="statsTri3">
+                <img src="../img/triangle3.png" alt="">
+            </div>
             <div class="stats">
                 <div class="bar bar1">
                     <span>1000+<br>Schüler</span>
@@ -85,10 +109,11 @@
                         <li>✔️ Gefragt in der Arbeitswelt</li>
                         <li>✔️ Ausflüge quer durch Europa</li>
                     </ul>
+                    <div class="info-button">
+                        <a href="#">Mehr lesen</a>
+                    </div>
                 </div>
-                <div class="info-button">
-                    <a href="#">Mehr lesen</a>
-                </div>
+                
             </div>
         </div>
 
@@ -199,10 +224,18 @@
     <div id="galerie-container">
         <h1 class="title1">Upcoming Events 2024/25</h1>
         <div id="galerie">
-            <div class="galerie-item"><img src="../img/event0.jpg" alt=""><p class="galerie-text">FIT 2024</p></div>
-            <div class="galerie-item"><img src="../img/event1.jpg" alt=""><p class="galerie-text">Fotowetbewerb</p></div>
-            <div class="galerie-item"><img src="../img/event2.jpg" alt=""><p class="galerie-text">Tag der offenen Tür</p></div>
-            <div class="galerie-item"><img src="../img/event3.jpg" alt=""><p class="galerie-text">Project Award</p></div>
+            <div class="galerie-item"><img src="../img/event0.jpg" alt="">
+                <p class="galerie-text">FIT 2024</p>
+            </div>
+            <div class="galerie-item"><img src="../img/event1.jpg" alt="">
+                <p class="galerie-text">Fotowetbewerb</p>
+            </div>
+            <div class="galerie-item"><img src="../img/event2.jpg" alt="">
+                <p class="galerie-text">Tag der offenen Tür</p>
+            </div>
+            <div class="galerie-item"><img src="../img/event3.jpg" alt="">
+                <p class="galerie-text">Project Award</p>
+            </div>
 
         </div>
 
@@ -213,22 +246,129 @@
     <div id="container2">
         <div id="top">
             <h1>TOP NEWS</h1>
-            <div>
-                <button></button>
-                <button></button>
+            <div id="navigation">
+                <button class="nav-button" id="prev"></button>
+                <button class="nav-button" id="next"></button>
             </div>
         </div>
         <div id="news">
-            <div>
-                
-            </div>
-            <div>
-                <div>
-                    <img src="" alt="">
+            <div id="categories">
+                <div class="category orange" onclick="changeNews(0)">
+                    <p>MEDIZINTECHNIK</p>
                 </div>
-                <div>
+                <div class="category red" onclick="changeNews(1)">
+                    <p>ELEKTRONIK</p>
+                </div>
+                <div class="category lightBlue heartbeat" onclick="changeNews(2)">
+                    <p>MEDIENTECHNIK</p>
+                </div>
+                <div class="category blue " onclick="changeNews(3)">
+                    <p>INFORMATIK</p>
+                </div>
+            </div>
+            <div id="text-container">
+                <div id="news-text">
                     <h1>Codes & Future Workshop an der HTL Leonding</h1>
-                    <p>Am 25. Oktober fand der Cloudflight Coding Contest (CCC) statt, ein spannender und europaweit ausgetragener Programmierwettbewerb, der Teilnehmerinnen und Teilnehmer vor knifflige algorithmische Herausforderungen stellt. </p>
+                    <p>Am 25. Oktober fand der Cloudflight Coding Contest (CCC) statt, ein spannender und europaweit
+                        ausgetragener Programmierwettbewerb, der Teilnehmerinnen und Teilnehmer vor knifflige
+                        algorithmische Herausforderungen stellt.</p>
+                    <div id="news-image">
+                        <img src="../img/roboter.png" alt="Roboter Workshop">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="container-1">
+            <h1>Von Unseren
+                AbsolventInnen</h1>
+            <p class="grey-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                natoque penatibus et magnis dis parturient.</p>
+            <div id="pc-container">
+                <img src="../img/pc.png" alt="">
+                <img id="bg" src="../img/pcbg.png" alt="">
+            </div>
+
+        </div>
+        <div id="container-2">
+            <div class="absolventen">
+                <div>
+                    <p class="grey-p">Lorem ipsum dolor sit amet, consectetuer
+                        adipiscing elit. Aenean commodo ligula eget
+                        dolor. Aenean massa.</p>
+                    <h3>Thomas Neubauer</h3>
+                    <p class="grey-p">Marketing Manager</p>
+                </div>
+                <img class="gf" src="../img/Frame.png" alt="">
+
+                <img src="../img/absolvent.png" alt="">
+            </div>
+            <div class="absolventen">
+                <div>
+                    <p class="grey-p">Lorem ipsum dolor sit amet, consectetuer
+                        adipiscing elit. Aenean commodo ligula eget
+                        dolor. Aenean massa.</p>
+                    <h3>Christina Haas</h3>
+                    <p class="grey-p">Company CEO</p>
+                </div>
+                <img class="gf" src="../img/Frame.png" alt="">
+
+                <img src="../img/absolventin.png" alt="">
+            </div>
+        </div>
+        <img id="d1" src="../img/dreieck1.png" alt="">
+        <img id="d2" src="../img/dreieck2.png" alt="">
+        <img id="d3" src="../img/dreieck3.png" alt="">
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <div id="footer">
+        <h1 id="footerh">HTL LEONDING</h1>
+        <div id="footer-container">
+            <div id="footer-info">
+                <div class="footer-items">
+                    <p class="head">HTBLA Leonding</p>
+                    <p>Limesstraße 12-14, A-4060 Leonding</p>
+                    <p>(0732) 67 33 68 – 0</p>
+                    <p>office@htl-leonding.ac.at</p>
+                    <p>Schulkennzahl: 410427</p>
+                    <p>Onlinebroschüre</p>
+                    <div id="aButton">Anmelden</div>
+                </div>
+
+                <div class="footer-items">
+                    <p class="head">Bildungsangebote</p>
+                    <p>Informatik - SSE</p>
+                    <p>Informatik - CSI</p>
+                    <p>Informatik - DDP</p>
+                    <p>IT-Medientechnik</p>
+                    <p>Elektronik und technische Informatik</p>
+                    <p>Biomedizin- und Gesundheitstechnik</p>
+                    <p>Fachschule Elektronik und technische Informatik</p>
+                    <p>Kolleg für Berufstätige Informatik</p>
+                    <p>Kolleg für Berufstätige System-/Medientechnik</p>
+                </div>
+
+                <div class="footer-items">
+                    <p class="head">Kontakt</p>
+                    <p>Kontaktdaten</p>
+                    <p>Datenschutz</p>
+                    <p>Impressum</p>
+                </div>
+            </div>
+            <div id="img-container">
+                <div>
+                    <img src="../img/footerimg2.png" alt="">
+                </div>
+                <div id="soc">
+                    <img src="../img/footerimg1.png" alt="">
                 </div>
             </div>
         </div>
