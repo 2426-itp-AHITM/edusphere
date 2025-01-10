@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTL Leonding</title>
+    <link rel="stylesheet" href="styleDdp.css">
+    <script src="./scriptDdp.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">news</a></li>
+                <li><a href="#">Clubs</a></li>
+                <li><a href="#">Über Uns</a></li>
+                <li><a href="#">Bewerber:innen</a></li>
+                <li><a href="#">Ausbildungen</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="content">
+            <h2>Design Of Digital Products</h2>
+            <h1>DDP</h1>
+            <p>Dein großes Interesse ist das Design und die Entwicklung von Produkten? Was muss neben der Programmierung
+                in einem Projekt alles passieren, dass zum Schluss das Produkt herauskommt, das die Kund:innen cool
+                finden und auch kaufen?</p>
+            <p>Du lernst neben den Grundlagen des Programmierens, wie digitale Produkte designt und entwickelt werden
+                und wie die Kommunikation im Team und zum Kunden ein voller Erfolg wird.</p>
+            <div class="buttons">
+                <a href="#" class="button">zum Flyer</a>
+                <a href="#" class="button">zur Anmeldung</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="abschluss-container">
+        <h1>Abschluss</h1>
+        <p>
+            Wenn Du Den Zweig DDP Bei Uns Erfolgreich Abschließt, Bekommst Du Ein Reife- Und
+            Diplomprüfungszeugnis. Das Ermöglicht Dir:
+        </p>
+        <ul>
+            <li>Den Direkten Einstieg Ins Berufsleben</li>
+            <li>
+                Das Studium An Einer Universität Oder FH, Wobei Wir Mit Einigen Uni- Und FH-Studiengängen
+                Anrechnungen Vereinbart Haben, Die Dir Dein Studium Dann Um Bis Zu Einem Jahr Verkürzen Können
+            </li>
+        </ul>
+        <p id="p2">
+            Ein Abschlusszeugnis Der HTL Leonding In DDP Ist Hundertprozentig Eine Wertvolle Eintrittskarte Zu
+            Österreichischen Unis Und FHs Und Den Vielen IT-Firmen Im OÖ Zentralraum Und Auch Darüber Hinaus.
+        </p>
+    </div>
+
+    <div id="timetable">
+        <div id="switch">
+            <div class="switchbutton" id="start" onclick="switchImg(this,1)">Stundentafel</div>
+            <div class="switchbutton" onclick="switchImg(this,2)">Stundenplan</div>
+        </div>
+        <div id="anzeige">
+            <img id="imageDisplay" src="../img/stundentafel.png" onclick="showPopup()" alt="Image 1">
+        </div>
+        <div id="popup" class="popup">
+            <h2>BWMBO</h2>
+            <p>BWM | Betriebswirtschaft und Management </p>
+            <p>
+                Egal, ob du nach der Schule selber ein Unternehmen gründest, oder in einer Firma angestellt bist, es ist
+                sehr wichtig, dass du verstehst, wie Unternehmen aufgebaut sind, wie dort Abläufe definiert werden, was
+                das Gesetz von Unternehmen verlangt, wie Buchhaltung und Kostenrechnung funktionieren usw. Das alles
+                lernst du hier. Wir verwenden dazu die weltweit größte Enterprise-Software und haben diese als einzige
+                Schule auch hausintern installiert.
+            </p>
+
+        </div>
+        <div id="overlay2" class="overlay2" onclick="hidePopup()"></div>
+    </div>
+
+    <div id="galerie-container">
+        <h1>Galerie</h1>
+        <div id="galerie">
+            <div class="galerie-item"><img src="../img/event0.jpg" alt=""></div>
+            <div class="galerie-item"><img src="../img/event1.jpg" alt=""></div>
+            <div class="galerie-item"><img src="../img/event2.jpg" alt=""></div>
+            <div class="galerie-item"><img src="../img/event3.jpg" alt=""></div>
+
+        </div>
+
+        <button id="next" class="nav-btn" onclick="slideback()"><img src="../img/Arrow 6.png" alt=""></button>
+        <button id="prev" class="nav-btn" onclick="slide()"><img src="../img/Arrow 7.png" alt=""></button>
+    </div>
+
+    <div id="wrapper">
+        <div class="container">
+            <div class="text">
+                Success-<br>Stories<br>unserer<br>Absolvent<br>Innen
+            </div>
+            <img id="Co3" src="../img/Component 3.png" alt="">
+            <div class="cards">
+                <div class="card">
+                    <img src="../img/pexels-karolina-grabowska-8005455 1.png" alt="Person 1">
+                    <div class="name">Karolina Grabowska</div>
+                </div>
+                <div class="card">
+                    <img src="../img/absolventin.png" alt="Person 2">
+                    <div class="name">Maxine Musterfrau</div>
+                </div>
+                <div class="card">
+                    <img src="../img/thomas.png" alt="Person 3">
+                    <div class="name">Neubauer Thomas</div>
+                </div>
+                <div class="card">
+                    <img src="../img/absolventin.png" alt="Person 4">
+                    <div class="name">Maxine Musterfrau</div>
+                </div>
+                <div class="card">
+                    <img src="../img/pexels-karolina-grabowska-8005455 1.png" alt="Person 4">
+                    <div class="name">Karolina Grabowska</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="projects">
+        <div class="header2">
+            <h2>Projekte DDP</h2>
+            <div>
+                <select id="yearSelect">
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                </select>
+            </div>
+        </div>
+        <div class="carousel">
+            <button class="nav prev">&lt;</button>
+            <div class="cards2">
+                <div class="card2">
+                    <iframe src="https://www.youtube-nocookie.com/embed/4aoojzswxF8?si=y8UR3eDiN1x263cn&amp "
+                        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    <h3>Connecting Memories</h3>
+                    <p>Felix Arzt, Philip Kirchmair, Max Mustermann</p>
+                </div>
+                <div class="card2">
+                    <iframe src="https://www.youtube-nocookie.com/embed/4aoojzswxF8?si=y8UR3eDiN1x263cn&amp "
+                        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    <h3>Connecting Memories</h3>
+                    <p>Felix Arzt, Philip Kirchmair, Max Mustermann</p>
+                </div>
+                <div class="card2">
+                    <iframe src="https://www.youtube-nocookie.com/embed/4aoojzswxF8?si=y8UR3eDiN1x263cn&amp "
+                        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    <h3>Connecting Memories</h3>
+                    <p>Felix Arzt, Philip Kirchmair, Max Mustermann</p>
+                </div>
+            </div>
+            <button class="nav next">&gt;</button>
+        </div>
+    </section>
+    <img id="Co4" src="../img/Component 4.png" alt="" srcset="">
+    <section class="news-section">
+      
+        <h1 class="news-title">news DDP</h1>
+        <div class="news-container">
+            <div class="news-card">
+                <img src="../img/image (9).png" alt="Leonie" class="news-image">
+                <h2 class="news-heading">LEONIE</h2>
+                <p class="news-description">
+                    Condimentum lobortis donec nibh molestie massa dictumst cursus.Condimentum lobortis donec nibh
+                    molestie massa dictumst cursus.Condimentum lobortis donec nibh molestie massa dictumst cursus.
+                </p>
+                <div class="news-footer">
+                    <span class="news-time">5 min</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="../img/image (10).png" alt="Tonstudio" class="news-image">
+                <h2 class="news-heading">TONSTUDIO</h2>
+                <p class="news-description">
+                    Condimentum lobortis donec nibh molestie massa dictumst cursus.Condimentum lobortis donec nibh
+                    molestie massa dictumst cursus.Condimentum lobortis donec nibh molestie massa dictumst cursus.
+                </p>
+                <div class="news-footer">
+                    <span class="news-time">5 min</span>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="../img/image (11).png" alt="Roboterfußball" class="news-image">
+                <h2 class="news-heading">ROBOTERFUSSBALL</h2>
+                <p class="news-description">
+                    Condimentum lobortis donec nibh molestie massa dictumst cursus.Condimentum lobortis donec nibh
+                    molestie massa dictumst cursus.Condimentum lobortis donec nibh molestie massa dictumst cursus.
+                </p>
+                <div class="news-footer">
+                    <span class="news-time">5 min</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="sponsors">
+          <h4>Sponsoren</h4>
+          <div class="sponsor-logos">
+            <img src="../img/image 15.png" alt="IT PRO">
+            <img src="../img/image 16.png" alt="Linz AG">
+            <img src="../img/image 17.png" alt="Fabasoft">
+            <img src="../img/image 18.png" alt="Primetals Technologies">
+          </div>
+        </div>
+      
+        <div class="main-content">
+          <img src="../img/anmeldung.png" alt="Anmeldung für die Schule">
+          <div class="overlay">
+            <h2>Anmeldung für die Schule</h2>
+          </div>
+        </div>
+      
+        <div class="footer-grid">
+            <div class="footer-section">
+              <h4>HTBLA Leonding</h4>
+              <p>Limesstraße 12-14 4060 Leonding</p>
+              <p>Tel.: (0732) 67 33 68-0</p>
+              <p>Email: office@htl-leonding.ac.at</p>
+              <p>Schulkennzahl: 410427</p>
+            </div>
+        
+            <div class="footer-section">
+              <h4>Bildungsangebot</h4>
+              <ul>
+                <li>Informatik (SSE, CSI, DDP)</li>
+                <li>IT-Medientechnik</li>
+                <li>Biomedizin und Gesundheitstechnik</li>
+                <li>Kolleg für Berufstätige</li>
+              </ul>
+            </div>
+        
+            <div class="footer-section">
+              <h4>Kontakt</h4>
+              <ul>
+                <li><a href="#">Kontaktdaten</a></li>
+                <li><a href="#">Datenschutz</a></li>
+                <li><a href="#">Impressum</a></li>
+              </ul>
+            </div>
+        
+            <div class="footer-section">
+              <h4>Social</h4>
+              <ul class="social-links">
+                <li><img src="../img/icons8-youtube-play-24.png"></li>
+                <li><img src="../img/icons8-facebook-24.png"></li>
+                <li><img src="../img/icons8-instagram-24.png"></li>
+                <li><img src="../img/icons8-tiktok-24.png"></li>
+              </ul>
+            </div>
+          </div>
+      </footer>
+</body>
+
+</html>
