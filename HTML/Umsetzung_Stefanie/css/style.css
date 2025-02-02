@@ -170,7 +170,7 @@ body {
     border-right: solid black 2px;
 }
 
-.container {
+.containerD {
     background: linear-gradient(to bottom, #021422, #04243d);
     color: white;
     height: 100vh;
@@ -185,12 +185,10 @@ body {
     text-align: center;
 }
 
-.title {
+.containerD .title1 {
     font-size: 1.2em;
-    padding: 20vh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    top: 20%;
 }
 #headPro{
     
@@ -445,7 +443,7 @@ button {
 }
 
 #galerie-container {
-    width: 90vw;
+    width: 100vw;
     margin: auto;
     margin-top: 10vh;
 }

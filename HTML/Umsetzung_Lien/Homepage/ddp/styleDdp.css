@@ -198,6 +198,8 @@ a {
 }
 
 #timetable {
+    background: rgb(26, 71, 114);
+    background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
     height: 100vh;
     padding: 5vh;
 }
@@ -235,15 +237,13 @@ a {
 }
 
 #galerie-container {
-    background: rgb(26, 71, 114);
-    background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
-    margin-top: -15vw;
     padding: 1vw;
+    color: #000000;
 }
 
 #galerie-container h1 {
     font-family: manrope;
-    color: white;
+    color: #000000;;
     font-size: 3rem;
     font-weight: bold;
     padding-top: 2vw;
@@ -310,6 +310,10 @@ button {
     margin-right: 37vw;
     margin-top: -2vw;
     animation: pulse 1.5s infinite;
+}
+.text #htl{
+    font-size: 2vw;
+    margin-bottom: -0.2vw;
 }
 @keyframes pulse {
     0% {
@@ -744,3 +748,13 @@ footer {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
+#imageVideo{
+    background: rgb(26, 71, 114);
+    background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
+    margin-bottom: 3vw;
+}
+
+#imageVideo img{
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+} 

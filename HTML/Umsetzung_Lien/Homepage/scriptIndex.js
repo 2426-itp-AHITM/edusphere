@@ -1,98 +1,149 @@
-const data = {
-  2023: { Informatik: 600, Medientechnik: 400, Elektronik: 100, Medizintechnik: 200, Fachschule: 90, Kolleg: 50 },
-  2022: { Informatik: 550, Medientechnik: 350, Elektronik: 90, Medizintechnik: 180, Fachschule: 80, Kolleg: 45 },
-  2021: { Informatik: 500, Medientechnik: 300, Elektronik: 85, Medizintechnik: 170, Fachschule: 75, Kolleg: 40 },
-};
+function restartAnimation() {
+  // Alle Bars auswählen
+  const bars = document.querySelectorAll('.bar');
 
-const yearSelect = document.getElementById("yearSelect");
-const numbers = document.querySelectorAll(".number");
+  // Für jede Bar die Animation zurücksetzen
+  bars.forEach((bar) => {
+      // Animation entfernen, um sie neu zu starten
+      bar.style.transition = 'none';
+      bar.style.height = '0'; // Zurücksetzen auf Startwert
 
+      // Erzwungene Neuzeichnung, damit die Animation neu starten kann
+      void bar.offsetHeight;
 
-function animateNumber(element, start, end) {
-  let current = start;
-  const duration = 1000;
-  const increment = Math.ceil(end / (duration / 20));
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= end) {
-      current = end;
-      clearInterval(timer);
-    }
-    element.textContent = current;
-  }, 20);
-}
+      // Animation wieder aktivieren
+      bar.style.transition = 'height 1.5s ease-out';
 
-
-function updateNumbers(year) {
-  numbers.forEach((number) => {
-    const department = number.dataset.department;
-    const endValue = data[year][department];
-    animateNumber(number, 0, endValue);
+      // Originalhöhe zurücksetzen (z.B. 150px, 50px etc.)
+      const originalHeight = window.getComputedStyle(bar).getPropertyValue('--original-height') || bar.style.height;
+      bar.style.height = originalHeight;
   });
 }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        updateNumbers(yearSelect.value);
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
+// Setze beim Laden des Dokuments die ursprünglichen Höhen als Custom Properties
+document.querySelectorAll('.bar').forEach((bar) => {
+  bar.style.setProperty('--original-height', bar.style.height);
+});
 
-numbers.forEach((number) => observer.observe(number));
+document.addEventListener("DOMContentLoaded", () => {
+  // Dropdown-Menü überwachen
+  const yearDropdown = document.getElementById("year");
 
-
-yearSelect.addEventListener("change", () => updateNumbers(yearSelect.value));
-
-
-const targetNumbers = {
-  classes: 45,
-  teachers: 100,
-  students: 1100
-};
-
-const duration = 2000;
-
-function animateCounter(id, target) {
-  const element = document.getElementById(id);
-  let current = 0;
-  const step = Math.ceil(target / (duration / 16));
-
-  const counter = setInterval(() => {
-    current += step;
-    if (current >= target) {
-      current = target;
-      clearInterval(counter);
-    }
-    element.textContent = current;
-  }, 16);
-}
-
-window.onload = () => {
-  animateCounter('classes', targetNumbers.classes);
-  animateCounter('teachers', targetNumbers.teachers);
-  animateCounter('students', targetNumbers.students);
-};
-
-
-const leftArrow = document.getElementById('left-arrow');
-const rightArrow = document.getElementById('right-arrow');
-const carousel = document.querySelector('.carousel');
-
-leftArrow.addEventListener('click', () => {
-  carousel.scrollBy({
-    left: -300,
-    behavior: 'smooth'
+  yearDropdown.addEventListener("change", () => {
+      // Alle Balken zurücksetzen
+      const bars = document.querySelectorAll(".bar");
+      bars.forEach(bar => {
+          // Animation entfernen
+          bar.style.animation = "none";
+          
+          // Reflow erzwingen, um die Animation zurückzusetzen
+          bar.offsetHeight; 
+          
+          // Animation wieder hinzufügen
+          bar.style.animation = ""; 
+      });
   });
 });
 
-rightArrow.addEventListener('click', () => {
-  carousel.scrollBy({
-    left: 300,
-    behavior: 'smooth'
-  });
-});
+
+
+
+
+/* gallerie */
+
+const galerie = document.getElementById('galerie');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+
+count = 0
+function slide() {
+    const items = document.querySelectorAll('.galerie-item');
+    const textItems = document.querySelectorAll('.galerie-text');
+
+
+    if (count == 4) {
+        count = 0
+    }
+    count++
+
+    for (i = 0; i < items.length; i++) {
+        if (i == count - 1) {
+            items[i].style.flex = 4
+            textItems[i].style.opacity = '1';
+
+            if (count == 1) {
+                items[3].style.flex = 1
+                items[2].style.flex = 2
+                items[1].style.flex = 2.7
+            } else if (count == 2) {
+                items[2].style.flex = 2.7
+                items[3].style.flex = 2
+                items[0].style.flex = 1
+            }
+            else if (count == 3) {
+                items[1].style.flex = 2
+                items[3].style.flex = 2.7
+                items[0].style.flex = 1
+            }
+            else if (count == 4) {
+                items[1].style.flex = 2
+                items[2].style.flex = 2.7
+                items[0].style.flex = 1
+            }
+            for (let j = 0; j < textItems.length; j++) {
+                if (j !== i) {
+                    textItems[j].style.opacity = '0';  // Text für andere Elemente unsichtbar machen
+                }
+            }
+        }
+    }
+
+
+}
+
+function slideback() {
+    if (count == 0) {
+        count = 4;
+    }
+    count--;
+
+    const items = document.querySelectorAll('.galerie-item');
+    const textItems = document.querySelectorAll('.galerie-text');
+
+    for (let i = 0; i < items.length; i++) {
+
+        if (i == count) {
+            items[i].style.flex = '4';
+            textItems[i].style.opacity = '1';
+
+            for (let j = 0; j < textItems.length; j++) {
+                if (j !== i) {
+                    textItems[j].style.opacity = '0';
+                }
+            }
+
+            if (count == 1) {
+                items[3].style.flex = '1';
+                items[2].style.flex = '2';
+                items[1].style.flex = '2.7';
+            } else if (count == 2) {
+                items[2].style.flex = '2.7';
+                items[3].style.flex = '2';
+                items[0].style.flex = '1';
+            } else if (count == 3) {
+                items[1].style.flex = '2';
+                items[3].style.flex = '2.7';
+                items[0].style.flex = '1';
+            } else if (count == 4) {
+                items[1].style.flex = '2';
+                items[2].style.flex = '2.7';
+                items[0].style.flex = '1';
+            }
+        }
+    }
+
+
+
+}
+
+slide()
