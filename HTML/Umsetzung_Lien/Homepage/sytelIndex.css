@@ -61,8 +61,8 @@ header nav ul li a {
     flex: 1;
     color: white;
     position: absolute;
-    top: 85%;
-    left: 45%;
+    top: 90%;
+    left: 42%;
     background-color: #ffffff57;
     width: 14vw;
     padding: 1vw;
@@ -84,7 +84,6 @@ header nav ul li a {
 #allDept {
     display: flex;
     width: 100vw;
-    margin-top: -2vw;
 }
 
 .dept {
@@ -98,14 +97,15 @@ header nav ul li a {
 
 .dept img {
     width: 100%;
-    height: 100%;
+    height: 110vh;
     object-fit: cover;
     cursor: pointer;
     opacity: 0.8;
-
 }
+
 .dept .bgImg{
     filter: blur(1.2px);
+    filter: brightness(60%);
 }
 .dept:hover {
     flex: 3;
@@ -114,6 +114,7 @@ header nav ul li a {
 
 .dept img:hover {
     transition: all 1s ease-in-out;
+
 }
 
 .dept:hover img {
@@ -123,7 +124,7 @@ header nav ul li a {
 
 .dept:hover .bgImg {
     filter: blur(2px);
-
+    filter: brightness(80%);
 }
 
 .deptText {
@@ -137,15 +138,19 @@ header nav ul li a {
     font-size: 2em;
     font-weight: bold;
     font-family: manrope;
+    font-weight: bold;
     color: white;
     transition: transform 1s ease-in-out, flex-direction 1.5s ease-in-out;
+}
+.deptText .span{
+    letter-spacing: 1px;
 }
 
 .dept:hover .deptText {
     flex-direction: row;
     text-align: center;
     transform: translateY(500%);
-
+    color:#ababab;
 }
 
 .effect3d {
@@ -196,7 +201,7 @@ header nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 40px;
+    margin-top: 75px;
 }
 
 .header {
@@ -224,11 +229,14 @@ header nav ul li a {
     display: grid;
     grid-template-columns: auto auto auto;
     margin-top: 2vw;
+    z-index: 1000;
 }
 
 #stats div {
     justify-content: center;
     text-align: center;
+    z-index: 1000;
+
 }
 
 .number {
@@ -251,6 +259,13 @@ p {
     padding: 50px;
     gap: 30px;
 }
+#statsTri1{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 100vw;
+    z-index: -10;
+}
 
 #girls {
     width: 100%;
@@ -264,7 +279,7 @@ p {
 #girls #caro {
     width: 25vw;
     margin-left: 10vw;
-    top: 150vw;
+    top: 185vw;
     position: absolute;
 }
 
@@ -278,14 +293,14 @@ p {
 #girls #scaleGirl {
     width: 18vw;
     margin-left: 24vw;
-    top: 165vw;
+    top: 200vw;
     position: absolute;
 }
 
 #girlsL {
     width: 25vw;
     padding: 2rem;
-    top: 157vw;
+    top: 190vw;
     margin-left: 53vw;
     position: absolute;
 }
@@ -711,6 +726,7 @@ footer {
 }
 
 #container1 {
+    margin-top: -2vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -723,6 +739,7 @@ footer {
     text-align: center;
     display: flex;
     justify-content: center;
+    z-index: 0;
 
 }
 #headPro{
@@ -731,10 +748,16 @@ footer {
     justify-content: center;
     display: flex;
 }
-.title select{
-    margin-top: 45px;
+.titleD select{
+    margin-top: 35px;
     margin-left: 15px;
-    height: 20px;
+    height: 30px;
+    width: 80px;
+    background-color: #021422;
+    border-radius: 20px;
+    border: white 1px solid;
+    color: white;
+    text-align: center;
 }
 
 
@@ -744,6 +767,7 @@ footer {
     align-items: flex-end;
     height: 200px;
     margin: 30px 0;
+    z-index: 0;
 }
 
 .bar {
@@ -844,7 +868,7 @@ footer {
     color: white;
     background: #0066cc;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     font-size: 1em;
     margin-top: 2vh;
 
@@ -870,16 +894,17 @@ footer {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    z-index: 1;
+    border-radius: 20px;
 }
 
 button {
     border: none;
     background: none;
     font-size: 4.5em;
+    margin-left: 4vw;
+    cursor: pointer;
+    z-index: 10;
 }
-
 #galerie-container {
     width: 90vw;
     margin: auto;
@@ -893,15 +918,13 @@ button {
     font-size: 2em;
     font-weight: bold;
     color: white;
-    /* Weißer Text für besseren Kontrast */
     position: absolute;
     top: 80%;
-    /* Positionierung in der Mitte des Eltern-Elements */
-    left: 25%;
-    /* Horizontale Mitte */
+    left: 35%;
     transform: translate(-50%, -50%);
-    /* Zentrieren des Textes */
     z-index: 2;
-    /* Stellt sicher, dass der Text über dem Bild liegt */
     opacity: 0;
+}
+.title1{
+    color: white;
 }
