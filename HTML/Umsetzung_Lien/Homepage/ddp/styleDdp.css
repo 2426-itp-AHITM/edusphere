@@ -658,13 +658,12 @@ footer {
 .main-content img {
     width: 80%;
     transition: all 0.2s;
-    height: 70vh;
+    height: 40vh;
 }
 .main-content img:hover{
     transform: scale(1.03);
     transition: all 0.2s;
     filter: brightness(50%);
-    cursor: pointer;
 }
 
 .overlay {
