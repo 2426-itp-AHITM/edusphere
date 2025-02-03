@@ -221,3 +221,58 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', moveCardToBack);
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    let index = 0; // Start bei erstem Bild
+    const items = document.querySelectorAll(".galerie-item");
+
+    function updateGallery() {
+        items.forEach((item, i) => {
+            item.classList.toggle("active", i === index);
+        });
+    }
+
+    document.getElementById("next").addEventListener("click", function () {
+        index = (index - 1) % items.length; // Nächstes Bild
+        updateGallery();
+    });
+
+    document.getElementById("prev").addEventListener("click", function () {
+        index = (index + 1 + items.length) % items.length; // Vorheriges Bild
+        updateGallery();
+    });
+
+    updateGallery(); // Setzt das erste Bild als aktiv
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const galerieContainer = document.getElementById("galerie");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    galerieContainer.classList.add("visible");
+                    observer.unobserve(galerieContainer); // Stoppt Beobachtung nach erster Aktivierung
+                }
+            });
+        },
+        { threshold: 0.6 } // Wenn 20% sichtbar sind, startet die Animation
+    );
+
+    observer.observe(galerieContainer);
+});
+// Intersection Observer für die Animation
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Wenn der Abschnitt sichtbar wird, Animation starten
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target); // Beobachtung beenden, nachdem die Animation gestartet wurde
+      }
+    });
+  }, { threshold: 0.8 }); // Der Abschnitt ist sichtbar, wenn 50% davon im Viewport sind
+  
+  // Ziel-Element beobachten
+  const abschlussSection = document.querySelector('#txt');
+  observer.observe(abschlussSection);
+  

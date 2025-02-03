@@ -90,6 +90,8 @@ header nav ul li a {
     line-height: 1.6;
 }
 
+
+
 .hero-section .buttons {
     display: flex;
     gap: 10px;
@@ -103,8 +105,13 @@ header nav ul li a {
     font-size: 1.2rem;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    opacity: 0;
+    animation: slide-right 1s forwards;
 }
-
+.button:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
 .hero-section .button:hover {
     background-color: #0066cc;
 }
@@ -112,17 +119,37 @@ header nav ul li a {
 a {
     text-decoration: none;
 }
-
-.abschluss-container {
+@keyframes slide-right {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  
+.abschluss-container{
     max-width: 100vw;
     text-align: left;
     background: rgb(26, 71, 114);
     background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
     padding: 5vw;
-    color: white;
-    margin-top: -2vw;
-    font-family: manrope;
+    margin-top: -1.7vw;
+    
 }
+#txt{
+    color: white;
+    font-family: manrope;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.8s ease-out;
+}
+#txt.animate {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 
 .abschluss-container h1 {
     font-size: 2.5em;
@@ -259,15 +286,21 @@ a {
     width: 90vw;
     margin: auto;
     gap: 1vw;
-
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
+#galerie.visible {
+    opacity: 1;
+    transform: scale(1);
+}
 .galerie-item {
     flex: 1;
-    height: 40vh;
+    height: 50vh;
     position: relative;
     overflow: hidden;
     transition: flex 0.5s ease;
+    cursor: pointer;
 }
 
 .galerie-item>img {
@@ -276,14 +309,59 @@ a {
     object-fit: cover;
     border-radius: 20px;
 }
-
+.galerie-item>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.galerie-item.active {
+    transform: scale(1.02);
+    opacity: 1;
+}
 button {
     border: none;
     background: none;
     font-size: 4.5em;
     margin-left: 4vw;
     cursor: pointer;
+    animation: pulse 1.5s infinite ease-in-out;
 }
+#galerie-container {
+    width: 90vw;
+    margin: auto;
+    padding: 5vw;
+    margin-top: -5vw;
+    color: #00264d;
+}
+
+.galerie-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+}
+.title1{
+    font-size: 2vw;
+    text-align: center;
+    color: #00264d;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
 #wrapper {
     font-family: Arial, sans-serif;
@@ -670,13 +748,16 @@ footer {
     width: 80%;
     transition: all 0.2s;
     height: 40vh;
-}
+    filter: brightness(50%);
 
-.main-content img:hover {
+}
+.main-content img:hover{
     transform: scale(1.03);
     transition: all 0.2s;
-    filter: brightness(50%);
+    filter: brightness(30%);
+    cursor: pointer;
 }
+
 
 .overlay {
     position: absolute;
@@ -782,12 +863,13 @@ footer {
 
 .stunden-container {
     display: flex;
-    background-color: #4890E2;
+    background-color: #ffffff;
     width: 98%;
     height: 7vh;
     font-size: 10px;
     padding: 1%;
     color: black;
+    cursor: pointer;
 }
 
 #output-box {
@@ -830,6 +912,9 @@ table {
 
 #container1 table {
     color: white;
+    background-color: #5f626542;
+    padding: 1vw;
+    border-radius: 20px;
 }
 
 
@@ -878,8 +963,9 @@ table {
 .insight-container>div>p {
     position: absolute;
     top: 85%;
-    color: white;
-    left: 5%;
+    color: rgba(255, 255, 255, 0.491);
+    left: 35%;
+    font-weight: bold;
 }
 
 .insight-container div img:hover {
@@ -891,12 +977,16 @@ table {
     margin-top: 10vh;
     margin-bottom: 5vh;
 }
-
+#insightHead h1{
+    color: #000A2D;
+    font-size: 3vw;
+    font-weight: bold;
+}
 
 /*projekte*/
 
 #container5 {
-    background: rgb(26, 71, 114);
+    background: rgb(175, 186, 196);
     background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
     padding: 5vh;
     position: relative;
