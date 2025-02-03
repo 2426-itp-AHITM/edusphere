@@ -147,3 +147,117 @@ function slideback() {
 }
 
 slide()
+document.addEventListener("DOMContentLoaded", function () {
+    const stats = document.querySelector(".info");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    stats.classList.add("animate");
+                    observer.unobserve(entry.target); // Stoppt weiteres Beobachten
+                }
+            });
+        },
+        { threshold: 0.6 } // Startet, wenn 20% des Elements sichtbar sind
+    );
+
+    observer.observe(stats);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const caroImg = document.querySelector("#caro");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    caroImg.classList.add("animate");
+                    observer.unobserve(entry.target); // Stoppt weiteres Beobachten
+                }
+            });
+        },
+        { threshold: 0.7 } // Animation startet, wenn 20% sichtbar sind
+    );
+
+    observer.observe(caroImg);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scaleGirlImg = document.querySelector("#scaleGirl");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    scaleGirlImg.classList.add("animate");
+                    observer.unobserve(entry.target); // Stoppt weiteres Beobachten
+                }
+            });
+        },
+        { threshold: 0.9 } // Animation startet, wenn 20% sichtbar sind
+    );
+
+    observer.observe(scaleGirlImg);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const absolventen = document.querySelectorAll(".absolventen");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target); // Stoppt Beobachtung nach erster Aktivierung
+                }
+            });
+        },
+        { threshold: 1 } // Animation startet, wenn 20% sichtbar sind
+    );
+
+    absolventen.forEach((element) => {
+        observer.observe(element);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    let index = 0; // Start bei erstem Bild
+    const items = document.querySelectorAll(".galerie-item");
+
+    function updateGallery() {
+        items.forEach((item, i) => {
+            item.classList.toggle("active", i === index);
+        });
+    }
+
+    document.getElementById("next").addEventListener("click", function () {
+        index = (index - 1) % items.length; // Nächstes Bild
+        updateGallery();
+    });
+
+    document.getElementById("prev").addEventListener("click", function () {
+        index = (index + 1 + items.length) % items.length; // Vorheriges Bild
+        updateGallery();
+    });
+
+    updateGallery(); // Setzt das erste Bild als aktiv
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const galerieContainer = document.getElementById("galerie");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    galerieContainer.classList.add("visible");
+                    observer.unobserve(galerieContainer); // Stoppt Beobachtung nach erster Aktivierung
+                }
+            });
+        },
+        { threshold: 0.6 } // Wenn 20% sichtbar sind, startet die Animation
+    );
+
+    observer.observe(galerieContainer);
+});
