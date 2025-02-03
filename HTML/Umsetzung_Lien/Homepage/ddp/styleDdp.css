@@ -769,11 +769,12 @@ footer {
 
 .stunden-container {
     display: flex;
-    background-color: aquamarine;
+    background-color: #4890E2;
     width: 98%;
     height: 7vh;
     font-size: 10px;
     padding: 1%;
+    color: black;
 }
 
 #output-box {
@@ -813,3 +814,121 @@ table{
     width: 100%;
     margin: auto;
 }
+
+#container1 table{
+    color: white;
+}
+
+
+/* insights*/
+
+#container4{
+    width: 90vw;
+    display: flex;
+    margin: auto;
+    height: 60vh;
+}
+
+.insight-container{
+    width: 20vw;
+    margin: auto;
+    margin-top: 0%;
+    position: relative;
+    cursor: pointer;
+    height: auto;
+    border-radius: 20px;
+}
+
+.insight-container div img{
+    width: 90%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    border-radius: 20px;
+}
+
+.insight-container:nth-child(1) div img{
+    height: 50vh;
+}
+
+.insight-container:nth-child(2) div img{
+    height: 35vh;
+}
+.insight-container:nth-child(3) div img{
+    height: 50vh;
+}
+.insight-container:nth-child(4) div img{
+    height: 35vh;
+}
+.insight-container> div >p{
+    position: absolute;
+    top: 85%;
+    color: white;
+    left: 5%;
+}
+
+.insight-container div img:hover{
+    height: 60vh;
+}
+
+#insightHead{
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+
+/*projekte*/
+
+#container5{
+    background: rgb(26, 71, 114);
+    background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
+    padding: 5vh;
+    position: relative;
+    height: 70vh;
+}
+
+.project-container{
+    width: 55vw;
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5vh;
+    position: absolute;
+    box-shadow: 20px 30px rgba(0, 0, 0, 0.178);
+}
+
+.project-info{
+    display: flex;
+}
+
+.project-info > p{
+    border: solid gray 1px;
+    border-radius: 20px;
+    padding: 5px;
+    color: rgb(0, 102, 255);
+    margin: 5px;
+
+}
+
+iframe{
+    margin-right: 5vw;
+}
+
+.project-container:nth-child(1){
+    left: 15vw;
+    top: 15vh;
+    background-color: rgb(204, 204, 204);
+}
+
+
+.project-container:nth-child(2){
+    left: 20vw;
+    top: 20vh;
+    background-color: rgb(238, 238, 238);
+}
+
+.project-container:nth-child(3){
+    left: 25vw;
+    top: 25vh;
+}
+
