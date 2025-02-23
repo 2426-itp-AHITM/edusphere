@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infoboard</title>
+    <title>Aktuelle Themen</title>
     <link rel="icon" type="image/png" href="./images/htl-logo.png">
+    <link rel="stylesheet" href="./style/iframe.css">
 </head>
 <body>
-    <iframe src="" width="100vw" height="100vh" style="background-color: black;"></iframe>
-    <iframe src="" width="100vw" height="100vh" style="background-color: green;"></iframe>
+    <div class="container">
+        <iframe src="./themen/ilb.html" class="active"></iframe>
+        <iframe src="./themen/mentalHealthTeam.html"></iframe>
+    </div>
+
+    <script>
+        let iframes = document.querySelectorAll("iframe");
+        let index = 0;
+
+        function switchIframes() {
+            iframes[index].classList.remove("active");
+            index = (index + 1) % iframes.length;
+            iframes[index].classList.add("active");
+        }
+
+        setInterval(switchIframes, 5000);
+    </script>
 </body>
 </html>

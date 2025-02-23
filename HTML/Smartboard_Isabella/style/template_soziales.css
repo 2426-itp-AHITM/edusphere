@@ -1,0 +1,75 @@
+/*** Überschrift ***/
+h1 {
+    margin-top: 5%;
+}
+
+/*** Logo Links oben ***/
+#logoTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1.3%;
+    height: 5vh;
+}
+
+/*** generelle Einstellungen ***/
+#content {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 100%;
+}
+
+/*** Kontent ***/
+#container1 {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    height: 50vh;
+    margin-bottom: 7%;
+}
+
+/*** Kontent Main Image ***/
+#img {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#img img {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 2vh;
+}
+
+/*** Kontent QR Code + Text ***/
+#text {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    
+}
+
+#text p {
+    font-size: 3vh;
+}
+
+#qrCode {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qrCode img {
+    max-width: 20vh;
+    max-height: 20vh;
+}
+
+/*** Zusatz Infos ***/
+#container2 p {
+    font-size: 1.95vh;
+}
