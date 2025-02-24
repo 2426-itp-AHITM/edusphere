@@ -80,14 +80,13 @@ main{
     width: 10vw;
     position: absolute;
     left: 2%;
-    top: 5%;
+    top: 20%;
 }
   
 .stat1 {
     text-align: center;
     flex: 1;
     color: white;
-
     background-color: #ffffff9a;
     width: 14vw;
     padding: 1vw;
@@ -95,7 +94,6 @@ main{
     z-index: 10;
     animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
     transition: all 0.3s;
-
 }
 .stat1:hover{
     transition: all 0.3s;
@@ -108,7 +106,7 @@ main{
 }
 
 .stat1 p {
-    font-size: 1.57rem;
+    font-size: 1.4rem;
     color: #000000;
 }
 
@@ -375,7 +373,7 @@ p {
 #girlsL {
     width: 25vw;
     padding: 2rem;
-    top: 45vh;
+    top: 40vh;
     margin-left: 53vw;
     position: absolute;
 }
@@ -806,7 +804,7 @@ footer {
     color: white;
     height: 80vh;
     width: 100vw;
-    margin-top: -7vh;
+    margin-top: -7.5vh;
 }
 
 #container1 {
@@ -1091,7 +1089,7 @@ button {
 
 #headerU{
     left: 15vw;
-    top: 35vh;
+    top: 40vh;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     font-size: 8em;
     color: white;
@@ -1121,7 +1119,6 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     overflow: hidden;
 }
 
@@ -1139,14 +1136,14 @@ button {
     font-weight: bold;
     color: #000A2D;
     line-height: 0.9;
-    margin-right: 37vw;
+    margin-right: 36vw;
     margin-top: -2vw;
     animation: pulse 1.5s infinite;
 }
 
 .text #htl {
-    font-size: 1.3vw;
-    margin-bottom: -0.2vw;
+    font-size: 1.5vw;
+    margin-bottom: -0.1vw;
     color: #000A2D;
 }
 
@@ -1172,8 +1169,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20vw;
-    margin-top: -2vw;
+    gap: 10vw;
+    margin-top: -2.5vw;
+    margin-left: -2vw;
 }
 
 .card {
@@ -1252,7 +1250,7 @@ button {
 #Co3 {
     position: absolute;
     z-index: 0;
-    left: 20%;
+    left: 30%;
     width: 70vw;
     opacity: 0.8;
 }
