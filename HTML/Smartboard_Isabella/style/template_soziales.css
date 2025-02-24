@@ -73,3 +73,7 @@ h1 {
 #container2 p {
     font-size: 1.95vh;
 }
+#linkGross {
+    font-size: 5vh!important; 
+    text-align: left;
+}

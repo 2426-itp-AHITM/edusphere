@@ -1,0 +1,52 @@
+/*** generelle Einstellungen ***/
+#container {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 100%;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 80%;
+}
+
+/*** Kontent QR Code ***/
+#qrCode {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#qrCode img {
+    max-width: 20vh;
+    max-height: 20vh;
+}
+
+#qrImage {
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 2%;
+}
+
+/*** App Icon unter QR Code ***/
+#appName {
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+}
+
+#appName img {
+    align-self: center;
+    width: 5vh;
+    height: 5vh;
+}
+
+#appName p {
+    margin: 0;
+    margin-left: 4%;
+    align-self: center;
+    font-size: 3vh;
+}
