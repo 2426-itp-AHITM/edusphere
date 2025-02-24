@@ -311,6 +311,7 @@ p {
 #girls {
     width: 100%;
     font-family: manrope;
+    position: relative;
 }
 
 #girls img {
@@ -330,7 +331,7 @@ p {
 #girls #caro {
     width: 25vw;
     margin-left: 10vw;
-    top: 176vw;
+    top: 25vh;
     position: absolute;
     opacity: 0;
     transform: translateZ(0);
@@ -361,7 +362,7 @@ p {
 #girls #scaleGirl {
     width: 18vw;
     margin-left: 24vw;
-    top:196vw;
+    top:58vh;
     position: absolute;
     opacity: 0;
     transform: translateZ(0);
@@ -374,7 +375,7 @@ p {
 #girlsL {
     width: 25vw;
     padding: 2rem;
-    top: 190vw;
+    top: 45vh;
     margin-left: 53vw;
     position: absolute;
 }
@@ -803,13 +804,13 @@ footer {
 .containerD {
     background: linear-gradient(to bottom, #021422, #04243d);
     color: white;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     margin-top: -7vh;
 }
 
 #container1 {
-    margin-top: -2vw;
+    margin-top: -7vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -845,6 +846,7 @@ footer {
 }
 
 
+/* Balken-Spezifische Styles */
 .stats {
     display: flex;
     justify-content: space-around;
@@ -861,9 +863,10 @@ footer {
     position: relative;
     margin: 2vw;
     height: 0; /* Startet von 0 */
-    animation: growBar 1.5s ease-out forwards; 
+    transition: height 1.5s ease-out; /* Animation für die Höhe */
 }
 
+/* Text in den Balken */
 .bar span {
     position: absolute;
     bottom: -60px;
@@ -873,18 +876,26 @@ footer {
     color: #fff;
 }
 
+/* Wenn der Balken die "animate"-Klasse bekommt, wird die Höhe animiert */
+.bar.animate {
+    height: 200px; /* Höhe, die du für die Balken festlegst */
+}
+
 /* Balken-spezifische Animationen */
-.bar1 {
-    animation: growBar1 1.5s ease-out forwards;
+.bar1.animate {
+    height: 150px; /* Beispielhöhe */
 }
-.bar2 {
-    animation: growBar2 1.5s ease-out forwards;
+
+.bar2.animate {
+    height: 180px; /* Beispielhöhe */
 }
-.bar3 {
-    animation: growBar3 1.5s ease-out forwards;
+
+.bar3.animate {
+    height: 120px; /* Beispielhöhe */
 }
-.bar4 {
-    animation: growBar4 1.5s ease-out forwards;
+
+.bar4.animate {
+    height: 100px; /* Beispielhöhe */
 }
 
 /* Individuelle Keyframes für jeden Balken */

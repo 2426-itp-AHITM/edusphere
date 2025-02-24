@@ -1,50 +1,24 @@
-function restartAnimation() {
-  // Alle Bars auswählen
-  const bars = document.querySelectorAll('.bar');
-
-  // Für jede Bar die Animation zurücksetzen
-  bars.forEach((bar) => {
-      // Animation entfernen, um sie neu zu starten
-      bar.style.transition = 'none';
-      bar.style.height = '0'; // Zurücksetzen auf Startwert
-
-      // Erzwungene Neuzeichnung, damit die Animation neu starten kann
-      void bar.offsetHeight;
-
-      // Animation wieder aktivieren
-      bar.style.transition = 'height 1.5s ease-out';
-
-      // Originalhöhe zurücksetzen (z.B. 150px, 50px etc.)
-      const originalHeight = window.getComputedStyle(bar).getPropertyValue('--original-height') || bar.style.height;
-      bar.style.height = originalHeight;
-  });
-}
-
-// Setze beim Laden des Dokuments die ursprünglichen Höhen als Custom Properties
-document.querySelectorAll('.bar').forEach((bar) => {
-  bar.style.setProperty('--original-height', bar.style.height);
+// Erstelle den IntersectionObserver
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        // Überprüfe, ob der Container zu mindestens 90% sichtbar ist
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+            // Wenn der Container zu 90% sichtbar ist, starte die Animation der Balken
+            const bars = entry.target.querySelectorAll('.bar');
+            bars.forEach((bar, index) => {
+                // Füge die "animate"-Klasse zu jedem Balken hinzu, um die Animation zu starten
+                bar.classList.add('animate');
+            });
+            observer.unobserve(entry.target); // Stoppe die Beobachtung nach der ersten Aktivierung
+        }
+    });
+}, {
+    threshold: 0.6 // Der Container muss zu mindestens 90% sichtbar sein
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Dropdown-Menü überwachen
-  const yearDropdown = document.getElementById("year");
-
-  yearDropdown.addEventListener("change", () => {
-      // Alle Balken zurücksetzen
-      const bars = document.querySelectorAll(".bar");
-      bars.forEach(bar => {
-          // Animation entfernen
-          bar.style.animation = "none";
-          
-          // Reflow erzwingen, um die Animation zurückzusetzen
-          bar.offsetHeight; 
-          
-          // Animation wieder hinzufügen
-          bar.style.animation = ""; 
-      });
-  });
-});
-
+// Füge den Observer für den containerD hinzu
+const containerD = document.querySelector('.containerD');
+observer.observe(containerD);
 
 
 
