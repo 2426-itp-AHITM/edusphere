@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +8,46 @@
     <link rel="stylesheet" href="sytelIndex.css">
     <script src="./scriptIndex.js" defer></script>
 </head>
+
 <body>
-    <video autoplay muted loop id="iframe"><source src="./img/Drone.mp4"></video>
+
     <header>
         <nav>
-          <ul>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Clubs</a></li>
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">Bewerber:innen</a></li>
-            <li><a href="#">Ausbildungen</a></li>
-            <li><a href="#">Kontakt</a></li>
-          </ul>
+            <ul>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Clubs</a></li>
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#">Bewerber:innen</a></li>
+                <li><a href="#">Ausbildungen</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
         </nav>
-      </header>
-      
-      <main>
+    </header>
+
+    <main>
         <div class="school-container">
             <h1 id="headerH" class="tracking-in-expand">HTL </h1>
             <h1 class="tracking-in-expand" id="headerU">LEONDING</h1>
+            <video autoplay muted loop id="iframe">
+                <source src="./img/Drone.mp4">
+            </video>
         </div>
         <div class="stat1">
             <img src="./img/brief.png" alt="" srcset="">
             <p>Bewerben</p>
-          </div>
         </div>
-      </main>
-    
+    </main>
 
-<div class="containerD">
-        <div class="titleD"><h1>HTL LEONDING STATISTIK </h1>
+
+    <div class="containerD">
+        <div class="titleD">
+            <h1>HTL LEONDING STATISTIK </h1>
             <select id="year" onchange="restartAnimation()">
-            <option value="2000">2024</option>
-            <option value="2001">2023</option>
-            <option value="2002">2022</option>
-        </select></div>
+                <option value="2000">2024</option>
+                <option value="2001">2023</option>
+                <option value="2002">2022</option>
+            </select>
+        </div>
         <div id="container1">
 
             <div class="stats">
@@ -70,7 +76,7 @@
                         <a href="#">mehr lesen</a>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
@@ -79,137 +85,164 @@
 
     <div id="allDept">
         <div class="dept">
-            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Informatik_Kopie-min.jpg" alt="">
-        
-            <a href="./ddp/ddp.html"><h2 class="deptText">
-                <span>I</span>
-                <span>N</span>
-                <span>F</span>
-                <span>O</span>
-                <span>R</span>
-                <span>M</span>
-                <span>A</span>
-                <span>T</span>
-                <span>I</span>
-                <span>K</span>
-              </h2></a>
-        </div>
-        <div class="dept">
-            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
-            <a href="./ddp/ddp.html"><h2 class="deptText">
-                <span>M</span>
-                <span>E</span>
-                <span>D</span>
-                <span>I</span>
-                <span>E</span>
-                <span>N</span>
-                <span>T</span>
-                <span>E</span>
-                <span>C</span>
-                <span>H</span>
-                <span>N</span>
-                <span>I</span>
-                <span>K</span>
-              </h2></a>
-        </div>
-        <div class="dept">
-            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medizintechnik Kopie-min.jpg" alt="">
-            <a href="./ddp/ddp.html"><h2 class="deptText">
-                <span>M</span>
-                <span>E</span>
-                <span>D</span>
-                <span>I</span>
-                <span>Z</span>
-                <span>I</span>
-                <span>N</span>
-                <span>T</span>
-                <span>E</span>
-                <span>C</span>
-                <span>H</span>
-                <span>N</span>
-                <span>I</span>
-                <span>K</span>
-              </h2></a>
-        </div>
-        <div class="dept">
-            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Elektronik_Kopie-min.jpg" alt="">
-            <a href="./ddp/ddp.html"><h2 class="deptText">
-                <span>E</span>
-                <span>L</span>
-                <span>E</span>
-                <span>K</span>
-                <span>T</span>
-                <span>R</span>
-                <span>O</span>
-                <span>N</span>
-                <span>I</span>
-                <span>K</span>
-              </h2></a>
-        </div>
-        <div class="dept">
-            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
-            <a href="./ddp/ddp.html"><h2 class="deptText">
-                <span>C</span>
-                <span>S</span>
-                <span>I</span>
+            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Informatik_Kopie-min.jpg"
+                alt="">
 
-              </h2></a>
+            <a href="./ddp/ddp.html">
+                <h2 class="deptText">
+                    <span>I</span>
+                    <span>N</span>
+                    <span>F</span>
+                    <span>O</span>
+                    <span>R</span>
+                    <span>M</span>
+                    <span>A</span>
+                    <span>T</span>
+                    <span>I</span>
+                    <span>K</span>
+                </h2>
+            </a>
         </div>
         <div class="dept">
-            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
-            <a href="./ddp/ddp.html"><h2 class="deptText">
-                <span>D</span>
-                <span>D</span>
-                <span>P</span>
-              </h2></a>
+            <img class="bgImg"
+                src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
+            <a href="./ddp/ddp.html">
+                <h2 class="deptText">
+                    <span>M</span>
+                    <span>E</span>
+                    <span>D</span>
+                    <span>I</span>
+                    <span>E</span>
+                    <span>N</span>
+                    <span>T</span>
+                    <span>E</span>
+                    <span>C</span>
+                    <span>H</span>
+                    <span>N</span>
+                    <span>I</span>
+                    <span>K</span>
+                </h2>
+            </a>
         </div>
         <div class="dept">
-            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
-            <a href="./ddp/ddp.html"><h2 class="deptText">
-                <span>F</span>
-                <span>A</span>
-                <span>C</span>
-                <span>H</span>
-                <span>S</span>
-                <span>C</span>
-                <span>H</span>
-                <span>U</span>
-                <span>L</span>
-                <span>E</span>
-              </h2></a>
+            <img class="bgImg"
+                src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medizintechnik Kopie-min.jpg" alt="">
+            <a href="./ddp/ddp.html">
+                <h2 class="deptText">
+                    <span>M</span>
+                    <span>E</span>
+                    <span>D</span>
+                    <span>I</span>
+                    <span>Z</span>
+                    <span>I</span>
+                    <span>N</span>
+                    <span>T</span>
+                    <span>E</span>
+                    <span>C</span>
+                    <span>H</span>
+                    <span>N</span>
+                    <span>I</span>
+                    <span>K</span>
+                </h2>
+            </a>
         </div>
         <div class="dept">
-            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
-            <a href="./ddp/ddp.html"><h2 class="deptText">
-                <span>K</span>
-                <span>O</span>
-                <span>L</span>
-                <span>L</span>
-                <span>L</span>
-                <span>E</span>
-                <span>G</span>
-                <span>-</span>
-                <span>I</span>
-                <span>T</span>
-              </h2></a>
+            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Elektronik_Kopie-min.jpg"
+                alt="">
+            <a href="./ddp/ddp.html">
+                <h2 class="deptText">
+                    <span>E</span>
+                    <span>L</span>
+                    <span>E</span>
+                    <span>K</span>
+                    <span>T</span>
+                    <span>R</span>
+                    <span>O</span>
+                    <span>N</span>
+                    <span>I</span>
+                    <span>K</span>
+                </h2>
+            </a>
         </div>
         <div class="dept">
-            <img class="bgImg" src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
-            <a href="./ddp/ddp.html"><h2 class="deptText">
-                <span>K</span>
-                <span>O</span>
-                <span>L</span>
-                <span>L</span>
-                <span>L</span>
-                <span>E</span>
-                <span>G</span>
-                <span>-</span>
-                <span>M</span>
-                <span>E</span>
-                <span>D</span>
-              </h2></a>
+            <img class="bgImg"
+                src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
+            <a href="./ddp/ddp.html">
+                <h2 class="deptText">
+                    <span>C</span>
+                    <span>S</span>
+                    <span>I</span>
+
+                </h2>
+            </a>
         </div>
-        
+        <div class="dept">
+            <img class="bgImg"
+                src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
+            <a href="./ddp/ddp.html">
+                <h2 class="deptText">
+                    <span>D</span>
+                    <span>D</span>
+                    <span>P</span>
+                </h2>
+            </a>
+        </div>
+        <div class="dept">
+            <img class="bgImg"
+                src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
+            <a href="./ddp/ddp.html">
+                <h2 class="deptText">
+                    <span>F</span>
+                    <span>A</span>
+                    <span>C</span>
+                    <span>H</span>
+                    <span>S</span>
+                    <span>C</span>
+                    <span>H</span>
+                    <span>U</span>
+                    <span>L</span>
+                    <span>E</span>
+                </h2>
+            </a>
+        </div>
+        <div class="dept">
+            <img class="bgImg"
+                src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
+            <a href="./ddp/ddp.html">
+                <h2 class="deptText">
+                    <span>K</span>
+                    <span>O</span>
+                    <span>L</span>
+                    <span>L</span>
+                    <span>L</span>
+                    <span>E</span>
+                    <span>G</span>
+                    <span>-</span>
+                    <span>I</span>
+                    <span>T</span>
+                </h2>
+            </a>
+        </div>
+        <div class="dept">
+            <img class="bgImg"
+                src="./img/RollUP_Bilder_komprimiert/RollUP_Bilder_komprimiert/Medientechnik__Kopie-min.jpg" alt="">
+            <a href="./ddp/ddp.html">
+                <h2 class="deptText">
+                    <span>K</span>
+                    <span>O</span>
+                    <span>L</span>
+                    <span>L</span>
+                    <span>L</span>
+                    <span>E</span>
+                    <span>G</span>
+                    <span>-</span>
+                    <span>M</span>
+                    <span>E</span>
+                    <span>D</span>
+                </h2>
+            </a>
+        </div>
+
     </div>
 
 
@@ -231,7 +264,7 @@
                 <div>
                     <button class="read-more">mehr lesen</button>
                 </div>
-            </div>           
+            </div>
         </div>
     </div>
 
@@ -266,10 +299,10 @@
             <p class="grey-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
                 natoque penatibus et magnis dis parturient.</p>
-                <div id="pc-container">
-                    <img src="./img/pc.png" alt="">
-                </div>
-           
+            <div id="pc-container">
+                <img src="./img/pc.png" alt="">
+            </div>
+
         </div>
         <div id="container-2">
             <div class="absolventen">
@@ -281,7 +314,7 @@
                     <p class="grey-p">Marketing Manager</p>
                 </div>
                 <img class="gf" src="./img/Frame.png" alt="">
- 
+
                 <img src="./img/thomas.png" alt="">
             </div>
             <div class="absolventen">
@@ -293,72 +326,73 @@
                     <p class="grey-p">Company CEO</p>
                 </div>
                 <img class="gf" src="./img/Frame.png" alt="">
- 
+
                 <img src="./img/absolventin.png" alt="">
             </div>
         </div>
         <img id="dr" src="./img/Component 3.png" alt="">
- 
+
     </div>
 
 
     <footer>
         <div class="sponsors">
-          <h4>Sponsoren</h4>
-          <div class="sponsor-logos">
-            <img src="./img/image 15.png" alt="IT PRO">
-            <img src="./img/image 16.png" alt="Linz AG">
-            <img src="./img/image 17.png" alt="Fabasoft">
-            <img src="./img/image 18.png" alt="Primetals Technologies">
-          </div>
+            <h4>Sponsoren</h4>
+            <div class="sponsor-logos">
+                <img src="./img/image 15.png" alt="IT PRO">
+                <img src="./img/image 16.png" alt="Linz AG">
+                <img src="./img/image 17.png" alt="Fabasoft">
+                <img src="./img/image 18.png" alt="Primetals Technologies">
+            </div>
         </div>
-      
+
         <div class="main-content">
-          <img src="./img/hallo.jpg" alt="Anmeldung für die Schule">
-          <div class="overlay">
-            <h2>Anmeldung für die Schule</h2>
-          </div>
+            <img src="./img/hallo.jpg" alt="Anmeldung für die Schule">
+            <div class="overlay">
+                <h2>Anmeldung für die Schule</h2>
+            </div>
         </div>
-      
+
         <div class="footer-grid">
             <div class="footer-section">
-              <h4>HTL Leonding</h4>
-              <p>Limesstraße 12-14 4060 Leonding</p>
-              <p>Tel.: (0732) 67 33 68-0</p>
-              <p>E-mail: office@htl-leonding.ac.at</p>
-              <p>Schulkennzahl: 410427</p>
+                <h4>HTL Leonding</h4>
+                <p>Limesstraße 12-14 4060 Leonding</p>
+                <p>Tel.: (0732) 67 33 68-0</p>
+                <p>E-mail: office@htl-leonding.ac.at</p>
+                <p>Schulkennzahl: 410427</p>
             </div>
-        
+
             <div class="footer-section">
-              <h4>Bildungsangebot</h4>
-              <ul>
-                <li>Informatik (SSE, CSI, DDP)</li>
-                <li>IT-Medientechnik</li>
-                <li>Biomedizin und Gesundheitstechnik</li>
-                <li>Kolleg für Berufstätige</li>
-              </ul>
+                <h4>Bildungsangebot</h4>
+                <ul>
+                    <li>Informatik (SSE, CSI, DDP)</li>
+                    <li>IT-Medientechnik</li>
+                    <li>Biomedizin und Gesundheitstechnik</li>
+                    <li>Kolleg für Berufstätige</li>
+                </ul>
             </div>
-        
+
             <div class="footer-section">
-              <h4>Kontakt</h4>
-              <ul>
-                <li><a href="#">Kontaktdaten</a></li>
-                <li><a href="#">Datenschutz</a></li>
-                <li><a href="#">Impressum</a></li>
-              </ul>
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><a href="#">Kontaktdaten</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Impressum</a></li>
+                </ul>
             </div>
-        
+
             <div class="footer-section">
-              <h4>Social</h4>
-              <ul class="social-links">
-                <li><img src="./img/icons8-youtube-play-24.png"></li>
-                <li><img src="./img/icons8-facebook-24.png"></li>
-                <li><img src="./img/icons8-instagram-24.png"></li>
-                <li><img src="./img/icons8-tiktok-24.png"></li>
-              </ul>
+                <h4>Social</h4>
+                <ul class="social-links">
+                    <li><img src="./img/icons8-youtube-play-24.png"></li>
+                    <li><img src="./img/icons8-facebook-24.png"></li>
+                    <li><img src="./img/icons8-instagram-24.png"></li>
+                    <li><img src="./img/icons8-tiktok-24.png"></li>
+                </ul>
             </div>
-          </div>
-      </footer>
-      
+        </div>
+    </footer>
+
 </body>
+
 </html>
