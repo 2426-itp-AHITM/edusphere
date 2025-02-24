@@ -23,6 +23,13 @@ header {
     font-family: manrope;
 }
 
+#headerLogo img{
+    width: 10vw;
+    position: absolute;
+    left: 2%;
+    top: 5%;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -362,149 +369,6 @@ button {
       transform: scale(1);
     }
   }
-
-#wrapper {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #eef2f3, #ffffff);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin-bottom: 2vw;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    width: 90%;
-}
-
-.text {
-    font-size: 5rem;
-    font-weight: bold;
-    color: #000A2D;
-    line-height: 0.9;
-    margin-right: 37vw;
-    margin-top: -2vw;
-    animation: pulse 1.5s infinite;
-}
-
-.text #htl {
-    font-size: 2vw;
-    margin-bottom: -0.2vw;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: scale(1.01);
-        opacity: 0.8;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.cards {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20vw;
-    margin-top: -2vw;
-}
-
-.card {
-    position: absolute;
-    width: 20vw;
-    height: 60vh;
-    background-color: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s;
-    cursor: pointer;
-    border: 10px solid whitesmoke;
-}
-
-.card:nth-child(1) {
-    transform: rotate(-25deg) translateX(-200px);
-    z-index: 1;
-}
-
-.card:nth-child(2) {
-    transform: rotate(-8deg) translateX(-100px);
-    z-index: 2;
-}
-
-.card:nth-child(3) {
-    transform: rotate(0deg);
-    z-index: 3;
-}
-
-.card:nth-child(4) {
-    transform: rotate(8deg) translateX(100px);
-    z-index: 2;
-}
-
-.card:nth-child(5) {
-    transform: rotate(25deg) translateX(200px);
-    z-index: 1;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card:hover {
-    transform: translateY(-20px) scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-}
-
-.cards:hover .card {
-    opacity: 0.7;
-    filter: blur(1px);
-}
-
-.cards:hover .card:hover {
-    opacity: 1;
-    filter: none;
-}
-
-.card .name {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-#Co3 {
-    position: absolute;
-    z-index: 0;
-    left: 20%;
-    width: 70vw;
-    opacity: 0.8;
-}
 
 .projects {
     width: 100%;
@@ -1187,4 +1051,109 @@ table {
 iframe {
     margin-right: 6vw;
     margin-top: 1vh
+}
+
+@keyframes slide-left2 {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+#content {
+    display: flex;
+    width: 90vw;
+    gap: 5vw;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    font-family: manrope;
+}
+
+.absolventen {
+    width: 70%;
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.214);
+    display: flex;
+    position: relative;
+    transition: all 0.2s;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+.absolventen.animate {
+    animation: slide-left2 0.5s ease-out forwards;
+}
+.gf {
+    position: absolute;
+    left: -5%;
+}
+
+#container-1 {
+    width: 42vw;
+
+}
+
+#container-1 h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#container-2 {
+    gap: 5vh;
+    display: grid;
+    justify-items: center;
+    z-index: 2;
+
+}
+
+.absolventen div:first-child {
+    padding: 20px;
+}
+ .absolventen:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all 0.2s;
+ }
+.grey-p {
+    color: #929292;
+    width: 90%;
+    font-weight: lighter;
+    font-size: 1.1vw;
+    font-style: italic
+}
+
+#dr {
+    position: absolute;
+    z-index: 1;
+    top: -4%;
+    left: 28%;
+}
+
+
+#pc-container {
+    position: relative;
+    width: 20vw;
+    margin-left: -2vw;
+    cursor: pointer;
+}
+
+#bg {
+    position: absolute;
+    left: 10%;
+    top: 9%;
+}
+
+#farbe {
+    position: absolute;
+    left: -10%;
+    top: -19%;
 }

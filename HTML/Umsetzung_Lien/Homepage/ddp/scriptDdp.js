@@ -293,3 +293,24 @@ const observer = new IntersectionObserver((entries, observer) => {
   const abschlussSection = document.querySelector('#txt');
   observer.observe(abschlussSection);
   
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const absolventen = document.querySelectorAll(".absolventen");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target); // Stoppt Beobachtung nach erster Aktivierung
+                }
+            });
+        },
+        { threshold: 1 } // Animation startet, wenn 20% sichtbar sind
+    );
+
+    absolventen.forEach((element) => {
+        observer.observe(element);
+    });
+});
