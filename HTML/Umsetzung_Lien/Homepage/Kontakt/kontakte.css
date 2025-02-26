@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: manrope;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -124,23 +124,168 @@ main{
 }
 
 .infoBoxes{
-    width: 90%;
+    width: 80%;
     background-color: white;
     box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
     margin: auto;
+    padding: 1vw;
+    margin-top: 2vw;
+}
+
+.infoBoxes:nth-child(1){
+    height: 36%;
+}
+
+.infoBoxes:nth-child(2){
+    height: 25%;
 }
 
 .infoBoxes > h1{
+    
+}
 
+.subButton{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    width: 7vw;
+    padding: 1vh;
+    text-align: center;
+}
+
+.hex-grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 1vw;
+    width: 90%;
+    margin: auto;
+}
+
+.hex {
+    width: 11vw;
+    height: 12vw;
+    margin: 5px;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color: #ccc;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.hex img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
+
+#beeContainer{
+    
+}
+
+
+
+#container2{
+    background: rgb(26, 71, 114);
+    background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.infoBoxes2{
+    background-color: white;
+    box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    margin-top: 2vw;
+    padding-left: 1vw;
+
+}
+
+#schulleitung{
+    width: 50%;
+}
+
+.envelope {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 50px 50px;
+    position: relative;
+    width: 200px;
+    height: 100px;
+}
+
+.triangle {
+    width: 100px;
+    height: 50px;
+    background-color: #f39c12;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.top { 
+    grid-column: span 2; 
+    transform: rotateX(180deg); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+}
+
+.left { 
+    grid-column: 1; 
+    grid-row: 2; 
+    transform: rotateY(180deg);
+}
+
+.right { 
+    grid-column: 2; 
+    grid-row: 2; 
+}
+
+.bottom {
+    grid-column: span 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    background-color: #f39c12;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
 
 
 #container3{
     background-image: url("../img/dP.png");
+    background-size: cover;
+    height: 100vh;
+    position: relative;
 }
 
+#container3 img{
+    width: 30vw;
+    margin-left: 35vw;
+    margin-top: 10vh;
+}
+
+#artztContainer{
+    width: 35vw;
+    background-color: white;
+    box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
+    position: absolute;
+    top: 45vh;
+    left: 50vw;
+    padding: 1vw;
+}
+
+#artztContainer > div {
+    display: flex;
+    gap: 2vw;
+}
 /* footer */
 
 
