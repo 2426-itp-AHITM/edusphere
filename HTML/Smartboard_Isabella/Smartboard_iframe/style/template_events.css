@@ -1,0 +1,63 @@
+/*** Kontent ***/
+#container {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 80vh;
+}
+
+#content {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*** Events ***/
+h2 {
+    font-size: 5vh;
+    letter-spacing: 0.7vh;
+    font-weight: 200;
+}
+
+#event {
+    margin-top: 0;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF9900;
+    border-radius: 2rem;
+}
+
+#eventInfos {
+    width: 100%;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5%;
+}
+
+#event img {
+    border-radius: 2rem;
+}
+
+/*** QR Code ***/
+#qrCode {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#qrCode img {
+    max-width: 30vh;
+    max-height: 30vh;
+    background-color: white;
+    padding: 1%;
+    border-radius: 1rem;
+}
+
+#qrCode p {
+    font-size: 2vh;
+}
