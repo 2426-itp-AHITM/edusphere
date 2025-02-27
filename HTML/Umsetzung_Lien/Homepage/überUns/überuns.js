@@ -25,3 +25,58 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', moveCardToBack);
     });
 });
+function handleScroll() {
+    const section = document.getElementById("animationSection");
+    const phone = document.getElementById("phone");
+    const socialIcons = document.getElementById("socialIcons");
+    const flyer = document.getElementById("flyer");
+    const sectionPosition = section.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (sectionPosition < screenHeight * 0.7) {
+        phone.classList.add("visible");
+        socialIcons.classList.add("visible");
+        flyer.classList.add("visible");
+    }
+}
+
+window.addEventListener("scroll", handleScroll);
+
+function handleScroll2() {
+    let container2 = document.querySelector('.container2');
+    let rect = container2.getBoundingClientRect();
+    let windowHeight = window.innerHeight;
+
+    if (rect.top < windowHeight * 0.6) {
+        container2.classList.add('visible');
+    }
+}
+
+document.addEventListener('scroll', handleScroll2);
+document.addEventListener('DOMContentLoaded', handleScroll2);
+
+// Funktion, die die Animation startet, wenn das Element sichtbar wird
+function startAnimation(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Wenn das Element sichtbar wird, füge die Animation hinzu
+        entry.target.style.animation = 'slide-right 2s forwards';
+        entry.target.style.opacity = '1'; // Setzt die Sichtbarkeit
+        observer.unobserve(entry.target); // Stoppt die Beobachtung nach der ersten Ausführung
+      }
+    });
+  }
+  
+  // Optionen für den Intersection Observer
+  const options = {
+    root: null, // Beobachtet den gesamten Viewport
+    threshold: 0.5 // Element muss zu mindestens 50% sichtbar sein
+  };
+  
+  // Erstelle den Observer
+  const observer = new IntersectionObserver(startAnimation, options);
+  
+  // Beobachte das Element
+  const elementToObserve = document.querySelector('#im2');
+  observer.observe(elementToObserve);
+  
