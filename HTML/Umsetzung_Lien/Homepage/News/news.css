@@ -142,9 +142,11 @@ a {
     gap: 2vw;
     justify-content: center;
     margin: 20px;
+    border-radius: 4px;
 }
 .gallery-item {
     box-shadow: 10px 15px 40px rgba(0, 0, 0, 0.253);
+
 }
 .gallery-item img {
     width: 20vw;
@@ -154,11 +156,26 @@ a {
     margin-top: 3vw;
     cursor: pointer;
     text-align: center;
+    animation: pulse 1.5s infinite;
 }
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+
+    }
+  }
+
 .header-gallery {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 34px;
     margin: 20px 0;
     margin-top: 4vw;
 }
@@ -169,14 +186,16 @@ a {
     transform: rotate(var(--rotate, 0deg));
 }
 .header-item img {
-    width: 7vw;
+    width: 7.7vw;
     height: auto;
     z-index: 0;
-    filter: grayscale(60%);
+    filter: grayscale(70%);
+    transition: all 0.3s;
+    border-radius: 4px;
 }
 .header-item span {
     position: absolute;
-    top: 10px;
+    top: 1.9vw;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -185,7 +204,13 @@ a {
     padding: 2px 5px;
     z-index: 10;
 }
-
+.header-item img:hover{
+    rotate: 3deg;
+    transform: scale(1.1);
+    transition: all 0.3s;
+    cursor: pointer;
+    filter: grayscale(0%);
+}
 footer {
     background-color: #00264d;
     color: white;
