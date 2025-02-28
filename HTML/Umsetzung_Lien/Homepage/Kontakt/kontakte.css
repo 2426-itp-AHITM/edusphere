@@ -70,24 +70,24 @@ main{
 }
 
 #headerH{
-    top: 25vh;
+    top: 38vh;
     left: 15vw;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    font-size: 8em;
+    font-size: 4em;
     color: black;
     font-family: manrope;
-    font-weight: bold;
+    font-weight: lighter;
     position: absolute;
 
 }
 
 #headerU{
     left: 15vw;
+    font-weight: bold;
     top: 40vh;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     font-size: 8em;
     color: black;
-    font-weight: lighter;
     font-family: manrope;
     position: absolute;
 }
@@ -112,6 +112,14 @@ main{
     color: white;
     border-radius: 20px;
     text-align: center;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#mailButton:hover{
+    background-color: white;
+    color: black;
 }
 
 #container1{
@@ -121,6 +129,7 @@ main{
 
 #info{
     width: 40vw;
+    margin: auto;
 }
 
 .infoBoxes{
@@ -129,7 +138,8 @@ main{
     box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
     margin: auto;
     padding: 1vw;
-    margin-top: 2vw;
+    margin-top: 5vh;
+    border-radius: 20px;
 }
 
 .infoBoxes:nth-child(1){
@@ -140,9 +150,6 @@ main{
     height: 25%;
 }
 
-.infoBoxes > h1{
-    
-}
 
 .subButton{
     background-color: black;
@@ -151,37 +158,51 @@ main{
     width: 7vw;
     padding: 1vh;
     text-align: center;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
 }
+
+.subButton:hover{
+    background-color: white;
+    color: black;
+}
+
 
 .hex-grid {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    gap: 1vw;
+    grid-template-columns: repeat(3, 30%);
+    gap: 1vh;
     width: 90%;
-    margin: auto;
-}
-
-.hex {
-    width: 11vw;
-    height: 12vw;
-    margin: 5px;
     position: relative;
+}
+.hex {
+    width: 12vw;
+    height: 13vw;
+    background-color: #ddd;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    background-color: #ccc;
-    overflow: hidden;
-    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.hex:nth-child(4){
+    transform: translateX(7vw);
 }
 
+.hex:nth-child(5){
+    transform: translateX(-7vw);
+}
 .hex img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    clip-path: inherit;
 }
 
 
-
 #beeContainer{
-    
+    width: 50%;
+    margin: auto;
 }
 
 
@@ -192,18 +213,72 @@ main{
     height: 100vh;
     display: flex;
     justify-content: center;
+    padding-top: 15vh;
 
 }
 
 .infoBoxes2{
     background-color: white;
     box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
-    width: 30vw;
+    width: 35vw;
     height: 30vh;
     display: flex;
-    margin-top: 2vw;
+    margin-top: 3vw;
     padding-left: 1vw;
+    border-radius: 20px;
 
+}
+
+.bildText > p{
+    color: gray;
+    font-size: 1rem;
+    padding-top: 1vw;
+    padding-left: 1vw;
+}
+
+.bildText > h2{
+    padding-left: 1vw;
+}
+
+#h{
+    font-size: 1.3rem;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    width: 40vw;
+    height: 30vh;
+}
+
+.hex:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.symbol {
+    margin-top: 3vh;
+    font-size: 2em;
+    color: white;
+}
+
+
+#bildungcontainer{
+    padding-top: 10vh;
 }
 
 #schulleitung{
@@ -211,50 +286,51 @@ main{
 }
 
 .envelope {
-    display: grid;
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 50px 50px;
+    width: 100%;
+    height: 100%;
     position: relative;
-    width: 200px;
-    height: 100px;
 }
 
 .triangle {
-    width: 100px;
-    height: 50px;
+
+    position: absolute;
     background-color: #f39c12;
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    display: block;
 }
 
 .top { 
-    grid-column: span 2; 
     transform: rotateX(180deg); 
-    position: absolute;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 100px;
+    width: 40vw;
+    height: 25vh;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
 
 .left { 
-    grid-column: 1; 
-    grid-row: 2; 
-    transform: rotateY(180deg);
+    transform: rotateX(90deg);
+    left: 0;
+    top: 0;
+    width: 30vw;
+    height: 25vh;
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%); 
 }
 
 .right { 
-    grid-column: 2; 
-    grid-row: 2; 
+    transform: rotateX(90deg);
+    left: 0;
+    top: 50vh;
+    width: 40vw;
+    height: 40vh;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%); 
 }
 
 .bottom {
-    grid-column: span 2;
-    position: absolute;
-    bottom: 0;
+    top: 27vh;
     left: 0;
-    width: 200px;
-    height: 100px;
-    background-color: #f39c12;
+    width: 40vw;
+    height: 25vh;
+    transform: rotateX(180deg);
     clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 }
 
@@ -269,7 +345,8 @@ main{
 #container3 img{
     width: 30vw;
     margin-left: 35vw;
-    margin-top: 10vh;
+    margin-top: 16vh;
+    border-radius: 20px;
 }
 
 #artztContainer{
@@ -277,15 +354,46 @@ main{
     background-color: white;
     box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
     position: absolute;
-    top: 45vh;
+    top: 49vh;
     left: 50vw;
     padding: 1vw;
+    border-radius: 20px;
 }
 
 #artztContainer > div {
     display: flex;
     gap: 2vw;
 }
+
+@keyframes slide-fwd-centerSc {
+    0% {
+      transform: translateZ(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(160px);
+      opacity: 1;
+    }
+  }
+ 
+#artzt.animate {
+    animation: slide-fwd-centerSc 0.5s ease-out forwards;
+}
+
+#artztContainer.animate {
+    animation: slide-fwd-center 0.5s ease-out forwards;
+}
+
+.slide-in-right{animation:slide-in-right .5s cubic-bezier(.25,.46,.45,.94) both}
+@keyframes slide-in-right{0%{transform:translateX(1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+
+
+.tracking-in-contract-bck-bottom{animation:tracking-in-contract-bck-bottom 1s cubic-bezier(.215,.61,.355,1.000) 1s both}
+@keyframes tracking-in-contract-bck-bottom{0%{letter-spacing:1em;transform:translateZ(400px) translateY(300px);opacity:0}40%{opacity:.6}100%{transform:translateZ(0) translateY(0);opacity:1}}
+
+
+.slide-in-left{animation:slide-in-left .5s cubic-bezier(.25,.46,.45,.94) both}
+@keyframes slide-in-left{0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
 /* footer */
 
 
@@ -420,3 +528,8 @@ footer {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
+
+
+
+.puff-in-center{animation:puff-in-center .7s cubic-bezier(.47,0.000,.745,.715) both}
+@keyframes puff-in-center{0%{transform:scale(2);filter:blur(4px);opacity:0}100%{transform:scale(1);filter:blur(0);opacity:1}}

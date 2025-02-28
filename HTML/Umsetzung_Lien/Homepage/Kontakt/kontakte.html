@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakte</title>
     <link rel="stylesheet" href="./kontakte.css">
+    <script src="./kontakte.js" defer></script>
 </head>
 
 <body>
     <header>
-        <a id="headerLogo" href="./index.html"><img src="../img/htlLogo.png" alt=""></a>
+        <a id="headerLogo" href="../index.html"><img src="../img/htlLogo.png" alt=""></a>
         <nav>
             <ul>
                 <li><a href="../News/news.html">News</a></li>
@@ -27,11 +28,11 @@
         <div class="school-container">
             <h1 id="headerH" class="tracking-in-expand">HTL Leonding</h1>
             <h1 class="tracking-in-expand" id="headerU">Kontakte</h1>
-            <p id="textO">Öffnungszeiten <br>
+            <p id="textO" class="tracking-in-contract-bck-bottom">Öffnungszeiten <br>
                 Montag – Donnerstag <br> 07:30 – 10:00 Uhr und 11:00 – 15:00 Uhr
                 Freitag <br> 07:30 – 10:00 Uhr, 11:00 – 13:00 Uhr</p>
 
-            <div id="mailButton">Email</div>
+            <div id="mailButton" class="tracking-in-contract-bck-bottom">Email</div>
         </div>
 
     </main>
@@ -54,7 +55,7 @@
 
             <div class="infoBoxes">
                 <h1>Berufsreifeprüfung</h1>
-                
+
                 <p>Inforatinen zur Berufsreifeprüfung! <br>
                     Termine, Fächer und weiter Infos.</p>
                 <div class="subButton">mehr lesen</div>
@@ -65,22 +66,58 @@
 
         <div id="beeContainer">
             <div class="hex-grid">
-                <div class="hex"><img src="../img/maria.png" alt="Bild"></div>
-                <div class="hex"><img src="../img/maria.png" alt="Bild"></div>
-                <div class="hex"><img src="../img/maria.png" alt="Bild"></div>
-                <div class="hex"><img src="../img/maria.png" alt="Bild"></div>
-                <div class="hex"><img src="../img/maria.png" alt="Bild"></div>
-                <div class="hex"><img src="../img/maria.png" alt="Bild"></div>
-                <div class="hex"><img src="../img/maria.png" alt="Bild"></div>
-                <div class="hex"><img src="../img/maria.png" alt="Bild"></div>
+                <div class="hex"><img src="../img/maria.png" alt="Bild">
+                    <div class="overlay">
+                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
+                    </div>
+                </div>
+                <div class="hex"><img src="../img/maria.png" alt="Bild">
+                    <div class="overlay">
+                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
+                    </div>
+                </div>
+                <div class="hex"><img src="../img/maria.png" alt="Bild">
+                    <div class="overlay">
+                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
+                    </div>
+                </div>
+
+                <div class="hex" style="grid-column: span 2;"><img src="../img/maria.png" alt="Bild">
+
+                    <div class="overlay">
+                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
+                    </div>
+                </div>
+                <div class="hex"><img src="../img/maria.png" alt="Bild">
+                    <div class="overlay">
+                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
+                    </div>
+                </div>
+
+
+                <div class="hex"><img src="../img/maria.png" alt="Bild">
+                    <div class="overlay">
+                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
+                    </div>
+                </div>
+                <div class="hex"><img src="../img/maria.png" alt="Bild">
+                    <div class="overlay">
+                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
+                    </div>
+                </div>
+                <div class="hex"><img src="../img/maria.png" alt="Bild">
+                    <div class="overlay">
+                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <div id="container2">
         <div id="schulleitung">
-            <h1 style="color: white;">SCHULLEITUNG</h1>
-            <div>
+            <!--
+             <div>
                 <div class="envelope">
                     <div class="triangle top"></div>
                     <div class="triangle left"></div>
@@ -88,26 +125,30 @@
                     <div class="triangle bottom"></div>
                 </div>
             </div>
+            -->
+            <h1 style="color: white;">SCHULLEITUNG</h1>
+            <img src="../img/Group 2.png" alt="">
+           
         </div>
-        <div >
+        <div>
             <h1 style="color: white;">BILDUNGSBERATUNG</h1>
             <div class="infoBoxes2">
-                <div>
-                    <p>Bildungsberater für Informatik und IT-Medientechnik</p>
+                <div class="bildText">
+                    <p id="h">Bildungsberater für Informatik und IT-Medientechnik</p>
                     <h2>Prof. Mag. Robert REDER</h2>
                     <p>r.reder(at)htl-leonding.ac.at</p>
                 </div>
-                <img src="../img/Reder.png" alt="">
-                
+                <img style="border-radius: 20px; margin-left: 2vw;" src="../img/Reder.png" alt="">
+
             </div>
             <div class="infoBoxes2">
-                <div>
-                    <p>Bildungsberater für Informatik und IT-Medientechnik</p>
+                <div class="bildText">
+                    <p id="h">Bildungsberater für Informatik und IT-Medientechnik</p>
                     <h2>Prof. Mag. Robert REDER</h2>
                     <p>r.reder(at)htl-leonding.ac.at</p>
                 </div>
-                <img src="../img/Reder.png" alt="">
-                
+                <img style="border-radius: 20px; margin-left: 2vw;" src="../img/Reder.png" alt="">
+
             </div>
         </div>
 
@@ -116,22 +157,24 @@
 
 
     <div id="container3">
-        <img src="../img/artzt.png" alt="">
+        <img id="artztimg" src="../img/artzt.png" alt="">
         <div id="artztContainer">
             <h1>SCHULÄRZTINNEN</h1>
             <div>
-                <h2>Dr. Tanja Dirisamer 
+                <h2>Dr. Tanja Dirisamer
                     <br>Mo  07:45 – 12:45
                     <br>Di    08:00 – 12:00
                     <br>Mi   – – – – –
                     <br>Do  07:45 – 12:45
-                    <br>Fr   – – – – –</h2>
+                    <br>Fr   – – – – –
+                </h2>
                 <h2>Dr. Rosmarie Köhler
                     <br>Mo  – – – – –
                     <br>Di    – – – – –
                     <br>Mi   08:00 – 13:00
                     <br>Do  – – – – –
-                    <br>Fr   – – – – –</h2>
+                    <br>Fr   – – – – –
+                </h2>
             </div>
         </div>
     </div>
