@@ -667,34 +667,54 @@ section {
 }
 
 footer {
-    background-color: #00264d;
+    background-color: #04243d;
     color: white;
     padding: 20px;
     font-family: manrope;
 }
-
 .sponsors {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
     margin-bottom: 20px;
-}
+    margin-top: -2vw;
 
-.sponsors h4 {
-    margin-bottom: 1.5vw;
-    font-size: 2.5vw;
-    margin-left: 4vw;
-    font-weight: lighter;
 }
 
 .sponsor-logos {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    gap: 40px; /* Abstand zwischen Logos */
+    width: max-content; /* Wichtig für Animation */
+    animation: slide 15s linear infinite;
 }
 
+/* Animation für den Slider */
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Damit die Logos nicht abgeschnitten werden */
 .sponsor-logos img {
-    width: 20vw;
+    max-width: 15vw;
     height: auto;
+    object-fit: contain;
 }
 
+.sponsors h4 {
+    margin-bottom: 2vw;
+    font-size: 2vw;
+    margin-left: 4vw;
+    font-weight: normal;
+    text-align: left;
+    margin-top: 1.3vw;
+}
 .main-content {
     margin-top: 2vw;
     position: relative;
@@ -740,12 +760,14 @@ footer {
 }
 
 .footer-section {
+    margin-top: 3vw;
     margin-bottom: 20px;
 }
 
 .footer-section h4 {
     margin-bottom: 10px;
     font-size: 1.2em;
+    width: 15vw;
     border-bottom: 2px solid #555;
     padding-bottom: 5px;
 }

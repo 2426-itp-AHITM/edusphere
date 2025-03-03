@@ -60,7 +60,6 @@ main{
     overflow: hidden;
     font-family: manrope;
     background-size: cover;
-    z-index: 10;
 }
 
 
@@ -93,12 +92,14 @@ main{
 #headerU{
     left: 5vw;
     font-weight: bold;
-    top: 15vh;
+    top: 20vh;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     font-size: 8em;
     color: white;
     font-family: manrope;
     position: absolute;
+    width: 20vw;
+    line-height: 8vw;
 }
 
 #clubcount{
@@ -121,7 +122,7 @@ main{
 #fleximg{
     display: flex;
     position: absolute;
-    top: 58vh;
+    top: 62vh;
     left: 5vw;
     position: relative;
     width: 5vw; /* Optional: Containerbreite */
@@ -150,7 +151,7 @@ main{
 
 #textInfoBox{
     position: absolute;
-    top: 60vh;
+    top: 55vh;
     left: 64vw;
     background-color: rgba(255, 255, 255, 0.521);
     padding: 1vw;
@@ -183,34 +184,55 @@ main{
 
 
 footer {
-    background-color: #00264d;
+    padding-top: 2vw;
+    background-color: #04243d;
     color: white;
     padding: 20px;
     font-family: manrope;
 }
-
 .sponsors {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
     margin-bottom: 20px;
-}
+    margin-top: -2vw;
 
-.sponsors h4 {
-    margin-bottom: 1.5vw;
-    font-size: 2.5vw;
-    margin-left: 4vw;
-    font-weight: lighter;
 }
 
 .sponsor-logos {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    gap: 40px; /* Abstand zwischen Logos */
+    width: max-content; /* Wichtig für Animation */
+    animation: slide 15s linear infinite;
 }
 
+/* Animation für den Slider */
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Damit die Logos nicht abgeschnitten werden */
 .sponsor-logos img {
-    width: 20vw;
+    max-width: 15vw;
     height: auto;
+    object-fit: contain;
 }
 
+.sponsors h4 {
+    margin-bottom: 2vw;
+    font-size: 2vw;
+    margin-left: 4vw;
+    font-weight: normal;
+    text-align: left;
+    margin-top: 1.3vw;
+}
 .main-content {
     margin-top: 2vw;
     position: relative;
@@ -256,12 +278,14 @@ footer {
 }
 
 .footer-section {
+    margin-top: 3vw;
     margin-bottom: 20px;
 }
 
 .footer-section h4 {
     margin-bottom: 10px;
     font-size: 1.2em;
+    width: 15vw;
     border-bottom: 2px solid #555;
     padding-bottom: 5px;
 }
@@ -313,8 +337,6 @@ footer {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
-
-
 
 .puff-in-center{animation:puff-in-center .7s cubic-bezier(.47,0.000,.745,.715) both}
 @keyframes puff-in-center{0%{transform:scale(2);filter:blur(4px);opacity:0}100%{transform:scale(1);filter:blur(0);opacity:1}}

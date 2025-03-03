@@ -219,7 +219,7 @@ header nav ul li a {
 #container5 {
     padding: 5vh;
     position: relative;
-    height: 70vh;
+    height: 80vh;
 }
 
 .project-container-stack {
@@ -315,41 +315,60 @@ header nav ul li a {
 #co4 {
     z-index: -10;
     margin-top: -10vw;
-    left: -2vw;
+    margin-left: -5vw;
     width: 100%;
 }
 
 
 footer {
-    background-color: #00264d;
+    background-color: #04243d;
     color: white;
     padding: 20px;
     font-family: manrope;
-    margin-top: 5vw;
 }
-
 .sponsors {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
     margin-bottom: 20px;
-}
+    margin-top: -2vw;
 
-.sponsors h4 {
-    margin-bottom: 1.5vw;
-    font-size: 2.5vw;
-    margin-left: 4vw;
-    font-weight: lighter;
 }
 
 .sponsor-logos {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    gap: 40px; /* Abstand zwischen Logos */
+    width: max-content; /* Wichtig für Animation */
+    animation: slide 15s linear infinite;
 }
 
+/* Animation für den Slider */
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Damit die Logos nicht abgeschnitten werden */
 .sponsor-logos img {
-    width: 20vw;
+    max-width: 15vw;
     height: auto;
+    object-fit: contain;
 }
 
+.sponsors h4 {
+    margin-bottom: 2vw;
+    font-size: 2vw;
+    margin-left: 4vw;
+    font-weight: normal;
+    text-align: left;
+    margin-top: 1.3vw;
+}
 .main-content {
     margin-top: 2vw;
     position: relative;
@@ -363,14 +382,12 @@ footer {
     filter: brightness(50%);
 
 }
-
-.main-content img:hover {
+.main-content img:hover{
     transform: scale(1.03);
     transition: all 0.2s;
     filter: brightness(30%);
     cursor: pointer;
 }
-
 
 .overlay {
     position: absolute;
@@ -383,8 +400,7 @@ footer {
     border-radius: 5px;
     font-size: 2.3vw;
 }
-
-.overlay h2 {
+.overlay h2{
     font-weight: lighter;
 }
 
@@ -398,12 +414,14 @@ footer {
 }
 
 .footer-section {
+    margin-top: 3vw;
     margin-bottom: 20px;
 }
 
 .footer-section h4 {
     margin-bottom: 10px;
     font-size: 1.2em;
+    width: 15vw;
     border-bottom: 2px solid #555;
     padding-bottom: 5px;
 }
@@ -455,3 +473,4 @@ footer {
 .footer-bottom a:hover {
     text-decoration: underline;
 }
+

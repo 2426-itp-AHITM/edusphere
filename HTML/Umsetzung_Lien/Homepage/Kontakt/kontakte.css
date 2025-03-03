@@ -60,7 +60,6 @@ main{
     overflow: hidden;
     font-family: manrope;
     background-size: cover;
-    z-index: 10;
 }
 
 
@@ -124,6 +123,7 @@ main{
 
 #container1{
     display: flex;
+    margin-left: 2vw;
     height: 100vh;
 }
 
@@ -155,7 +155,7 @@ main{
     background-color: black;
     color: white;
     border-radius: 20px;
-    width: 7vw;
+    width: 8vw;
     padding: 1vh;
     text-align: center;
     transition: all 1s ease-in-out;
@@ -171,9 +171,10 @@ main{
 .hex-grid {
     display: grid;
     grid-template-columns: repeat(3, 30%);
-    gap: 1vh;
+    gap: -4vw;
     width: 90%;
     position: relative;
+    border-radius: 4px;
 }
 .hex {
     width: 12vw;
@@ -184,29 +185,40 @@ main{
     justify-content: center;
     align-items: center;
     position: relative;
+    border: none;
 }
+
 .hex:nth-child(4){
+    margin-top: -3vw;
     transform: translateX(7vw);
 }
 
 .hex:nth-child(5){
+    margin-top: -3vw;
     transform: translateX(-7vw);
 }
 .hex img {
-    width: 100%;
+    width: 110%;
     height: 100%;
     object-fit: cover;
     clip-path: inherit;
+    filter: blur(0px);
 }
 
 
 #beeContainer{
     width: 50%;
     margin: auto;
+    margin-left: 10vw;
 }
 
-
-
+#lastCol{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: -3vw;
+    margin-left: 0.5vw;
+    gap: 1vw;
+}
 #container2{
     background: rgb(26, 71, 114);
     background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
@@ -214,6 +226,7 @@ main{
     display: flex;
     justify-content: center;
     padding-top: 15vh;
+    margin-top: 3vw;
 
 }
 
@@ -268,6 +281,7 @@ main{
 .hex:hover .overlay {
     opacity: 1;
     visibility: visible;
+    cursor: pointer;
 }
 
 .symbol {
@@ -350,7 +364,7 @@ main{
 }
 
 #artztContainer{
-    width: 35vw;
+    width: 30vw;
     background-color: white;
     box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
     position: absolute;
@@ -358,6 +372,7 @@ main{
     left: 50vw;
     padding: 1vw;
     border-radius: 20px;
+    font-size: 0.9vw;
 }
 
 #artztContainer > div {
@@ -396,36 +411,55 @@ main{
 @keyframes slide-in-left{0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
 /* footer */
 
-
 footer {
-    background-color: #00264d;
+    background-color: #04243d;
     color: white;
     padding: 20px;
     font-family: manrope;
 }
-
 .sponsors {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    text-align: center;
     margin-bottom: 20px;
-}
+    margin-top: -2vw;
 
-.sponsors h4 {
-    margin-bottom: 1.5vw;
-    font-size: 2.5vw;
-    margin-left: 4vw;
-    font-weight: lighter;
 }
 
 .sponsor-logos {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    gap: 40px; /* Abstand zwischen Logos */
+    width: max-content; /* Wichtig für Animation */
+    animation: slide 15s linear infinite;
 }
 
+/* Animation für den Slider */
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Damit die Logos nicht abgeschnitten werden */
 .sponsor-logos img {
-    width: 20vw;
+    max-width: 15vw;
     height: auto;
+    object-fit: contain;
 }
 
+.sponsors h4 {
+    margin-bottom: 2vw;
+    font-size: 2vw;
+    margin-left: 4vw;
+    font-weight: normal;
+    text-align: left;
+    margin-top: 1.3vw;
+}
 .main-content {
     margin-top: 2vw;
     position: relative;
@@ -471,12 +505,14 @@ footer {
 }
 
 .footer-section {
+    margin-top: 3vw;
     margin-bottom: 20px;
 }
 
 .footer-section h4 {
     margin-bottom: 10px;
     font-size: 1.2em;
+    width: 15vw;
     border-bottom: 2px solid #555;
     padding-bottom: 5px;
 }

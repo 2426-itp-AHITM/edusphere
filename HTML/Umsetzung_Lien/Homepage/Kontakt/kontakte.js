@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const info = document.querySelector(".infoBoxes");
+    const info = document.querySelector("#info");
 
     const observer = new IntersectionObserver(
         (entries, observer) => {
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         },
-        { threshold: 0.9 } // Animation startet, wenn 20% sichtbar sind
+        { threshold: 0.1} // Animation startet, wenn 20% sichtbar sind
     );
 
     observer.observe(info);
