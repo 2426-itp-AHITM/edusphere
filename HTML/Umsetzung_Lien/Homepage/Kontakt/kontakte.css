@@ -5,10 +5,12 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
+
 @font-face {
     font-family: manrope;
     src: url("../Manrope/Manrope-VariableFont_wght.ttf");
 }
+
 header {
     background-color: rgba(0, 0, 0, 0.504);
     color: white;
@@ -20,7 +22,7 @@ header {
     z-index: 10;
 }
 
-header nav ul { 
+header nav ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -39,15 +41,15 @@ header nav ul li a {
     font-family: manrope;
 }
 
-#headerLogo img{
+#headerLogo img {
     width: 10vw;
     position: absolute;
     left: 2%;
     top: 20%;
 }
-  
 
-main{
+
+main {
     background-image: url("../img/kontakte.png");
     background-size: cover;
 }
@@ -68,7 +70,7 @@ main{
     z-index: 0;
 }
 
-#headerH{
+#headerH {
     top: 38vh;
     left: 15vw;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -80,7 +82,7 @@ main{
 
 }
 
-#headerU{
+#headerU {
     left: 15vw;
     font-weight: bold;
     top: 40vh;
@@ -91,17 +93,32 @@ main{
     position: absolute;
 }
 
-.tracking-in-expand{animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) .3s both}
+.tracking-in-expand {
+    animation: tracking-in-expand .7s cubic-bezier(.215, .61, .355, 1.000) .3s both
+}
 
-@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -.5em;
+        opacity: 0
+    }
 
-#textO{
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+#textO {
     position: absolute;
     left: 15vw;
     top: 65vh;
 }
 
-#mailButton{
+#mailButton {
     position: absolute;
     left: 15vw;
     top: 80vh;
@@ -116,24 +133,33 @@ main{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-#mailButton:hover{
+#mailButton:hover {
     background-color: white;
     color: black;
 }
 
-#container1{
+#container1 {
     display: flex;
     margin-left: 2vw;
     height: 100vh;
 }
 
-#info{
-    width: 40vw;
-    margin: auto;
+#container1 > img{
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    filter: blur(4px);
 }
 
-.infoBoxes{
-    width: 80%;
+#info {
+    width: 50vw;
+    margin: auto;
+    margin-left: 10vw;
+    z-index: 10;
+}
+
+.infoBoxes {
+    width: 100%;
     background-color: white;
     box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
     margin: auto;
@@ -142,16 +168,16 @@ main{
     border-radius: 20px;
 }
 
-.infoBoxes:nth-child(1){
+.infoBoxes:nth-child(1) {
     height: 36%;
 }
 
-.infoBoxes:nth-child(2){
+.infoBoxes:nth-child(2) {
     height: 25%;
 }
 
 
-.subButton{
+.subButton {
     background-color: black;
     color: white;
     border-radius: 20px;
@@ -162,7 +188,7 @@ main{
     cursor: pointer;
 }
 
-.subButton:hover{
+.subButton:hover {
     background-color: white;
     color: black;
 }
@@ -176,6 +202,7 @@ main{
     position: relative;
     border-radius: 4px;
 }
+
 .hex {
     width: 12vw;
     height: 13vw;
@@ -188,15 +215,16 @@ main{
     border: none;
 }
 
-.hex:nth-child(4){
+.hex:nth-child(4) {
     margin-top: -3vw;
     transform: translateX(7vw);
 }
 
-.hex:nth-child(5){
+.hex:nth-child(5) {
     margin-top: -3vw;
     transform: translateX(-7vw);
 }
+
 .hex img {
     width: 110%;
     height: 100%;
@@ -206,31 +234,33 @@ main{
 }
 
 
-#beeContainer{
+#beeContainer {
     width: 50%;
     margin: auto;
     margin-left: 10vw;
+    z-index: 10;
 }
 
-#lastCol{
+#lastCol {
     display: grid;
     grid-template-columns: auto auto auto;
     margin-top: -3vw;
     margin-left: 0.5vw;
     gap: 1vw;
 }
-#container2{
+
+#container2 {
     background: rgb(26, 71, 114);
     background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
     height: 100vh;
-    display: flex;
     justify-content: center;
     padding-top: 15vh;
     margin-top: 3vw;
-
+    display: flex;
+    width: 100vw;
 }
 
-.infoBoxes2{
+.infoBoxes2 {
     background-color: white;
     box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
     width: 35vw;
@@ -242,18 +272,18 @@ main{
 
 }
 
-.bildText > p{
+.bildText>p {
     color: gray;
     font-size: 1rem;
     padding-top: 1vw;
     padding-left: 1vw;
 }
 
-.bildText > h2{
+.bildText>h2 {
     padding-left: 1vw;
 }
 
-#h{
+#h {
     font-size: 1.3rem;
     color: black;
     font-weight: bold;
@@ -291,12 +321,14 @@ main{
 }
 
 
-#bildungcontainer{
+#bildungcontainer {
     padding-top: 10vh;
 }
 
-#schulleitung{
-    width: 50%;
+
+#container2>div>h1 {
+    color: white;
+    margin-bottom: 15vh;
 }
 
 .envelope {
@@ -312,8 +344,8 @@ main{
     display: block;
 }
 
-.top { 
-    transform: rotateX(180deg); 
+.top {
+    transform: rotateX(180deg);
     top: 0;
     left: 0;
     width: 40vw;
@@ -321,22 +353,22 @@ main{
     clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
 
-.left { 
+.left {
     transform: rotateX(90deg);
     left: 0;
     top: 0;
     width: 30vw;
     height: 25vh;
-    clip-path: polygon(0% 50%, 100% 0%, 100% 100%); 
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
 }
 
-.right { 
+.right {
     transform: rotateX(90deg);
     left: 0;
     top: 50vh;
     width: 40vw;
     height: 40vh;
-    clip-path: polygon(0% 0%, 100% 50%, 0% 100%); 
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }
 
 .bottom {
@@ -349,21 +381,21 @@ main{
 }
 
 
-#container3{
+#container3 {
     background-image: url("../img/dP.png");
     background-size: cover;
     height: 100vh;
     position: relative;
 }
 
-#container3 img{
+#container3 img {
     width: 30vw;
     margin-left: 35vw;
     margin-top: 16vh;
     border-radius: 20px;
 }
 
-#artztContainer{
+#artztContainer {
     width: 30vw;
     background-color: white;
     box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
@@ -375,22 +407,23 @@ main{
     font-size: 0.9vw;
 }
 
-#artztContainer > div {
+#artztContainer>div {
     display: flex;
     gap: 2vw;
 }
 
 @keyframes slide-fwd-centerSc {
     0% {
-      transform: translateZ(0);
-      opacity: 0;
+        transform: translateZ(0);
+        opacity: 0;
     }
+
     100% {
-      transform: translateZ(160px);
-      opacity: 1;
+        transform: translateZ(160px);
+        opacity: 1;
     }
-  }
- 
+}
+
 #artzt.animate {
     animation: slide-fwd-centerSc 0.5s ease-out forwards;
 }
@@ -399,16 +432,62 @@ main{
     animation: slide-fwd-center 0.5s ease-out forwards;
 }
 
-.slide-in-right{animation:slide-in-right .5s cubic-bezier(.25,.46,.45,.94) both}
-@keyframes slide-in-right{0%{transform:translateX(1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+.slide-in-right {
+    animation: slide-in-right 1s cubic-bezier(.25, .46, .45, .94) both;
+    opacity: 0;
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(150%);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
 
 
-.tracking-in-contract-bck-bottom{animation:tracking-in-contract-bck-bottom 1s cubic-bezier(.215,.61,.355,1.000) 1s both}
-@keyframes tracking-in-contract-bck-bottom{0%{letter-spacing:1em;transform:translateZ(400px) translateY(300px);opacity:0}40%{opacity:.6}100%{transform:translateZ(0) translateY(0);opacity:1}}
+.tracking-in-contract-bck-bottom {
+    animation: tracking-in-contract-bck-bottom 1s cubic-bezier(.215, .61, .355, 1.000) 1s both
+}
+
+@keyframes tracking-in-contract-bck-bottom {
+    0% {
+        letter-spacing: 1em;
+        transform: translateZ(400px) translateY(300px);
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        transform: translateZ(0) translateY(0);
+        opacity: 1
+    }
+}
 
 
-.slide-in-left{animation:slide-in-left .5s cubic-bezier(.25,.46,.45,.94) both}
-@keyframes slide-in-left{0%{transform:translateX(-1000px);opacity:0}100%{transform:translateX(0);opacity:1}}
+.slide-in-left {
+    animation: slide-in-left .5s cubic-bezier(.25, .46, .45, .94) both
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
 /* footer */
 
 footer {
@@ -417,6 +496,7 @@ footer {
     padding: 20px;
     font-family: manrope;
 }
+
 .sponsors {
     width: 100%;
     overflow: hidden;
@@ -430,8 +510,10 @@ footer {
 
 .sponsor-logos {
     display: flex;
-    gap: 40px; /* Abstand zwischen Logos */
-    width: max-content; /* Wichtig für Animation */
+    gap: 40px;
+    /* Abstand zwischen Logos */
+    width: max-content;
+    /* Wichtig für Animation */
     animation: slide 15s linear infinite;
 }
 
@@ -440,6 +522,7 @@ footer {
     from {
         transform: translateX(-100%);
     }
+
     to {
         transform: translateX(100%);
     }
@@ -460,6 +543,7 @@ footer {
     text-align: left;
     margin-top: 1.3vw;
 }
+
 .main-content {
     margin-top: 2vw;
     position: relative;
@@ -473,7 +557,8 @@ footer {
     filter: brightness(50%);
 
 }
-.main-content img:hover{
+
+.main-content img:hover {
     transform: scale(1.03);
     transition: all 0.2s;
     filter: brightness(30%);
@@ -491,7 +576,8 @@ footer {
     border-radius: 5px;
     font-size: 2.3vw;
 }
-.overlay h2{
+
+.overlay h2 {
     font-weight: lighter;
 }
 
@@ -567,5 +653,184 @@ footer {
 
 
 
-.puff-in-center{animation:puff-in-center .7s cubic-bezier(.47,0.000,.745,.715) both}
-@keyframes puff-in-center{0%{transform:scale(2);filter:blur(4px);opacity:0}100%{transform:scale(1);filter:blur(0);opacity:1}}
+.puff-in-center {
+    animation: puff-in-center .7s cubic-bezier(.47, 0.000, .745, .715) both
+}
+
+@keyframes puff-in-center {
+    0% {
+        transform: scale(2);
+        filter: blur(4px);
+        opacity: 0
+    }
+
+    100% {
+        transform: scale(1);
+        filter: blur(0);
+        opacity: 1
+    }
+}
+
+
+#schulleitung {
+    display: flex;
+    width: 40vw;
+    margin-right: 10vw;
+}
+
+.leitung {
+    flex: 1;
+    height: 100vh;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    margin-top: -5vw;
+}
+
+.leitung img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.8;
+
+}
+
+.leitung .bgImg {
+    filter: blur(1.2px);
+    filter: brightness(60%);
+
+}
+
+.leitung:hover {
+    flex: 3;
+
+}
+
+.leitung img:hover {
+    transition: all 1s ease-in-out;
+
+}
+
+.leitung:hover img {
+    transform: scale(1.1);
+    transition: transform 1s ease-in-out;
+}
+
+.leitung:hover .bgImg {
+    filter: blur(2px);
+    filter: brightness(80%);
+}
+
+.deptText {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    transform: translateY(-50%);
+    font-size: 2em;
+    font-weight: bold;
+    font-family: manrope;
+    font-weight: bold;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    transition: transform 1s ease-in-out, flex-direction 1.5s ease-in-out;
+}
+
+.deptText .span {
+    letter-spacing: 1px;
+}
+
+.leitung:hover .deptText {
+    flex-direction: row;
+    text-align: center;
+    transform: translateY(500%);
+    color: white;
+
+}
+
+.leitung:hover .info {
+    opacity: 1;
+}
+
+.info {
+    opacity: 0;
+    color: white;
+    z-index: 10;
+    position: absolute;
+    top: 60%;
+    text-align: center;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+#container4 {
+    padding:3vw;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    gap: 1vw;
+    height: auto;
+    margin-bottom: 3vw;
+    justify-content: center;
+    background: rgb(26, 71, 114);
+    background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
+
+}
+
+.lehrer {
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 7vh;
+    width: 10vw;
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.116);
+    border-radius: 4px;
+}
+
+.lehrer h2{
+    font-size: 1vw;
+    margin-right: 0.5vw;
+    margin-top: 1vw;
+}
+
+.lehrerImg>img {
+    width: 40%;
+    border-radius: 100px;
+    margin-left: 1vw;
+    margin-top: 0.5vw;
+}
+
+.lehrer.expanded {
+    position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 10;
+}
+
+.extra-info {
+    display: none;
+    margin-top: 10px;
+}
+
+.expanded .extra-info {
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    z-index: 20;
+}
