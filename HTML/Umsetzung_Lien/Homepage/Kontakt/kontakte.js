@@ -109,37 +109,26 @@ function duplicateLehrer(count) {
 // Funktion aufrufen, um 100 Lehrer anzuzeigen
 duplicateLehrer(98);
 
+document.addEventListener("DOMContentLoaded", function () {
+    const overlayBg = document.getElementById("overlay-bg");
+    const overlayImg = overlayBg.querySelector("img");
+    const overlayName = overlayBg.querySelector("h2");
+    const closeOverlay = document.getElementById("close-overlay");
 
-const overlayBg = document.getElementById("overlay-bg");
+    document.querySelectorAll(".lehrer").forEach(lehrer => {
+        lehrer.addEventListener("click", function () {
+            const imgSrc = this.querySelector("img").src;
+            const name = this.querySelector("h2").textContent;
 
-document.querySelectorAll(".lehrer").forEach(lehrer => {
-    lehrer.addEventListener("click", function () {
-        // Falls schon ein anderes Element vergrößert ist, zurücksetzen
-        document.querySelectorAll(".lehrer").forEach(el => {
-            el.classList.remove("expanded");
+            overlayImg.src = imgSrc;  // Setzt das Bild im Overlay
+            overlayName.textContent = name;  // Setzt den Namen im Overlay
+
+            overlayBg.style.display = "flex"; // Overlay anzeigen
         });
-
-        // Aktuelles Element vergrößern
-        this.classList.add("expanded");
-        overlayBg.style.display = "flex";
     });
-});
 
-// Close-X hinzufügen
-document.querySelectorAll(".lehrer").forEach(lehrer => {
-    const closeButton = document.createElement("div");
-    closeButton.textContent = "X";
-    closeButton.classList.add("close-btn");
-
-    closeButton.addEventListener("click", function (event) {
-        // Verhindert das Schließen beim Klicken auf den X-Button selbst
-        event.stopPropagation();
-
-        // Schließt das vergrößerte Lehrer-Element
-        lehrer.classList.remove("expanded");
+    // Schließen des Overlays bei Klick auf "X"
+    closeOverlay.addEventListener("click", function () {
         overlayBg.style.display = "none";
     });
-
-    // Close-X Button zum vergrößerten Element hinzufügen
-    lehrer.appendChild(closeButton);
 });
