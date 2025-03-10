@@ -908,17 +908,94 @@ footer {
 .search-btn:hover {
     background: #a7a7a7;
 }
-
-#container31{
+#container31 {
     width: 30vw;
     margin: auto;
 }
 
-#sekgrid{
+#sekgrid {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
 }
 
-#sekgrid> img{
+#sekgrid > img {
     width: 100%;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+#sekr {
+    position: relative;
+    width: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle69 img {
+    width: 10vw;
+    margin-left: 5vw;
+}
+
+.vertical-text {
+    position: absolute;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.person {
+    position: relative;
+    overflow: hidden;
+}
+
+.person img {
+    width: 100%;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+/* Overlay für den Hover-Effekt */
+.person::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Bild wird dunkler */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Brief-Icon */
+.overlay {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.overlay img {
+    width: 40px; 
+    height: 30vw;/* Größe des Brief-Icons */
+}
+
+/* Hover-Effekt */
+.person:hover::after {
+    opacity: 1; /* Bild wird grau */
+}
+
+.person:hover .overlay {
+    opacity: 1; /* Brief-Icon wird sichtbar */
+    z-index: 100;
 }
