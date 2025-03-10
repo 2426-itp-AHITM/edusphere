@@ -951,51 +951,44 @@ footer {
     transform: translate(-50%, -50%);
     z-index: 100;
 }
+/* Anfangszustand: Overlay unsichtbar */
+/* Person Container */
 .person {
     position: relative;
     overflow: hidden;
+    width: 150px; /* Feste Größe */
+    height: 200px;
+    display: inline-block;
 }
 
+/* Bild der Person */
 .person img {
     width: 100%;
-    display: block;
-    transition: 0.3s ease-in-out;
-}
-
-/* Overlay für den Hover-Effekt */
-.person::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Bild wird dunkler */
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    align-content: center;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s ease-in-out;
+    z-index: 0; /* Bild im Hintergrund */
 }
 
-/* Brief-Icon */
-.overlay {
+/* Overlay mit dem Brief-Icon */
+.overlay1 {
     position: absolute;
-    top: 2%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
+    transform: translate(-50%, -50%); /* Positioniert das Icon in der Mitte */
+    opacity: 0; /* Anfangszustand: Overlay unsichtbar */
     transition: opacity 0.3s ease-in-out;
+    z-index: 10; /* Sicherstellen, dass das Icon im Vordergrund ist */
 }
 
-.overlay img {
-    width: 40px; 
-    height: 30vw;/* Größe des Brief-Icons */
+/* Hover-Effekt: Brief-Icon sichtbar */
+.person:hover .overlay1 {
+    opacity: 1; /* Overlay sichtbar */
 }
 
-/* Hover-Effekt */
-.person:hover::after {
-    opacity: 1; /* Bild wird grau */
-}
-
-.person:hover .overlay {
-    opacity: 1; /* Brief-Icon wird sichtbar */
-    z-index: 100;
+/* Abdunkeln des Bildes beim Hover */
+.person:hover img {
+    filter: brightness(50%); /* Bild abdunkeln */
 }
