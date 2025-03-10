@@ -761,18 +761,19 @@ footer {
     font-size: 0.8rem;
 }
 
-#con{
+#con {
     width: 100vw;
     background: rgb(26, 71, 114);
     background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
     padding-top: 1vw;
 }
 
-#con > h2{
+#con>h2 {
     color: white;
     text-align: center;
     font-size: 4rem;
 }
+
 #container4 {
     padding-bottom: 2vw;
     display: grid;
@@ -782,7 +783,7 @@ footer {
     margin-bottom: 3vw;
     justify-content: center;
     margin: auto;
-    
+
 }
 
 .lehrer {
@@ -841,19 +842,19 @@ footer {
     border-radius: 10px;
 }
 
-#pInfo{
+#pInfo {
     text-align: center;
     width: 70%;
 }
 
-#pInfo> h2{
+#pInfo>h2 {
     font-size: 2.3rem;
 }
 
-#pInfo > p{
+#pInfo>p {
     font-size: 1.3rem;
     color: gray;
-    
+
 }
 
 #close-overlay {
@@ -901,13 +902,14 @@ footer {
     font-size: 16px;
 }
 
-.search-btn > img{
+.search-btn>img {
     width: 1vw;
 }
 
 .search-btn:hover {
     background: #a7a7a7;
 }
+
 #container31 {
     width: 30vw;
     margin: auto;
@@ -916,12 +918,11 @@ footer {
 #sekgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1vw;
+    gap: 1.5vw;
 }
 
-#sekgrid > img {
+#sekgrid>img {
     width: 100%;
-    opacity: 0.8;
     z-index: 0;
 }
 
@@ -951,13 +952,18 @@ footer {
     transform: translate(-50%, -50%);
     z-index: 100;
 }
+
 /* Anfangszustand: Overlay unsichtbar */
 /* Person Container */
 .person {
     position: relative;
     overflow: hidden;
-    width: 150px; /* Feste Größe */
+    width: 150px;
+    /* Feste Größe */
     height: 200px;
+    opacity: 0.9;
+    border-radius: 4px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.31);
     display: inline-block;
 }
 
@@ -969,7 +975,9 @@ footer {
     object-fit: cover;
     display: block;
     transition: filter 0.3s ease-in-out;
-    z-index: 0; /* Bild im Hintergrund */
+    z-index: 0;
+    /* Bild im Hintergrund */
+
 }
 
 /* Overlay mit dem Brief-Icon */
@@ -977,18 +985,193 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Positioniert das Icon in der Mitte */
-    opacity: 0; /* Anfangszustand: Overlay unsichtbar */
+    transform: translate(-50%, -50%);
+    /* Positioniert das Icon in der Mitte */
+    opacity: 0;
+    /* Anfangszustand: Overlay unsichtbar */
     transition: opacity 0.3s ease-in-out;
-    z-index: 10; /* Sicherstellen, dass das Icon im Vordergrund ist */
+    z-index: 10;
+    /* Sicherstellen, dass das Icon im Vordergrund ist */
 }
 
 /* Hover-Effekt: Brief-Icon sichtbar */
 .person:hover .overlay1 {
-    opacity: 1; /* Overlay sichtbar */
+    opacity: 1;
+    /* Overlay sichtbar */
 }
 
 /* Abdunkeln des Bildes beim Hover */
 .person:hover img {
-    filter: brightness(50%); /* Bild abdunkeln */
+    filter: brightness(50%);
+    /* Bild abdunkeln */
+    cursor: pointer;
+}
+
+.name {
+    color: white;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+.step.active {
+    background: #0b5ea8;
+    border-radius: 5px;
+}
+
+.step::before {
+    content: attr(data-step);
+    background: white;
+    color: #0b5ea8;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+
+.container2 {
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vw;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    width: 90vw;
+    padding: 20px;
+}
+
+.step2 {
+    min-width: 300px;
+    max-width: 300px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0.049);
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.279);
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+
+.step2:hover {
+    transition: all 0.3s;
+    transform: scale(1.04);
+}
+
+.step2 p {
+    color: rgba(255, 255, 255, 0.247);
+    font-style: italic;
+    font-family: manrope;
+}
+
+.step2 ul,
+li {
+    list-style: none;
+    margin-top: 1vw;
+    transition: all 0.3s;
+}
+.step2 li:hover{
+    color: #a7a7a7;
+    transition: all 0.3s;
+}
+
+.step2 ul {
+    margin-top: 1vw;
+    cursor: pointer;
+}
+
+.step2 h4 {
+    font-weight: lighter;
+    font-size: 1.2vw;
+    color: #ffffff;
+}
+
+.step2 a {
+    color: rgb(170, 180, 188);
+}
+
+.abt-ico {
+    background-image: url(https://www.htl-leonding.at/wp-content/uploads/2019/03/anmeldung_hoehereAbteilung.png);
+    background-size: 2.6em;
+    width: 1.3em;
+    display: inline-block;
+    height: 1.3em;
+    margin-right: 0.8em;
+    vertical-align: sub;
+    border-radius: 0.2em;
+}
+
+.abt-inf {
+    background-position: top left;
+}
+
+.abt-medt {
+    background-position: bottom left;
+}
+
+.abt-et {
+    background-position: top right;
+}
+
+.abt-medz {
+    background-position: bottom right;
+}
+
+.teacher-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.teacher-detail {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+    width: 30vw;
+}
+.teacher-info{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.teacher-info img {
+    max-width: 10vw;
+    border-radius: 4px;
+}
+
+.teacher-info h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #333;
 }

@@ -94,41 +94,29 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(artztContainer);
 });
 
+function showTeacherDetails(teacherId) {
+    // Verstecke alle Lehrer-Details
+    const details = document.querySelectorAll('.teacher-detail');
+    details.forEach(detail => {
+        detail.style.display = 'none';
+    });
 
-
-function duplicateLehrer(count) {
-    const container = document.getElementById("container4");
-    const original = document.querySelector(".lehrer");
-
-    for (let i = 1; i < count; i++) {
-        const clone = original.cloneNode(true); // Klont das Element mit Inhalt
-        container.appendChild(clone); // Fügt das Klon-Element in den Container ein
+    // Zeige das ausgewählte Lehrer-Detail
+    const selectedDetail = document.getElementById(teacherId);
+    if (selectedDetail) {
+        selectedDetail.style.display = 'block';
     }
 }
 
-// Funktion aufrufen, um 100 Lehrer anzuzeigen
-duplicateLehrer(98);
+// Funktion zum Schließen der Details, wenn der Hintergrund (außerhalb des Bildes) geklickt wird
+function closeTeacherDetails(event) {
+    // Überprüfe, ob der Klick auf den äußeren Container (den Hintergrund) erfolgt ist
+    if (event.target === event.currentTarget) {
+        event.currentTarget.style.display = 'none'; // Popup schließen
+    }
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-    const overlayBg = document.getElementById("overlay-bg");
-    const overlayImg = overlayBg.querySelector("img");
-    const overlayName = overlayBg.querySelector("h2");
-    const closeOverlay = document.getElementById("close-overlay");
-
-    document.querySelectorAll(".lehrer").forEach(lehrer => {
-        lehrer.addEventListener("click", function () {
-            const imgSrc = this.querySelector("img").src;
-            const name = this.querySelector("h2").textContent;
-
-            overlayImg.src = imgSrc;  // Setzt das Bild im Overlay
-            overlayName.textContent = name;  // Setzt den Namen im Overlay
-
-            overlayBg.style.display = "flex"; // Overlay anzeigen
-        });
-    });
-
-    // Schließen des Overlays bei Klick auf "X"
-    closeOverlay.addEventListener("click", function () {
-        overlayBg.style.display = "none";
-    });
-});
+// Funktion zum Verhindern der Weitergabe des Klick-Events bei inneren Elementen
+function preventClose(event) {
+    event.stopPropagation(); // Verhindert, dass der Klick weitergegeben wird
+}
