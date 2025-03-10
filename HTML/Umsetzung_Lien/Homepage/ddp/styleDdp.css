@@ -147,7 +147,55 @@ a {
     background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
     padding: 5vw;
     margin-top: -1.7vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 60vh;
+    width: 100vw;
     
+}
+
+.abschluss-container > #roboimg > img{
+    width: 70%;
+    margin-left: 10%;
+}
+
+#roboimg{
+    position: relative;
+}
+
+.codingButtons{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 4vw;
+    text-decoration: none;
+    color: white;
+    top: 37vh;
+    left: 7vw;
+
+}
+
+.codingbutton{
+    background-color: #4890E2;
+    border-radius: 20px;
+    width: 12vw;
+    padding: 1vw;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.5s ease-in-out;
+    font-weight: bold;
+}
+
+.codingbutton:hover{
+    background-color: #0066cc;
+}
+
+#roboimg > h1{
+    font-size: 1.7rem;
+    position: absolute;
+    top: -1vh;
+    left: 20%;
 }
 #txt{
     color: white;
