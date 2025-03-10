@@ -1,0 +1,26 @@
+.flag-container {
+    position: relative;
+    width: 50px; /* Breite der Flaggen */
+    height: 30px; /* Höhe der Flaggen */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.flags img {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    transition: opacity 0.3s ease-in-out;
+    top: 3px;
+    left: 5px;
+}
+
+.flags img:nth-child(2) {
+    opacity: 0; /* Die zweite Flagge (UK) ist anfangs unsichtbar */
+}
+
+.language-label {
+    margin-left: 2.5vw;
+    font-weight: bold;
+}

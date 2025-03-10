@@ -7,6 +7,8 @@
     <title>Kontakte</title>
     <link rel="stylesheet" href="./kontakte.css">
     <script src="./kontakte.js" defer></script>
+    <script src="../allgemein.js" defer></script>
+    <link rel="stylesheet" href="../allgemein.css">
 </head>
 
 <body>
@@ -15,11 +17,19 @@
         <nav>
             <ul>
                 <li><a href="../News/news.html">News</a></li>
-                <li><a href="../Clubs/clubs.html">Clubs</a></li>
+                <li><a href="../clubs/clubs.html">Clubs</a></li>
                 <li><a href="../überUns/überuns.html">Über uns</a></li>
                 <li><a href="../bewerber/bewerber.html">Bewerber:innen</a></li>
-                <li><a href="../ausbildungen/ausbildungen.html">Ausbildungen</a></li>
                 <li><a href="../Kontakt/kontakte.html">Kontakt</a></li>
+                <li>
+                    <div class="flag-container" onclick="toggleLanguage()">
+                        <div class="flags">
+                            <img id="flag-at" src="../img/flagge-osterreich.jpeg" alt="AT">
+                            <img id="flag-uk" src="../img/flagge-grossbritannien.jpeg" alt="UK">
+                        </div>
+                        <span id="language-label" class="language-label">DE</span>
+                    </div>
+                </li> 
             </ul>
         </nav>
     </header>
@@ -38,7 +48,7 @@
     </main>
 
     <div id="container1">
-        <img src="../img/Component 4.png" alt="">
+        <img src="../img/Group 409.png" alt="">
         <div id="info">
             <div class="infoBoxes">
                 <h1>LEHER:INNEN</h1>
@@ -54,66 +64,22 @@
 
             </div>
 
-            <div class="infoBoxes">
-                <h1>Berufsreifeprüfung</h1>
-
-                <p>Inforatinen zur Berufsreifeprüfung! <br>
-                    Termine, Fächer und weiter Infos.</p>
-                <div class="subButton">mehr lesen</div>
-
-            </div>
-
         </div>
 
-        <div id="beeContainer">
-            <div class="hex-grid">
-                <div class="hex"><img src="../img/maria.png" alt="Bild">
-                    <div class="overlay">
-                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
-                    </div>
-                </div>
-                <div class="hex"><img src="../img/maria.png" alt="Bild">
-                    <div class="overlay">
-                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
-                    </div>
-                </div>
-                <div class="hex"><img src="../img/maria.png" alt="Bild">
-                    <div class="overlay">
-                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
-                    </div>
-                </div>
-
-                <div class="hex" style="grid-column: span 2;"><img src="../img/maria.png" alt="Bild">
-
-                    <div class="overlay">
-                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
-                    </div>
-                </div>
-                <div class="hex"><img src="../img/maria.png" alt="Bild">
-                    <div class="overlay">
-                        <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
-                    </div>
-                </div>
-
-                <div id="lastCol">
-                    <div class="hex"><img src="../img/maria.png" alt="Bild">
-                        <div class="overlay">
-                            <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
-                        </div>
-                    </div>
-                    <div class="hex"><img src="../img/maria.png" alt="Bild">
-                        <div class="overlay">
-                            <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
-                        </div>
-                    </div>
-                    <div class="hex"><img src="../img/maria.png" alt="Bild">
-                        <div class="overlay">
-                            <span class="symbol">&#9993;</span> <!-- Beispiel-Symbol -->
-                        </div>
-                    </div>
-                </div>
+        <div id="container31">
+            <div id="sekgrid">
+                <img src="../img/Reder.png" alt="">
+                <img src="../img/Reder.png" alt="">
+                <img src="../img/Reder.png" alt="">
+                <img src="../img/Group 410.png" alt="">
+                <img src="../img/Reder.png" alt="">
+                <img src="../img/Reder.png" alt="">
+                <img src="../img/Reder.png" alt="">
+                <img src="../img/Reder.png" alt="">
+                <img src="../img/Reder.png" alt="">
             </div>
         </div>
+
     </div>
 
     

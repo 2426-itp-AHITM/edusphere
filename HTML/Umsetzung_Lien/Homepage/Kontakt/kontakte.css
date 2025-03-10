@@ -20,6 +20,7 @@ header {
     padding: 5px 0;
     text-align: center;
     z-index: 10;
+    height: 7vh;
 }
 
 header nav ul {
@@ -27,6 +28,7 @@ header nav ul {
     display: flex;
     justify-content: flex-end;
     margin-right: 50px;
+    margin-top: 2vh;
 }
 
 header nav ul li {
@@ -36,7 +38,7 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 20px;
     transition: color 0.3s ease;
     font-family: manrope;
 }
@@ -145,21 +147,18 @@ main {
 }
 
 #container1>img {
-    width: 100%;
+    left: 5vw;
     z-index: 0;
     position: absolute;
-    filter: blur(4px);
 }
 
 #info {
-    width: 50vw;
+    width: 30vw;
     margin: auto;
-    margin-left: 10vw;
     z-index: 10;
 }
 
 .infoBoxes {
-    width: 100%;
     background-color: white;
     box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
     margin: auto;
@@ -172,9 +171,6 @@ main {
     height: 36%;
 }
 
-.infoBoxes:nth-child(2) {
-    height: 25%;
-}
 
 
 .subButton {
@@ -912,4 +908,18 @@ footer {
 
 .search-btn:hover {
     background: #a7a7a7;
+}
+
+#container31{
+    width: 30vw;
+    margin: auto;
+}
+
+#sekgrid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+#sekgrid> img{
+    width: 100%;
 }

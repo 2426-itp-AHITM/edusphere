@@ -7,6 +7,8 @@
     <title>HTL Leonding</title>
     <link rel="stylesheet" href="sytelIndex.css">
     <script src="./scriptIndex.js" defer></script>
+    <script src="./allgemein.js" defer></script>
+    <link rel="stylesheet" href="./allgemein.css">
 </head>
 
 <body>
@@ -16,11 +18,19 @@
         <nav>
             <ul>
                 <li><a href="./News/news.html">News</a></li>
-                <li><a href="./Clubs/clubs.html">Clubs</a></li>
+                <li><a href="./clubs/clubs.html">Clubs</a></li>
                 <li><a href="./überUns/überuns.html">Über uns</a></li>
                 <li><a href="./bewerber/bewerber.html">Bewerber:innen</a></li>
-                <li><a href="./ausbildungen/ausbildungen.html">Ausbildungen</a></li>
                 <li><a href="./Kontakt/kontakte.html">Kontakt</a></li>
+                <li>
+                    <div class="flag-container" onclick="toggleLanguage()">
+                        <div class="flags">
+                            <img id="flag-at" src="./img/flagge-osterreich.jpeg" alt="AT">
+                            <img id="flag-uk" src="./img/flagge-grossbritannien.jpeg" alt="UK">
+                        </div>
+                        <span id="language-label" class="language-label">DE</span>
+                    </div>
+                </li> 
             </ul>
         </nav>
     </header>
@@ -40,7 +50,7 @@
             </div>
             <div class="stat1">
                 <img src="./img/alarm.png" alt="" srcset="">
-                <p>Events</p>
+                <p>Anmeldung für <br>Schnuppertag</p>
             </div>
         </div>
         
