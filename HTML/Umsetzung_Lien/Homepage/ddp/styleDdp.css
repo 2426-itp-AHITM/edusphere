@@ -155,8 +155,8 @@ a {
 }
 
 .abschluss-container > #roboimg > img{
-    width: 70%;
-    margin-left: 10%;
+    width: 60%;
+    margin-left: 20%;
 }
 
 #roboimg{
@@ -167,18 +167,18 @@ a {
     position: absolute;
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 4vw;
+    gap: 6vw;
     text-decoration: none;
     color: white;
-    top: 37vh;
-    left: 7vw;
+    top: 27vh;
+    left: 9vw;
 
 }
 
 .codingbutton{
     background-color: #4890E2;
     border-radius: 20px;
-    width: 12vw;
+    width: 9vw;
     padding: 1vw;
     text-align: center;
     color: white;
