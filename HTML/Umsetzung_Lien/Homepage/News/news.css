@@ -211,6 +211,42 @@ a {
     cursor: pointer;
     filter: grayscale(0%);
 }
+
+/* news */
+
+#newsContainer{
+    width: 100vw;
+    display: flex;
+}
+
+#container-right{
+    width: 70vw;
+    height: 100vh;
+}
+
+#filter{
+    display: flex;
+    width: 35vw;
+}
+
+#headContainer{
+    display: flex;
+}
+
+#topNews{
+    width: 80%;
+}
+
+#topNews > div{
+    background-color: rgba(255, 255, 255, 0.514);
+}
+
+#topNews > div > img{
+    width: 70%;
+    margin: auto;
+}
+
+
 footer {
     background-color: #04243d;
     color: white;
