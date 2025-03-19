@@ -17,7 +17,7 @@ header {
     width: 100%;
     padding: 5px 0;
     text-align: center;
-    z-index: 10;
+    z-index: 10000000000;
 }
 
 header nav ul { 
@@ -225,6 +225,8 @@ a {
     border-radius: 10px;
     z-index: 100;
     margin-top: 2vw;
+    width: 60vw;
+
 }
 
 #filter {
@@ -263,8 +265,13 @@ h1 {
 }
 
 #container-right {
-    background-color: #04243d;
+    background-color: #062f4e;
     width: 100%;
+    z-index: 100000;
+    margin-top: -2.5vh;
+    margin-right: -2vw;
+    padding-top: 12vh;
+    padding-bottom: 10vh;
 }
 #topNews{
     width: 80%;
@@ -288,11 +295,12 @@ h1 {
     width: 42vw;
 }
 .oldNews {
-    background-color: white;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
     position: relative;
+    width: 70%;
+    margin: auto;
 }
 
 .oldNews img {
@@ -302,13 +310,14 @@ h1 {
 }
 
 .oldNews h1 {
-    font-size: 16px;
-    background: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.432);
     color: white;
     padding: 5px;
     position: absolute;
     bottom: 10px;
-    left: 10px;
+    left: 20px;
+    width: 90%;
 }
 
 footer {
@@ -316,6 +325,7 @@ footer {
     color: white;
     padding: 20px;
     font-family: manrope;
+    margin-top: -2.5vh;
 }
 .sponsors {
     width: 100%;
@@ -396,7 +406,7 @@ footer {
 }
 
 #tri5{
-    z-index: 0;
+    z-index: -1;
     margin-left: -5vw;
     width: 80vw;
     margin-top: -8vw;
