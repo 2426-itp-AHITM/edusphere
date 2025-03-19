@@ -271,7 +271,18 @@ h1 {
     margin-top: -2.5vh;
     margin-right: -2vw;
     padding-top: 12vh;
+    overflow-y: auto;
     padding-bottom: 10vh;
+    height: 100vh;
+    scrollbar-color: gray;
+}
+#container-right::-webkit-scrollbar {
+    width: 8px;
+}
+
+#container-right::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 4px;
 }
 #topNews{
     width: 80%;
