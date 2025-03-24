@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -51,6 +54,35 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 
+#Pfö{
+    width: 3vw;
+    height: 3vw;
+    margin-top: 2vw;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+#Pfö1{
+    width: 3vw;
+    height: 3vw;
+    margin-top: 18vw;
+    animation: pulse 1.5s infinite;
+    margin-left: 1vw;
+}
 
 .hero-section {
     background: url('../img/bewerben.png') no-repeat center center/cover;

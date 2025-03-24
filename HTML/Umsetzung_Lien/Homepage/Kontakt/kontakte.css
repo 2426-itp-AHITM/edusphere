@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: manrope;
@@ -49,7 +52,29 @@ header nav ul li a {
     font-size: 14px;
     transition: color 0.3s ease;
 }
+#Pfö{
+    width: 3vw;
+    height: 3vw;
+    animation: pulse 1.5s infinite;
+    margin-top: 51vw;
+    margin-left: 15vw;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
 
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
 #headerLogo img {
     width: 10vw;
@@ -172,7 +197,6 @@ main {
     margin-top: 5vh;
     border-radius: 20px;
     width: 40vw;
-    box-shadow: 10px 15px 10px 10px rgba(0, 0, 0, 0.119);
 }
 
 .infoBoxes:nth-child(1) {

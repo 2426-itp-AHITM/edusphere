@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -87,7 +91,7 @@ main{
     text-align: center;
     flex: 1;
     color: white;
-    background-color: #ffffff9a;
+    background-color: #ffffff;
     width: 14vw;
     padding: 1vw;
     border-radius: 30px;
@@ -109,7 +113,9 @@ main{
     font-size: 1.4rem;
     color: #000000;
 }
-
+.stat1 img{
+    width: 5vw;
+}
 #allDept {
     display: flex;
     width: 100vw;
@@ -1112,7 +1118,7 @@ button {
 #headerU{
     left: 15vw;
     top: 40vh;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.315);
     font-size: 8em;
     color: white;
     font-weight: lighter;
@@ -1127,7 +1133,7 @@ button {
 #flexDex{
     display: flex;
     position: absolute;
-    top: 85%;
+    top: 81%;
     left: 33%;
     gap: 2vw;
 }
