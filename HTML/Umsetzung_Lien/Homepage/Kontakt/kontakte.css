@@ -158,20 +158,31 @@ main {
 }
 
 .infoBoxes {
-    background-color: white;
-    box-shadow: 8px 8px 7px 5px rgba(0, 0, 0, 0.24);
     margin: auto;
     padding: 1vw;
     margin-top: 5vh;
     border-radius: 20px;
+    width: 40vw;
+    box-shadow: 10px 15px 10px 10px rgba(0, 0, 0, 0.119);
 }
 
 .infoBoxes:nth-child(1) {
     height: 36%;
 }
 
+.infoBoxes p{
+    color: #04243d;
+    font-size: 1.5vw;
+}
 
+.infoBoxes span{
+    color: black;
+    font-weight: bold;
+}
 
+.infoBoxes h1{
+    font-size: 3vw;
+}
 .subButton {
     background-color: black;
     color: white;

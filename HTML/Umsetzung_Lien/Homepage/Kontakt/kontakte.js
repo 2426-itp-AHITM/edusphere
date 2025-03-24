@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         },
-        { threshold: 0.1} // Animation startet, wenn 20% sichtbar sind
+        { threshold: 0.4} // Animation startet, wenn 20% sichtbar sind
     );
 
     observer.observe(info);
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         },
-        { threshold: 0.9 } // Animation startet, wenn 20% sichtbar sind
+        { threshold: 0.2 } // Animation startet, wenn 20% sichtbar sind
     );
 
     observer.observe(artztContainer);
