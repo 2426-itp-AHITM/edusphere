@@ -91,11 +91,13 @@ main{
     text-align: center;
     flex: 1;
     color: white;
-    background-color: #ffffff;
+    background-color: #ffffff85;
     width: 14vw;
+    backdrop-filter: blur(5px);
     padding: 1vw;
-    border-radius: 30px;
+    border-radius: 30px 30px 15px 15px;
     z-index: 10;
+    border: 2px solid white;
     animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
     transition: all 0.3s;
 }
@@ -114,6 +116,7 @@ main{
     color: #000000;
 }
 .stat1 img{
+    z-index: 1000;
     width: 5vw;
 }
 #allDept {
@@ -1133,12 +1136,11 @@ button {
 #flexDex{
     display: flex;
     position: absolute;
-    top: 81%;
-    left: 33%;
+    top: 82%;
+    left: 25%;
     gap: 2vw;
+    cursor: pointer;
 }
-
-
 
 
 #wrapper {
