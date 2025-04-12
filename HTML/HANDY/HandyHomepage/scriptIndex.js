@@ -121,23 +121,6 @@ function slideback() {
 }
 
 slide()
-document.addEventListener("DOMContentLoaded", function () {
-    const stats = document.querySelector(".info");
-
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    stats.classList.add("animate");
-                    observer.unobserve(entry.target); // Stoppt weiteres Beobachten
-                }
-            });
-        },
-        { threshold: 0.6 } // Startet, wenn 20% des Elements sichtbar sind
-    );
-
-    observer.observe(stats);
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     const caroImg = document.querySelector("#caro");
@@ -216,4 +199,32 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     observer.observe(galerieContainer);
+});  const cardsContainer = document.getElementById('cardsContainer');
+const cards = document.querySelectorAll('.cardD');
+const dotsContainer = document.getElementById('dotsContainer');
+let currentIndex = 0;
+
+// Dots erzeugen
+cards.forEach((_, i) => {
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => {
+    moveToIndex(i);
+  });
+  dotsContainer.appendChild(dot);
 });
+
+const dots = document.querySelectorAll('.dot');
+
+function moveToIndex(index) {
+  const cardWidth = cards[0].offsetWidth + 20; // 20px für Margin
+  cardsContainer.style.transform = `translateX(-${index * cardWidth}px)`;
+  updateDots(index);
+  currentIndex = index;
+}
+
+function updateDots(index) {
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+}
