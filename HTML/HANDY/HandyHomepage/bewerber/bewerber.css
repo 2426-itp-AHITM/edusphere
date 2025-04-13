@@ -86,7 +86,7 @@ header nav ul li a {
 
 .hero-section {
     background: url('../img/bewerben.png') no-repeat center center/cover;
-    height: 100vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,15 +117,15 @@ header nav ul li a {
 }
 
 .hero-section h1 {
-    font-size: 7rem;
-    margin-bottom: 10px;
+    font-size: 3.3rem;
+    margin-bottom: 2vw;
     font-weight: 400;
     font-weight: bold;
-    margin-top: -3vw;
+    margin-top: -4vw;
 }
 
 .hero-section h2 {
-    font-size: 3rem;
+    font-size: 2.3em;
     font-weight: lighter;
     margin-top: 2vw;
     color: #ffffff9e;
@@ -145,7 +145,7 @@ header nav ul li a {
 }
 
 .hero-section .button {
-    padding: 1.2vw;
+    padding: 1.7vw;
     background-color: #4890E2;
     color: #fff;
     border-radius: 20px;
@@ -153,6 +153,7 @@ header nav ul li a {
     font-weight: bold;
     transition: background-color 0.3s ease;
     opacity: 0;
+    margin-top: 2vw;
     animation: slide-right 1s forwards;
 }
 .button:nth-child(2) {
@@ -186,7 +187,7 @@ a {
     background: #5f626542;
     padding: 10px;
     border-radius: 5px;
-    width: 30vw;
+    width: 70vw;
     margin: auto;
     margin-bottom: 2vw;
     margin-top: 0vw;
@@ -266,7 +267,7 @@ a {
 }
 .step2 h4{
     font-weight: lighter;
-    font-size: 1.2vw;
+    font-size:4vw;
     color: #ffffff;
 }
 .step2 a{
@@ -306,26 +307,23 @@ footer {
     background-color: #04243d;
     color: white;
     padding: 20px;
-    font-family: manrope;
+    font-family: 'Manrope', sans-serif;
 }
+
+/* Sponsorenbereich */
 .sponsors {
     width: 100%;
     overflow: hidden;
-    position: relative;
-    padding: 20px 0;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: -2vw;
-
+    padding: 10px 0;
 }
 
 .sponsor-logos {
     display: flex;
-    gap: 40px; /* Abstand zwischen Logos */
-    width: max-content; /* Wichtig für Animation */
+    gap: 20px;
+    width: max-content;
     animation: slide 15s linear infinite;
 }
-
 /* Animation für den Slider */
 @keyframes slide {
     from {
@@ -336,35 +334,33 @@ footer {
     }
 }
 
-/* Damit die Logos nicht abgeschnitten werden */
 .sponsor-logos img {
-    max-width: 15vw;
+    max-width: 80px;
     height: auto;
     object-fit: contain;
 }
 
 .sponsors h4 {
-    margin-bottom: 2vw;
-    font-size: 2vw;
-    margin-left: 4vw;
-    font-weight: normal;
+    font-size: 16px;
+    margin: 10px 0;
     text-align: left;
-    margin-top: 1.3vw;
+    padding-left: 10px;
 }
+
+/* Hauptbild mit Text */
 .main-content {
-    margin-top: 2vw;
     position: relative;
     text-align: center;
+    margin: 20px 0;
 }
 
 .main-content img {
-    width: 80%;
-    transition: all 0.2s;
-    height: 40vh;
+    width: 100%;
+    height: auto;
     filter: brightness(50%);
-
 }
-.main-content img:hover{
+
+.main-content img:hover {
     transform: scale(1.03);
     transition: all 0.2s;
     filter: brightness(30%);
@@ -373,46 +369,40 @@ footer {
 
 .overlay {
     position: absolute;
-    top: 45%;
-    width: 35vw;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 100%;
+    padding: 0 10px;
+    transform: translateY(-50%);
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 2.3vw;
-}
-.overlay h2{
-    font-weight: lighter;
+    font-size: 24px;
 }
 
+.overlay h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 5vw;
+}
 
+/* Grid für Footer-Bereiche */
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-left: 4vw;
-    margin-right: 4vw;
-}
-
-.footer-section {
-    margin-top: 3vw;
-    margin-bottom: 20px;
+    margin: 20px 10px;
 }
 
 .footer-section h4 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    width: 15vw;
     border-bottom: 2px solid #555;
     padding-bottom: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .footer-section p,
 .footer-section ul {
-    margin: 0;
-    font-size: 0.9em;
+    font-size: 14px;
     line-height: 1.5;
+    margin: 0;
 }
 
 .footer-section ul {
@@ -425,33 +415,23 @@ footer {
 }
 
 .footer-section ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
-.footer-section ul li:hover {
+.footer-section ul li a:hover {
     text-decoration: underline;
     color: #ffffff89;
-    cursor: pointer;
 }
 
-.social-links li {
-    display: inline-block;
-    margin-right: 10px;
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 10px;
 }
 
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.8em;
+.social-links li img {
+    width: 24px;
+    height: 24px;
 }
 
-.footer-bottom a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-.footer-bottom a:hover {
-    text-decoration: underline;
-}

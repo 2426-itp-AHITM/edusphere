@@ -102,6 +102,7 @@ main {
     padding-left: 1.5vw;
     padding-right: 1.5vw;
     padding-top: 1.5vw;
+    padding-bottom: -2vw;
     border-radius: 30px 30px 15px 15px;
     z-index: 10;
     border: 2px solid white;
@@ -112,6 +113,7 @@ main {
 .stat1:hover {
     transition: all 0.3s;
     transform: scale(1.2);
+    background-color: #000000;
 }
 
 .number1 {
@@ -156,9 +158,17 @@ h1 {
     scroll-snap-type: x mandatory;
     padding: 40px 20px;
     gap: 20px;
-    margin-top: -2vw;
+    margin-top: -120vw;
+    z-index: 100;
     scrollbar-width: none;
     /* Für Firefox */
+}
+
+#go4 {
+    z-index: -1000;
+    width: 150vw;
+    margin-left: -10vw;
+    margin-top: -40vw;
 }
 
 body::-webkit-scrollbar {
@@ -282,7 +292,6 @@ p {
     width: 360px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.575);
 }
 
 .image-wrapper {
@@ -345,10 +354,11 @@ p {
     width: 170px;
     height: auto;
     z-index: 2;
+
 }
 
 
-@keyframes slide-fwd-center {
+@keyframes slide-fwd-centerSc {
     0% {
         transform: translateZ(0);
         opacity: 0;
@@ -358,6 +368,30 @@ p {
         transform: translateZ(160px);
         opacity: 1;
     }
+}
+
+/* Startzustände */
+.hidden-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease;
+}
+
+.hidden-fade {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.8s ease;
+}
+
+/* Sichtbar */
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.visible-scale {
+    opacity: 1;
+    transform: scale(1);
 }
 
 
@@ -420,16 +454,6 @@ section {
     scroll-behavior: smooth;
 }
 
-
-.event-card {
-    background: white;
-    color: black;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 1rem;
-    min-width: 300px;
-}
 
 .event-card:nth-child(1) {
     width: 10%;
@@ -622,6 +646,7 @@ section {
     left: -10%;
     top: -19%;
 }
+
 /* Basis bleibt gleich */
 footer {
     background-color: #04243d;
@@ -644,11 +669,13 @@ footer {
     width: max-content;
     animation: slide 15s linear infinite;
 }
+
 /* Animation für den Slider */
 @keyframes slide {
     from {
         transform: translateX(-100%);
     }
+
     to {
         transform: translateX(100%);
     }
@@ -807,7 +834,11 @@ footer {
     height: 20px;
     background-color: white;
     border-radius: 5px;
+    width: 0;
+    /* Startbreite für Animation */
+    transition: width 1s ease-in-out;
 }
+
 
 .bar1 {
     width: 150px;
@@ -818,37 +849,36 @@ footer {
 }
 
 .bar3 {
-    width: 220px;
+    width: 200px;
 }
 
 .bar4 {
     width: 30px;
 }
 
-/* Wenn der Balken die "animate"-Klasse bekommt, wird die Höhe animiert */
 .bar.animate {
-    width: 200px;
-    /* Höhe, die du für die Balken festlegst */
+    transition: width 1s ease-in-out;
 }
+
 
 /* Balken-spezifische Animationen */
 .bar1.animate {
-    width: 150px;
+    width: 200px;
     /* Beispielhöhe */
 }
 
 .bar2.animate {
-    width: 180px;
+    width: 80px;
     /* Beispielhöhe */
 }
 
 .bar3.animate {
-    width: 120px;
+    width: 220px;
     /* Beispielhöhe */
 }
 
 .bar4.animate {
-    width: 100px;
+    width: 90px;
     /* Beispielhöhe */
 }
 
@@ -906,6 +936,7 @@ footer {
         transform: scale(1);
     }
 }
+
 
 #galerie {
     display: flex;
@@ -1040,18 +1071,188 @@ button {
 #flexDex {
     display: flex;
     position: absolute;
-    top: 18%;
+    top: 19%;
     left: 1%;
     gap: 6vw;
     cursor: pointer;
 }
 
-#Succes-Stories{
+
+/* Stelle sicher, dass alles zentriert im Viewport erscheint */
+.termine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10000;
+    background-color: none;
+    margin-top: -120vw;   
+     margin-bottom: 15vw;
+
+}
+
+/* Optional: Blur-Overlay über Hintergrundbild */
+.event-bg {
+    filter: brightness(0.7);
+}
+
+/* Responsive Design: */
+@media (max-width: 700px) {
+    .event-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .event-overlay {
+        padding: 16px;
+    }
+
+    .event-content h3 {
+        font-size: 18px;
+    }
+
+    .event-content p {
+        font-size: 12px;
+    }
+}
+
+
+.termine h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+
+
+.event-card {
+    position: relative;
+    width: 80vw;
+    height: 18vh;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10vw;
+    z-index: 1000;
+}
+
+
+.event-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.top-row {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.event-date {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 2vw;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.event-date img {
+    width: 5vw;
+}
+
+.event-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.event-content h3 {
+    font-size: 22px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.event-content p {
+    font-size: 14px;
+    margin: 0;
+    color: #ccc;
+    margin-left: 1vw;
+}
+
+.event-button {
+    margin-top: 6px;
+    background: #2e6df6;
+    color: white;
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 0vw;
+}
+
+/* Pfeil rechts */
+.event-arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: white;
+    z-index: 3;
+    font-weight: bold;
+}
+
+/* Dots unten mittig */
+.event-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    z-index: 3;
+}
+
+.dotS {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.5;
+}
+
+.dotS.active {
+    opacity: 1;
+}
+#tritri {
+    z-index: -100;
+    width: 115vw;
+    margin-top: -18vw;
+    margin-left: -14vw;
+    margin-bottom: 20vw;
+}
+#Succes-Stories {
     overflow: hidden;
     background: rgb(26, 71, 114);
     background: linear-gradient(0deg, rgba(26, 71, 114, 1) 12%, rgba(10, 38, 64, 1) 91%);
     font-family: manrope;
+    z-index: 100000000;
 }
+
 #wrapper {
     padding: 0;
     display: flex;
@@ -1064,7 +1265,9 @@ button {
 
 .container {
     position: relative;
-    height: 50vh;
+    height: 30vh;
+    z-index: 100000;
+
 }
 
 .text {
@@ -1106,7 +1309,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: 10vw;
-    margin-left: 40vw;
+    margin-left: 38vw;
     margin-top: -30vw;
 }
 
@@ -1124,7 +1327,7 @@ button {
 }
 
 .card:nth-child(1) {
-    transform: rotate(-20deg) translateX(-120px);
+    transform: rotate(-20deg) translateX(-100px);
     z-index: 1;
 }
 
@@ -1144,7 +1347,7 @@ button {
 }
 
 .card:nth-child(5) {
-    transform: rotate(25deg) translateX(120px);
+    transform: rotate(25deg) translateX(100px);
     z-index: 1;
 }
 
@@ -1190,120 +1393,3 @@ button {
     width: 70vw;
     opacity: 0.8;
 }
-
-.termine {
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .termine h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-  
-  .event-card {
-    position: relative;
-    width: 90%;
-    max-width: 620px;
-    margin: 0 auto;
-    border-radius: 25px;
-    overflow: hidden;
-    height: 18vh;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  }
-  
-  .event-bg {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .event-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 15px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .event-date {
-    background: white;
-    color: black;
-    border-radius: 10px;
-    padding: 6px 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 600;
-    width: fit-content;
-    font-size: 14px;
-  }
-  
-  .event-date img {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .event-text h3 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .event-text p {
-    margin: 0;
-    font-size: 14px;
-    color: #ccc;
-  }
-  
-  .event-button {
-    background: #2e6df6;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    width: fit-content;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  /* Pfeil rechts */
-  .event-arrow {
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    font-size: 28px;
-    color: white;
-    font-weight: bold;
-  }
-  
-  /* Dots unten */
-  .event-dots {
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    margin-top: 10vw;
-
-    transform: translateX(-50%);
-  }
-  
-  .dotS {
-    width: 6px;
-    height: 6px;
-    background: white;
-    opacity: 0.5;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  .dotS.active {
-    opacity: 1;
-  }
