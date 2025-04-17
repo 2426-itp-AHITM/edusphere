@@ -15,6 +15,8 @@ var splide = new Splide('.splide', {
     resetProgress: false,
     pauseOnHover: false,
     speed: transitionSpeed,
+    drag: false,
+    swipe: false
 });
 
 splide.mount();
@@ -23,7 +25,7 @@ function startProgressBar() {
     var progressBar = document.querySelector('.my-slider-progress-bar');
     progressBar.style.transition = 'none';
     progressBar.style.width = '0%';
-    
+
     setTimeout(function () {
         progressBar.style.transition = 'width ' + totalDuration + 'ms linear';
         progressBar.style.width = '100%';
