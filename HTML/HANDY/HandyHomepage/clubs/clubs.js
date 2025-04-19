@@ -46,3 +46,19 @@ function resetInterval() {
 }
 
 updateProgressBar();
+
+
+
+  const burgerBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  burgerBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
+
+  // Menü automatisch schließen bei Link-Klick
+  document.querySelectorAll("#mobileMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
