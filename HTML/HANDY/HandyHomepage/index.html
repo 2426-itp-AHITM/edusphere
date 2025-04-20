@@ -11,29 +11,57 @@
     <link rel="stylesheet" href="./allgemein.css">
 </head>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
+        });
+
+        // Optional: Schließe das Menü beim Klicken auf einen Link
+        document.querySelectorAll("#mobileMenu a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("active");
+            });
+        });
+    });
+</script>
+
+
 <body>
 
     <header>
-        <a id="headerLogo" href="./index.html"><img src="./img/htlLogo.png" alt=""></a>
-        <nav>
-            <ul>
-                <li><a href="./News/news.html">News</a></li>
-                <li><a href="./index.html#allDept">Ausbildungen</a></li>
-                <li><a href="./clubs/clubs.html">Clubs</a></li>
-                <li><a href="./überUns/überuns.html">Über uns</a></li>
-                <li><a href="./bewerber/bewerber.html">Bewerber:innen</a></li>
-                <li><a href="./Kontakt/kontakte.html">Kontakt</a></li>
-                <li>
-                    <div class="flag-container" onclick="toggleLanguage()">
-                        <div class="flags">
-                            <img id="flag-at" src="./img/flagge-osterreich.jpeg" alt="AT">
-                            <img id="flag-uk" src="./img/flagge-grossbritannien.jpeg" alt="UK">
-                        </div>
-                        <span id="language-label" class="language-label">DE</span>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+        <a id="headerLogo" href="./index.html">
+            <img src="./img/htlLogo.png" alt="">
+        </a>
+
+        <!-- Menü- und Sprachzeile -->
+        <div class="header-controls">
+
+            <div id="menu-toggle">&#9776;</div>
+            <!-- Sprache -->
+            <div class="flag-container" onclick="toggleLanguage()">
+                <div class="flags">
+                    <img id="flag-at" src="./img/flagge-osterreich.jpeg" alt="AT">
+                    <img id="flag-uk" src="./img/flagge-grossbritannien.jpeg" alt="UK">
+                </div>
+                <!--<span id="language-label" class="language-label">DE</span>-->
+            </div>
+
+            <!-- Burger-Button -->
+            <nav id="mobileMenu">
+                <ul>
+                    <li><a href="./News/news.html">News</a></li>
+                    <li><a href="./index.html#allDept">Ausbildungen</a></li>
+                    <li><a href="./clubs/clubs.html">Clubs</a></li>
+                    <li><a href="./überUns/überuns.html">Über uns</a></li>
+                    <li><a href="./bewerber/bewerber.html">Bewerber:innen</a></li>
+                    <li><a href="./Kontakt/kontakte.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
 

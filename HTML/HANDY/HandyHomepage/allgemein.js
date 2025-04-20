@@ -8,11 +8,10 @@ function toggleLanguage() {
     if (isGerman) {
         atFlag.style.opacity = "0"; // Österreich-Flagge ausblenden
         ukFlag.style.opacity = "1"; // UK-Flagge einblenden
-        label.textContent = "ENG";
+        //label.textContent = "ENG";
     } else {
         atFlag.style.opacity = "1"; // Österreich-Flagge einblenden
         ukFlag.style.opacity = "0"; // UK-Flagge ausblenden
-        label.textContent = "DE";
     }
     isGerman = !isGerman;
 }

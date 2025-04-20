@@ -13,40 +13,80 @@ body {
     font-family: manrope;
     src: url("../Manrope/Manrope-VariableFont_wght.ttf");
 }
+
+/* header */
 header {
     background-color: rgba(0, 0, 0, 0.504);
     color: white;
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 5px 0;
-    text-align: center;
-    z-index: 10000000000;
-}
-
-header nav ul { 
-    list-style: none;
+    padding: 10px 5vw;
+    z-index: 1000;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 50px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header nav ul li {
-    margin-left: 20px;
+#headerLogo img {
+    width: 30vw;
+    max-width: 120px;
 }
 
-header nav ul li a {
+/* Container für Burger und Flaggen */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Burger Icon */
+#menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Mobile Menü */
+#mobileMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.74);
+    color: white;
+    transition: right 0.3s ease;
+    z-index: 999;
+    padding: 100px 20px 20px;
+}
+
+#mobileMenu.active {
+    right: 0;
+}
+
+#mobileMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mobileMenu li {
+    margin: 20px 0;
+}
+
+#mobileMenu a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
     font-family: manrope;
 }
-#headerLogo img{
-    width: 10vw;
-    position: absolute;
-    left: 2%;
-    top: 20%;
+
+.flag-container {
+    margin-right: 4vw;
+}
+
+.flag-container>.flags>img {
+    width: 8vw;
 }
 
 .hero-section {
