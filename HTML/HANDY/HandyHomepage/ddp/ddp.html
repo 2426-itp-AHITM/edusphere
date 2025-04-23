@@ -13,21 +13,21 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobileMenu");
-  
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("active");
-      });
-  
-      // Optional: Schließe das Menü beim Klicken auf einen Link
-      document.querySelectorAll("#mobileMenu a").forEach(link => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.remove("active");
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
         });
-      });
+
+        // Optional: Schließe das Menü beim Klicken auf einen Link
+        document.querySelectorAll("#mobileMenu a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("active");
+            });
+        });
     });
-  </script>
+</script>
 
 <body>
     <header>
@@ -61,7 +61,7 @@
             </nav>
         </div>
 
-        
+
 
     </header>
 
@@ -102,35 +102,43 @@
                 Österreichischen Unis Und FHs Und Den Vielen IT-Firmen Im OÖ Zentralraum Und Auch Darüber Hinaus.
             </p>
         </div>
-        <div id="roboimg">
-            <img src="../img/robo.png" alt="">
-            <div class="codingButtons">
-                <a href="#" class="codingbutton">Coder Dojo</a>
-                <a href="#" class="codingbutton">Online-Coding</a>
-            </div>
+
+        <div class="codingButtons">
+            <a href="#" class="codingbutton">Coder Dojo</a>
+            <a href="#" class="codingbutton">Online-Coding</a>
         </div>
+
     </div>
 
-    <div id="galerie-container">
-        <h1 class="title1">Nächste Termine für DDP 2024/25</h1>
-        <div id="galerie">
-            <div class="galerie-item"><img src="../img/event0.jpg" alt="">
-                <p class="galerie-text">Project Award</p>
-            </div>
-            <div class="galerie-item"><img src="../img/event1.jpg" alt="">
-                <p class="galerie-text">Think your Product</p>
-            </div>
-            <div class="galerie-item"><img src="../img/event2.jpg" alt="">
-                <p class="galerie-text">FIT</p>
-            </div>
-            <div class="galerie-item"><img src="../img/event3.jpg" alt="">
-                <p class="galerie-text">Hacker Wettbewerb</p>
+    <div class="termine">
+        <h2>nächsten Termine 2024/25</h2>
+
+        <div class="event-card">
+            <img src="../img/DDP.png" class="event-bg" alt="Hintergrund" />
+
+            <div class="event-overlay">
+                <div class="top-row">
+                    <div class="event-date">
+                        <img src="../img/alarm.png" alt="Kalender Icon" />
+                        <span>11.12.2024</span>
+                    </div>
+                </div>
+
+                <div class="event-content">
+                    <h3>Design of Digital Product</h3>
+                    <p>DDP</p>
+                    <button class="event-button">mehr lesen</button>
+                </div>
             </div>
 
+            <div class="event-arrow">&gt;</div>
+
+            <div class="event-dots">
+                <span class="dotS active"></span>
+                <span class="dotS"></span>
+                <span class="dotS"></span>
+            </div>
         </div>
-
-        <button id="next" class="nav-btn" onclick="slideback()"><img src="../img/Arrowblackl.png" alt=""></button>
-        <button id="prev" class="nav-btn" onclick="slide()"><img src="../img/Arrowblackr.png" alt=""></button>
     </div>
 
     <div id="timetable">
@@ -167,31 +175,31 @@
                         <td class="time-column">08:00</td>
                         <td>
                             <div class="stunden-container">
-                                <h1>Physik <br> 1A</h1>
+                                <h1>NWP <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Mathe <br> 1A</h1>
+                                <h1>AM <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Deutsch <br> 1A</h1>
+                                <h1>D <br> 1A</h1>
                             </div>
                         </td>
 
                         <td class="heartbeat">
                             <div class="stunden-container">
-                                <h1>Programmieren <br> 1A</h1>
+                                <h1>SEW <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Standard-Software <br> 1A</h1>
+                                <h1>SYT <br> 1A</h1>
                             </div>
                         </td>
                     </tr>
@@ -201,31 +209,31 @@
                         <td class="time-column">08:55</td>
                         <td>
                             <div class="stunden-container">
-                                <h1>Geografie <br> 1A</h1>
+                                <h1>GGP <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Mathe <br> 1A</h1>
+                                <h1>AM <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Rechnungswesen <br> 1A</h1>
+                                <h1>RW <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Programmieren <br> 1A</h1>
+                                <h1>SEW <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Standard-Software <br> 1A</h1>
+                                <h1>SYT <br> 1A</h1>
                             </div>
                         </td>
                     </tr>
@@ -235,31 +243,31 @@
                         <td class="time-column">10:00</td>
                         <td>
                             <div class="stunden-container">
-                                <h1>Geografie <br> 1A</h1>
+                                <h1>GGP <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Religion <br> 1A</h1>
+                                <h1>RELI <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Betriebswirtschaft <br> 1A</h1>
+                                <h1>BW <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Programmieren <br> 1A</h1>
+                                <h1>SEW <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Sport <br> 1A</h1>
+                                <h1>BSP <br> 1A</h1>
                             </div>
                         </td>
                     </tr>
@@ -269,31 +277,31 @@
                         <td class="time-column">10:55</td>
                         <td>
                             <div class="stunden-container">
-                                <h1>Deutsch <br> 1A</h1>
+                                <h1>D <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Rechnungswesen <br> 1A</h1>
+                                <h1>RW <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Mathe <br> 1A</h1>
+                                <h1>AM <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Hardware <br> 1A</h1>
+                                <h1>HW <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Sport <br> 1A</h1>
+                                <h1>BSP <br> 1A</h1>
                             </div>
                         </td>
                     </tr>
@@ -303,31 +311,31 @@
                         <td class="time-column">11:50</td>
                         <td>
                             <div class="stunden-container">
-                                <h1>Programmieren <br> 1A</h1>
+                                <h1>SEW <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Deutsch <br> 1A</h1>
+                                <h1>D <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Mathe <br> 1A</h1>
+                                <h1>AM <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Hardware <br> 1A</h1>
+                                <h1>HW <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Religion <br> 1A</h1>
+                                <h1>R <br> 1A</h1>
                             </div>
                         </td>
                     </tr>
@@ -337,7 +345,7 @@
                         <td class="time-column">12:45</td>
                         <td>
                             <div class="stunden-container">
-                                <h1>Programmieren <br> 1A</h1>
+                                <h1>SEW <br> 1A</h1>
                             </div>
                         </td>
 
@@ -347,19 +355,19 @@
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Computerarchitektur <br> 1A</h1>
+                                <h1>CA <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Physik <br> 1A</h1>
+                                <h1>NWP <br> 1A</h1>
                             </div>
                         </td>
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Betriebswirtschaft <br> 1A</h1>
+                                <h1>BW <br> 1A</h1>
                             </div>
                         </td>
                     </tr>
@@ -369,7 +377,7 @@
                         <td class="time-column">13:40</td>
                         <td>
                             <div class="stunden-container">
-                                <h1>Sozial- und Personalkompetenzen <br> 1A</h1>
+                                <h1>SOPK <br> 1A</h1>
                             </div>
                         </td>
 
@@ -383,7 +391,7 @@
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Physik <br> 1A</h1>
+                                <h1>NWP <br> 1A</h1>
                             </div>
                         </td>
 
@@ -405,7 +413,7 @@
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Englisch <br> 1A</h1>
+                                <h1>E <br> 1A</h1>
                             </div>
                         </td>
 
@@ -431,7 +439,7 @@
 
                         <td>
                             <div class="stunden-container">
-                                <h1>Englisch <br> 1A</h1>
+                                <h1>E <br> 1A</h1>
                             </div>
                         </td>
 
@@ -465,16 +473,10 @@
 
 
     <div id="content">
-        <img id="farbe" src="../img/farbe.png" alt="">
+        
         <div id="container-1">
             <h1>Von Unseren
                 Absolvent:innen</h1>
-            <p class="grey-p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                natoque penatibus et magnis dis parturient.</p>
-            <div id="pc-container">
-                <img src="../img/pc.png" alt="">
-            </div>
 
         </div>
         <div id="container-2">
@@ -503,7 +505,6 @@
                 <img src="../img/absolventin.png" alt="">
             </div>
         </div>
-        <img id="dr" src="../img/Component 3.png" alt="">
 
     </div>
 
@@ -516,37 +517,10 @@
         <h1>Galerie</h1>
     </div>
     <div id="container4">
+        <p>Robotic</p>
 
-        <div class="insight-container">
-            <div>
-                <img src="../img/insights1.png" alt="">
-                <p>Robotic</p>
-            </div>
-        </div>
-        <div class="insight-container">
-            <div>
-                <img src="../img/insights2.png" alt="">
-                <p>Robotic</p>
-            </div>
-        </div>
-        <div class="insight-container">
-            <div>
-                <img src="../img/insights3.png" alt="">
-                <p>Robotic</p>
-            </div>
-        </div>
-        <div class="insight-container">
-            <div>
-                <img src="../img/insights4.png" alt="">
-                <p>Robotic</p>
-            </div>
-        </div>
-        <div class="insight-container">
-            <div>
-                <img src="../img/insights1.png" alt="">
-                <p>Robotic</p>
-            </div>
-        </div>
+       <img src="../img/Group 413.png" alt="">
+
     </div>
 
 
@@ -618,7 +592,6 @@
 
     <h1 class="news-title">News DDP</h1>
     <div class="news-container">
-        <img id="comp4" src="../img/Component 4.png" alt="" srcset="">
 
         <div class="news-card">
             <img src="../img/image (9).png" alt="Leonie" class="news-image">
