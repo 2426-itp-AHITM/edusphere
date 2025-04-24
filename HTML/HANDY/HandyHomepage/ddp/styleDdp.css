@@ -807,19 +807,27 @@ button {
     margin-bottom: 6vw;
     margin-top: 6vw;
     width: 100vw;
-    overflow-x: auto;
+    height: 60vh;
+
 }
 
+.news-container >img{
+    margin-top: 45%;
+    width: 10vw;
+    height: 10vw;
+    margin-left: -2vw;
+}
 .news-card {
 
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-
+    width: 80vw;
+    height: 50vh;
     overflow: hidden;
     display: inline-block;
-
+    margin-left: 5vw;
     padding-bottom: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-family: manrope;
@@ -833,7 +841,7 @@ button {
 
 .news-image {
     width: 100%;
-    height: 15vh;
+    height: 25vh;
     border-bottom: 5px solid #eaf1f8;
 }
 
@@ -847,7 +855,7 @@ button {
 }
 
 .news-description {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #00306664;
     padding: 0 15px;
     text-align: left;
@@ -861,11 +869,16 @@ button {
     background: #afd7ff64;
     border-radius: 20px;
     padding: 5px 15px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #000A2D;
-    width: 4vw;
-    margin-left: 18vw;
+    width: 18vw;
+    margin-left: 3vw;
+}
+
+.news-footer > span{
+    text-align: center;
+    width: 18vw;
 }
 
 #Co4 {
@@ -1055,14 +1068,14 @@ footer {
 
 #output-box {
     visibility: hidden;
-    width: 30vw;
+    width: 70vw;
     background-color: white;
     z-index: 1001;
     position: absolute;
     height: 30%;
-    left: 35%;
+    left: 10%;
     top: 35%;
-    padding: 1vw;
+    padding: 3vw;
     border-radius: 20px;
 }
 
