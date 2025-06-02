@@ -2,7 +2,7 @@
 ![Mein Bild](https://www.htl-leonding.at/wp-content/uploads/2022/10/htllogo_2022_white_v2-1024x231.png)
 
 **Teammitglieder:**  
-Bauer Alina, Baumann Isabella, Gossenreiter Thomas, Hochbichler Lien, Steinmair Stefanie   
+Baumann Isabella, Gossenreiter Thomas, Hochbichler Lien, Steinmair Stefanie   
 
 **Projekt-Auftraggeber:**  
 Huemer, Reder  
