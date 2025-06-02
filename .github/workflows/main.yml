@@ -16,19 +16,35 @@ jobs:
 
     - name: Set up Docker Compose
       run: |
-        docker-compose up -d
-        sleep 30  # give services time to start
+        docker compose up -d
+        sleep 30
+      working-directory: ./docker-local-wordpress
 
     - name: Verify services
       run: docker ps -a
+      working-directory: ./docker-local-wordpress
 
     - name: Run WordPress smoke test
       run: |
         curl --retry 10 --retry-delay 5 --fail http://localhost:8080 || exit 1
+      working-directory: ./docker-local-wordpress
 
     - name: Run tests (placeholder)
       run: |
         echo "Add PHPUnit or integration test commands here"
+      working-directory: ./docker-local-wordpress
 
     - name: Shut down Docker Compose
-      run: docker-compose down
+      run: docker compose down
+      working-directory: ./docker-local-wordpress
+
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+    - name: Build Docker image
+      run: |
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/wordpress-ci:latest .
+      working-directory: ./docker-local-wordpress
+
+    - name: Push image to Docker Hub
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/wordpress-ci:latest
