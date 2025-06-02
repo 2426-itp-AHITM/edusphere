@@ -14,21 +14,24 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: List files (debug step)
+      run: ls -R
+
     - name: Set up Docker Compose
       run: |
         docker compose -f docker-local-wordpress/docker-compose.yml up -d
-        sleep 30  # give services time to start
+        sleep 30  # Give services time to start
 
     - name: Verify services
       run: docker ps -a
 
     - name: Run WordPress smoke test
       run: |
-        curl --retry 10 --retry-delay 5 --fail http://localhost:8080 || exit 1
+        curl --retry 10 --retry-delay 5 --fail http://localhost:8000 || exit 1
 
     - name: Run tests (placeholder)
       run: |
         echo "Add PHPUnit or integration test commands here"
 
     - name: Shut down Docker Compose
-      run: docker-compose down
+      run: docker compose -f docker-local-wordpress/docker-compose.yml down
