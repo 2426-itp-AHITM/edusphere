@@ -16,9 +16,8 @@ jobs:
 
     - name: Set up Docker Compose
       run: |
-        docker compose up -d
+        docker compose -f docker-local-wordpress/docker-compose.yml up -d
         sleep 30  # give services time to start
-      working-directory: /docker-local-wordpress
 
     - name: Verify services
       run: docker ps -a
